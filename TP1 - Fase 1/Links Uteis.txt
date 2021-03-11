@@ -7,3 +7,5 @@ https://developer.android.com/guide/topics/sensors/sensors_overview
 APPS CONCORRENTES
 https://thepointsguy.com/guide/best-travel-apps/
 
+PERCURSOS PEDESTRES IDENTIFICADOS em Território Nacional
+http://www.walkingportugal.com/b_paginas_globais/WalkingPortugal_busca_regional.html
