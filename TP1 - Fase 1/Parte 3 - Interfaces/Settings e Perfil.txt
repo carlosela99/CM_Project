@@ -1,0 +1,9 @@
+SETTINGS:
+ - Alterar idioma (2 bandeiras botões)
+ - Alterar o tema (2 botões)
+ - Ativar/desativar som de jogo (slider ou switch)
+ - Ativar/desativar música (slider ou switch)
+
+PERFIL:
+ - Alterar icon (escolher de lista pré feita)
+ - Alterar password
