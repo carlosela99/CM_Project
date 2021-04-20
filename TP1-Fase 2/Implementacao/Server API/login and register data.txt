@@ -1,0 +1,13 @@
+
+
+REGISTER
+ - email
+ - username
+ - password
+ - confirm password
+
+LOGIN
+ - username/email
+ - password
+
+
