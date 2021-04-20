@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Reclaim Portugal</string>
-    <string name="titulo_login">Iniciar sessão</string>
+    <string name="login">Iniciar sessão</string>
+    <string name="register">Registo</string>
 </resources>
