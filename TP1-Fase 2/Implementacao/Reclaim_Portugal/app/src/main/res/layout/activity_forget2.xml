@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_auth"
-    tools:context=".Login">
+    tools:context=".Register">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -93,7 +93,7 @@
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    app:backgroundTint="#DD2828"
+                    app:backgroundTint="#B31414"
                     app:cornerRadius="12dp" />
 
                 <RelativeLayout
