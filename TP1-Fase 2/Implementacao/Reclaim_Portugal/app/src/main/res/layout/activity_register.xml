@@ -52,11 +52,11 @@
                         android:fontFamily="@font/candy_beans"
                         android:shadowColor="@color/black"
                         android:shadowRadius="4"
-                        android:text="Register"
+                        android:text="Login"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
-                        android:textSize="28sp" />
+                        android:textSize="35sp" />
 
                 </RelativeLayout>
 
@@ -73,20 +73,10 @@
                         android:hint="Email addres"
                         android:inputType="textPersonName"
                         android:padding="16dp"
-                        android:text="username" />
+                        android:text="username/mail" />
 
                 </RelativeLayout>
 
-                <EditText
-
-                    android:layout_width="305dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:ems="10"
-                    android:hint="Email addres"
-                    android:inputType="textPersonName"
-                    android:padding="16dp"
-                    android:text="mail" />
 
                 <EditText
 
@@ -99,21 +89,46 @@
                     android:padding="16dp"
                     android:text="password" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_width="305dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:ems="10"
-                    android:hint="Email addres"
-                    android:inputType="textPersonName"
-                    android:padding="16dp"
-                    android:text="confirm password" />
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="5"/>
+                    android:layout_weight="5">
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="145dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="0dp"
+                        android:color="@android:color/holo_red_light"
+                        android:fontFamily="@font/candy_beans"
+                        android:text="Login"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="20sp"
+                        app:backgroundTint="#DD2828" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/candy_beans"
+                    android:padding="10dp"
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="2"
+                    android:text="Forgot password"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:backgroundTint="#DD2828"
+                    app:cornerRadius="12dp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -128,19 +143,7 @@
             android:layout_height="match_parent"
             android:layout_weight="5">
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="145dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="320dp"
-                android:color="@android:color/holo_red_light"
-                android:text="Register"
-                android:textSize="20sp"
-                android:fontFamily="@font/candy_beans"
 
-                app:backgroundTint="#DD2828"/>
         </RelativeLayout>
     </LinearLayout>
 
