@@ -51,11 +51,11 @@
                         android:fontFamily="@font/candy_beans"
                         android:shadowColor="@color/black"
                         android:shadowRadius="4"
-                        android:text="Registration Complete"
+                        android:text="@string/registration_complete"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
+                        android:textSize="30sp" />
 
 
                 </RelativeLayout>
@@ -99,7 +99,7 @@
                         android:padding="10dp"
                         android:shadowColor="@color/black"
                         android:shadowRadius="2"
-                        android:text="Login"
+                        android:text="@string/login"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="20sp"

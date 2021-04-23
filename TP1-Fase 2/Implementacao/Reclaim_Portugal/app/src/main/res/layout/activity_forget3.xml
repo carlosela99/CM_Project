@@ -42,21 +42,22 @@
 
                     <TextView
                         android:id="@+id/textView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="290dp"
+                        android:layout_height="71dp"
+                        android:layout_alignParentTop="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="20dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="11dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="0dp"
+                        android:layout_marginBottom="15dp"
                         android:fontFamily="@font/candy_beans"
                         android:shadowColor="@color/black"
                         android:shadowRadius="4"
-                        android:text="Forgot Password"
+                        android:text="@string/forgot_password"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
-                        android:textSize="35sp" />
+                        android:textSize="30sp" />
 
                 </RelativeLayout>
 
@@ -66,33 +67,38 @@
                     android:layout_weight="5">
 
                     <EditText
-                        android:layout_width="305dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_width="307dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/text_box"
                         android:ems="10"
-                        android:hint="Email addres"
+                        android:fontFamily="@font/candy_beans"
+                        android:hint="@string/insert_new_password"
                         android:inputType="textPersonName"
-                        android:padding="16dp"
-                        android:text="Insert new password" />
+                        android:padding="16dp" />
 
                 </RelativeLayout>
 
 
                 <EditText
-
-                    android:layout_width="305dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
+                    android:layout_width="308dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/text_box"
                     android:ems="10"
-                    android:hint="Email addres"
+                    android:fontFamily="@font/candy_beans"
+                    android:hint="@string/confirm_new_password"
                     android:inputType="textPersonName"
-                    android:padding="16dp"
-                    android:text="confirm new password" />
+                    android:padding="16dp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="5">>
+
                     <Button
                         android:id="@+id/button"
                         android:layout_width="210dp"
@@ -104,7 +110,7 @@
                         android:padding="10dp"
                         android:shadowColor="@color/black"
                         android:shadowRadius="2"
-                        android:text="Confirm"
+                        android:text="@string/confirm"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="20sp"

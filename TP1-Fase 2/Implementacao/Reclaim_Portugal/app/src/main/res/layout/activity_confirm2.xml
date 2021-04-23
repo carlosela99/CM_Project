@@ -47,16 +47,15 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
-                        android:layout_marginBottom="37dp"
+                        android:layout_marginBottom="41dp"
                         android:fontFamily="@font/candy_beans"
                         android:shadowColor="@color/black"
                         android:shadowRadius="4"
-                        android:text="Password was changed"
+                        android:text="@string/password_was_changed"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
-                        android:textSize="25sp" />
-
+                        android:textSize="30sp" />
 
 
                 </RelativeLayout>
@@ -101,7 +100,7 @@
                         android:padding="10dp"
                         android:shadowColor="@color/black"
                         android:shadowRadius="2"
-                        android:text="Login"
+                        android:text="@string/login"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="20sp"
