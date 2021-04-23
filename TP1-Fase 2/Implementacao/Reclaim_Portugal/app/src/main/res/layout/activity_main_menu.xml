@@ -13,12 +13,6 @@
         android:layout_width="match_parent"
         android:theme="@style/Theme.ReclaimPortugal.AppBarOverlay"/>
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_main_menu"
-        app:layout_anchor="@+id/imageView2"
-        app:layout_anchorGravity="center" />
-
     <Button
         android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
