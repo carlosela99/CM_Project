@@ -10,56 +10,62 @@ module.exports.changePassword = changePassword;
 module.exports.submitQuestion = submitQuestion;
 module.exports.getQuestions = getQuestions;
 
+// import local modules
+const jsonResponse = require("./response");
 
 async function login(request, response){
 
   try{
-    var body = request.body;
+    var json = request.body;
 
-    if(!IsJsonString(request.body) || !json.hasOwnProperty('User') || !json.hasOwnProperty('Password')){
-      response.sendStatus(400);
+    console.log(request.body);
+
+    if(/*!IsJsonString(json) ||*/ !json.hasOwnProperty('User') || !json.hasOwnProperty('Password')){
+      jsonResponse.badRequest(response);
       return;
     }
 
-    var username_email = body.User;
-    var password = body.Password;
+    var username_email = json.User;
+    var password = json.Password;
 
     var connection = await mysql.createConnection(config);
 
-    var [user] = await connection.query('SELECT id as user FROM players WHERE username = ? or email = ?', username_email, username_email);
+    var [user] = await connection.query('SELECT id FROM players WHERE username = ? or email = ?', [username_email, username_email]);
 
-    if (user.id != undefined){
+    if (user.length > 0){
 
-      var [login] = await connection.query('SELECT COUNT(*) as user FROM players WHERE id = ? and password = ?', user.id, password);
+      var [login] = await connection.query('SELECT COUNT(*) as user FROM players WHERE id = ? and password = ?', [user[0].id, password]);
 
-      if (login.user > 0){
-
-        response.sendStatus(200);
+      if (login[0].user > 0){
+        console.log("New login with " + json.User);
+        jsonResponse.ok(response);
         connection.end();
         return;
       }
     }
+    console.log("Fail login with " + json.User);
     connection.end();
-    response.sendStatus(201);
+    jsonResponse.unauthorized(response);
   }
-  catch{
-    response.sendStatus(500);
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
   }
 }
 
 async function register(request, response){
 
   try{
-    var body = request.body;
+    var json = request.body;
 
-    if(!IsJsonString(request.body) || !json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
+    if(!IsJsonString(json) || !json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
       response.sendStatus(400);
       return;
     }
 
-    var username = body.Username;
-    var email = body.Email;
-    var password = body.Password;
+    var username = json.Username;
+    var email = json.Email;
+    var password = json.Password;
 
     var connection = await mysql.createConnection(config);
 
@@ -73,9 +79,10 @@ async function register(request, response){
       return;
     }
     connection.end();
-    response.sendStatus(201);
+    response.sendStatus(401);
   }
-  catch{
+  catch(e){
+    console.log(e);
     response.sendStatus(500);
   }
 }

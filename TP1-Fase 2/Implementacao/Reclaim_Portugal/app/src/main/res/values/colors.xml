@@ -10,4 +10,5 @@
     <color name="grey">#535353</color>
     <color name="yellow">#ffbf00</color>
     <color name="red_button">#D31E1E</color>
+    <color name="red_incorrect">#FF0000</color>
 </resources>

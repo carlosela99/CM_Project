@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // service listening port
-const port = 5656; // MUDAR
+const port = 5407;
 
 // import local modules
 const requestHandlers = require("./request-handlers");
@@ -23,7 +23,7 @@ const options = {
 
 // requests
 app.get("/questions", requestHandlers.getQuestions);
-app.put("/login", requestHandlers.login);
+app.post("/login", requestHandlers.login);
 app.put("/register", requestHandlers.register);
 app.put("/forgot-password", requestHandlers.forgotPassword);
 app.put("/change-password", requestHandlers.changePassword);

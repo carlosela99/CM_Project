@@ -1,0 +1,55 @@
+
+module.exports.messageResponse = messageResponse
+module.exports.ok = ok
+module.exports.unauthorized = unauthorized
+module.exports.badRequest = badRequest
+module.exports.internalError = internalError
+
+
+function messageResponse(response, message){
+
+    var json = JSON.stringify(message);
+    sendResponse(json, response, 200);
+}
+
+function ok(response){
+
+    var json = JSON.stringify({
+        status: "ok"
+    });
+
+    sendResponse(json, response, 200);
+}
+
+function unauthorized(response){
+
+    var json = JSON.stringify({
+        status: "unauthorized"
+    });
+
+    sendResponse(json, response, 401);
+}
+
+function badRequest(response){
+
+    var json = JSON.stringify({
+        status: "bad request"
+    });
+
+    sendResponse(json, response, 400);
+}
+
+function internalError(response){
+
+    var json = JSON.stringify({
+        status: "internal server error"
+    });
+
+    sendResponse(json, response, 500);
+}
+
+function sendResponse(json, response, status){
+    response.statusCode = status;
+    response.type('json');
+    response.send(json);
+}
