@@ -16,20 +16,22 @@
     <Button
         android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/play"
-        android:layout_marginTop="325dp"
+        android:layout_height="58dp"
         android:layout_marginStart="150dp"
-    />
+        android:layout_marginTop="325dp"
+        android:text="@string/play"
+        app:backgroundTint="#ECE63A"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/btnQuestion"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/question"
-        android:layout_marginTop="325dp"
+        android:layout_height="58dp"
         android:layout_marginStart="400dp"
-    />
+        android:layout_marginTop="325dp"
+        android:text="@string/question"
+        app:backgroundTint="#FE9823"
+        android:textColor="@color/black"/>
 
     <ImageView
         android:id="@+id/icon"
@@ -58,5 +60,17 @@
         android:layout_marginStart="100dp"
     />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="54dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="670dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/settings"
+        android:background="@android:color/transparent"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
