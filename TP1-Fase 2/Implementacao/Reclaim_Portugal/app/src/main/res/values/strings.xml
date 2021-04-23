@@ -2,6 +2,8 @@
     <string name="app_name">Reclaim Portugal</string>
     <string name="login">Iniciar sessão</string>
     <string name="register">Registo</string>
+    <string name="play">Jogar</string>
+    <string name="question">Faz uma Questão!</string>
     <string name="title_activity_main_menu">MainMenu</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

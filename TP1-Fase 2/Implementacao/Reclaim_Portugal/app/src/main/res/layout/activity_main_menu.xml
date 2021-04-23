@@ -19,19 +19,50 @@
         app:layout_anchor="@+id/imageView2"
         app:layout_anchorGravity="center" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="121dp"
-        android:orientation="horizontal"
-        android:translationY="290" >
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play"
+        android:layout_marginTop="325dp"
+        android:layout_marginStart="150dp"
+    />
 
-        <Button
-            android:id="@+id/button8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Button" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        android:layout_marginTop="325dp"
+        android:layout_marginStart="400dp"
+    />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="68dp"
+        android:layout_height="72dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="100dp"
+    />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="100dp"
+    />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
