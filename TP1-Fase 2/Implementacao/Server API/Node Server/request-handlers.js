@@ -5,6 +5,7 @@ let config = require('./config.js');
 // export module functions
 module.exports.login = login;
 module.exports.register = register;
+module.exports.confirmRegister = confirmRegister;
 module.exports.forgotPassword = forgotPassword;
 module.exports.changePassword = changePassword;
 module.exports.submitQuestion = submitQuestion;
@@ -12,6 +13,7 @@ module.exports.getQuestions = getQuestions;
 
 // import local modules
 const jsonResponse = require("./response");
+const mailer = require("./mailer");
 
 async function login(request, response){
 
@@ -58,8 +60,8 @@ async function register(request, response){
   try{
     var json = request.body;
 
-    if(!IsJsonString(json) || !json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
-      response.sendStatus(400);
+    if(/*!IsJsonString(json) ||*/ !json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
+      jsonResponse.badRequest(response);
       return;
     }
 
@@ -69,21 +71,64 @@ async function register(request, response){
 
     var connection = await mysql.createConnection(config);
 
-    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE username = ? or email = ?', username, email);
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE username = ? or email = ?', [username, email]);
 
-    if (users.count == 0){
+    if (users[0].count == 0){
 
-      var [register] = await connection.query('INSERT INTO player (email, username, password) VALUES (?,?,?)', email, username, password);
+      var code = Math.floor(Math.random() * (99999 - 10000 + 1) ) + 10000;
+      await connection.query('INSERT INTO players (email, username, password, confirmation_code) VALUES (?,?,?,?)', [email, username, password, code]);
+      mailer.sendRegisterConfirmationCode(email, code);
 
-      response.sendStatus(200);
-      return;
+      console.log("New register with " + json.Email);
+      jsonResponse.ok(response);
     }
-    connection.end();
-    response.sendStatus(401);
+    else{
+
+      console.log("Fail register with " + json.Email);
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
   }
   catch(e){
     console.log(e);
-    response.sendStatus(500);
+    jsonResponse.internalError(response);
+  }
+}
+
+async function confirmRegister(request, response){
+
+  try{
+    var json = request.body;
+
+    if(/*!IsJsonString(json) ||*/ !json.hasOwnProperty('Email') || !json.hasOwnProperty('Code')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var code = json.Code;
+console.log(code);
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ? and confirmation_code = ?', [email, code]);
+    console.log(users[0].count);
+    if (users[0].count == 1){
+
+      await connection.query('UPDATE players SET confirmed = 1 WHERE email = ? and confirmation_code = ?', [email, code]);
+
+      console.log("Email confirmed with " + json.Email);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      console.log("Fail confirmation with " + json.Email);
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
   }
 }
 

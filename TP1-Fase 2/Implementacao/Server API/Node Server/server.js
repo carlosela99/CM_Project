@@ -24,10 +24,11 @@ const options = {
 // requests
 app.get("/questions", requestHandlers.getQuestions);
 app.post("/login", requestHandlers.login);
-app.put("/register", requestHandlers.register);
-app.put("/forgot-password", requestHandlers.forgotPassword);
-app.put("/change-password", requestHandlers.changePassword);
-app.put("/submit-question", requestHandlers.submitQuestion);
+app.post("/register", requestHandlers.register);
+app.post("/confirm-register", requestHandlers.confirmRegister);
+app.post("/forgot-password", requestHandlers.forgotPassword);
+app.post("/change-password", requestHandlers.changePassword);
+app.post("/submit-question", requestHandlers.submitQuestion);
 // MUDAR PARA POSTS
 
 // 404 not found

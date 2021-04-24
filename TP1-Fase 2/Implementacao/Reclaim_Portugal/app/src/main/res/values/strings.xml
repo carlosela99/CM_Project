@@ -2,7 +2,7 @@
     <string name="app_name">Reclaim Portugal</string>
     <string name="login">Iniciar sessão</string>
     <string name="register">Registo</string>
-    <string name="username_email">username / email</string>
+    <string name="username_email">Username / email</string>
     <string name="password">Password</string>
     <string name="forgot_password">Esqueci-me da Password</string>
     <string name="verification_code">Verificar o código</string>
@@ -19,4 +19,5 @@
     <string name="register_description">Foi registado com sucesso no Reclaim Portugal. Agora pode fazer o login e começar a jogar!</string>
     <string name="verification_code_1">O códiogo de verificação foi enviado <br/> para a sua conta e-mail!</string>
     <string name="login_fail">Dados inseridos inválidos</string>
+    <string name="code">Código de verificação</string>
 </resources>

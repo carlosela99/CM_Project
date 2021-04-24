@@ -1,16 +1,9 @@
 
-module.exports.messageResponse = messageResponse
 module.exports.ok = ok
 module.exports.unauthorized = unauthorized
 module.exports.badRequest = badRequest
 module.exports.internalError = internalError
 
-
-function messageResponse(response, message){
-
-    var json = JSON.stringify(message);
-    sendResponse(json, response, 200);
-}
 
 function ok(response){
 
