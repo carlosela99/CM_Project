@@ -1,5 +1,6 @@
 
 const nodemailer = require('nodemailer');
+const SENDER_NAME = "Reclaim Portugal";
 const SENDER_EMAIL = "reclaimportugal@gmail.com";
 
 module.exports.sendRegisterConfirmationCode = sendRegisterConfirmationCode
@@ -16,14 +17,14 @@ var transporter = nodemailer.createTransport({
 function sendRegisterConfirmationCode(email_address, confirmation_code){
 
     var message = 'Welcome to Reclaim Portugal!\n\n'
-    message += 'Your account was created and you can start playing right now. ';
+    message += 'Your account has been sucessfully created and you can start playing right now. ';
     message += 'To confirm your email address please insert the following code:\n\n';
     message += '\t' + confirmation_code;
 
     var mailOptions = {
-        from: SENDER_EMAIL,
+        from: getSender(),
         to: email_address,
-        subject: 'Reclaim Portugal Registration',
+        subject: 'Confirm your account',
         text: message
       };
 
@@ -34,5 +35,9 @@ function sendRegisterConfirmationCode(email_address, confirmation_code){
           console.log('Email sent: ' + info.response);
         }
       });
+}
+
+function getSender(){
+  return SENDER_NAME + ' <' + SENDER_EMAIL + '>';
 }
 
