@@ -24,7 +24,6 @@
     <string name="username">Nome do Utilizador</string>
     <string name="confirm">Confirmar</string>
     <string name="send_verification_code">Envio do código de verificação</string>
-    <string name="register">Registo</string>
     <string name="password_was_changed">Password foi alterada</string>
     <string name="registration_complete">Registo Completo</string>
     <string name="change_password_description">A sua senha foi alterada com sucesso. Da próxima vez, pode usar a sua nova senha para entrar no jogo!</string>

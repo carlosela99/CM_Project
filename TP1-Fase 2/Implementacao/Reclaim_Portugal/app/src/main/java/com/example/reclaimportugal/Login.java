@@ -40,6 +40,11 @@ public class Login extends AppCompatActivity {
         startActivity(new Intent(Login.this, Welcome.class));
     }
 
+    private void showMainMenu(){
+        startActivity(new Intent(Login.this, MainMenu.class));
+        finish();
+    }
+
     public void loginUser(View v){
 
         EditText userText = (EditText)findViewById(R.id.text_user);
@@ -62,6 +67,7 @@ public class Login extends AppCompatActivity {
 
         isBusy = false;
         Log.i("auth", "login success!");
+        showMainMenu();
     }
 
     public void loginErrorResult(){
