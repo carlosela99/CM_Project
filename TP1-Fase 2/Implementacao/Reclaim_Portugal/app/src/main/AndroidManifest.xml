@@ -8,12 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ReclaimPortugal">
-        <activity android:name=".Settings"></activity>
+        android:theme="@style/Theme.ReclaimPortugal"
+        android:screenOrientation="landscape">
+        <activity android:name=".Settings" />
         <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
-            android:theme="@style/Theme.ReclaimPortugal.NoActionBar"></activity>
+            android:theme="@style/Theme.ReclaimPortugal.NoActionBar"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".Welcome"
             android:screenOrientation="landscape">
