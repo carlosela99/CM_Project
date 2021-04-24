@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 // service listening port
-const port = 5656; // MUDAR
+const port = 5407;
 
 // import local modules
 const requestHandlers = require("./request-handlers");
@@ -23,11 +23,12 @@ const options = {
 
 // requests
 app.get("/questions", requestHandlers.getQuestions);
-app.put("/login", requestHandlers.login);
-app.put("/register", requestHandlers.register);
-app.put("/forgot-password", requestHandlers.forgotPassword);
-app.put("/change-password", requestHandlers.changePassword);
-app.put("/submit-question", requestHandlers.submitQuestion);
+app.post("/login", requestHandlers.login);
+app.post("/register", requestHandlers.register);
+app.post("/confirm-register", requestHandlers.confirmRegister);
+app.post("/forgot-password", requestHandlers.forgotPassword);
+app.post("/change-password", requestHandlers.changePassword);
+app.post("/submit-question", requestHandlers.submitQuestion);
 // MUDAR PARA POSTS
 
 // 404 not found
