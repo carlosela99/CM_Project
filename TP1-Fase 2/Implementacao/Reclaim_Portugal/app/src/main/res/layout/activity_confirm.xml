@@ -77,7 +77,7 @@
                         android:fontFamily="@font/candy_beans"
                         android:shadowColor="@color/black"
                         android:shadowRadius="4"
-                        android:text="You've been successfully registered to Reclaim Portugal. You can now login and start playing!"
+                        android:text="@string/register_description"
                         android:textAlignment="center"
                         android:textAllCaps="false"
                         android:textColor="@color/white"

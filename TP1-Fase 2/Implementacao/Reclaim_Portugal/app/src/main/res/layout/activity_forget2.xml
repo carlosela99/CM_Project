@@ -38,7 +38,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="5">
+                    android:layout_weight="5.5">
 
                     <TextView
                         android:id="@+id/textView"
@@ -47,7 +47,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="32dp"
                         android:fontFamily="@font/candy_beans"
                         android:shadowColor="@color/black"
                         android:shadowRadius="4"
@@ -59,32 +59,24 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
+
+                <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/text_box"
-                        android:ems="10"
-                        android:hint="@string/verification_code"
-                        android:fontFamily="@font/candy_beans"
-                        android:inputType="textPersonName"
-                        android:padding="16dp" />
-
-                </RelativeLayout>
-
+                    android:layout_height="75dp"
+                    android:background="@drawable/text_box"
+                    android:ems="10"
+                    android:fontFamily="@font/candy_beans"
+                    android:hint="@string/verification_code"
+                    android:inputType="textPersonName"
+                    android:padding="16dp" />
 
                 <Button
                     android:id="@+id/button"
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="45dp"
+                    android:layout_marginStart="65dp"
                     android:layout_marginTop="0dp"
-                    android:layout_marginBottom="0dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="@font/candy_beans"
                     android:padding="10dp"
                     android:shadowColor="@color/black"
@@ -101,12 +93,43 @@
                     android:layout_height="match_parent"
                     android:layout_weight="5">
 
-                </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="161dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="95dp"
+                        android:layout_marginBottom="-10dp"
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"></RelativeLayout>
+                        app:srcCompat="@drawable/icon_rapaz" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="294dp"
+                        android:layout_height="87dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="-10dp"
+                        app:srcCompat="@drawable/balao_texto" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="0dp"
+                        android:fontFamily="@font/italic"
+                        android:shadowColor="@color/black"
+                        android:shadowRadius="4"
+                        android:text="@string/verification_code_1"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#D22727"
+                        android:textSize="13sp"
+                        android:textStyle="italic" />
+                </RelativeLayout>
 
             </LinearLayout>
         </RelativeLayout>
@@ -114,7 +137,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="5">
+            android:layout_weight="6">
 
 
         </RelativeLayout>
