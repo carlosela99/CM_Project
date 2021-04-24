@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReclaimPortugal">
-        <activity android:name=".RegisterConfirmCode"></activity>
+        <activity
+            android:name=".RegisterConfirmCode"
+            android:screenOrientation="landscape"/>
 
         <uses-library
             android:name="org.apache.http.legacy"
