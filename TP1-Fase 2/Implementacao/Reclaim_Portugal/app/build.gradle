@@ -46,4 +46,5 @@ task wrapper(type: Wrapper){
 }
 task prepareKotlinBuildScriptModel {
 
+    compile 'com.mcxiaoke.volley:library:1.0.0'
 }

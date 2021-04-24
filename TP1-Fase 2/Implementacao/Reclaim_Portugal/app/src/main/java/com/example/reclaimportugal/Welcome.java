@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class Welcome extends AppCompatActivity {
     private Button button;
@@ -27,5 +26,13 @@ public class Welcome extends AppCompatActivity {
     public void openMainMenu() {
         Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
+    }
+
+    public void showLogin(View v){
+        startActivity(new Intent(Welcome.this, Login.class));
+    }
+
+    public void showRegister(View v){
+        startActivity(new Intent(Welcome.this, Register.class));
     }
 }
