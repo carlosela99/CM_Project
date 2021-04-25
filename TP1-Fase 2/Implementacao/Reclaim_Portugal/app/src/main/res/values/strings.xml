@@ -32,6 +32,4 @@
     <string name="verification_code_1">O códiogo de verificação foi enviado <br/> para a sua conta e-mail!</string>
     <string name="login_fail">Dados inseridos inválidos</string>
     <string name="code">Código de verificação</string>
-    <string name="change_password">Mudar password</string>
-    <string name="insert_old_password">insira a password antiga</string>
 </resources>
