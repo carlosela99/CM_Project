@@ -105,9 +105,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:theme="@style/Theme.ReclaimPortugal.AppBarOverlay"/>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
