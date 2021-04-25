@@ -5,7 +5,7 @@
     <string name="play">Jogar</string>
     <string name="question">Faz uma Questão!</string>
     <string name="settings">Configurações</string>
-    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_main_menu">Main Menu</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -32,4 +32,5 @@
     <string name="login_fail">Dados inseridos inválidos</string>
     <string name="code">Código de verificação</string>
     <string name="change_password">Mudar Palavra-Passe</string>
+    <string name="insert_old_password">Insira a password antiga</string> />
 </resources>

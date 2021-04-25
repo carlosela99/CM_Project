@@ -7,100 +7,168 @@
     android:background="@drawable/background_main_menu"
     tools:context=".Settings">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-44dp"
-        tools:layout_editor_absoluteY="0dp">
 
-        <Button
-            android:id="@+id/btnchange"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginStart="120dp"
-            android:layout_marginTop="300dp"
-            android:text="@string/change_password"
-            app:backgroundTint="#E10C0C"
-            app:cornerRadius="20dp" />
+    <Button
+        android:id="@+id/btnchange"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="@string/change_password"
+        app:backgroundTint="#E10C0C"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
 
-        <TextView
-            android:id="@+id/Credits"
-            android:layout_width="239dp"
-            android:layout_height="110dp"
-            android:layout_marginStart="440dp"
-            android:layout_marginTop="-60dp"
-            android:text="                    OUR TEAM:                            Carlos Antunes      Jorge Mimoso    Daniel Morais        Marco Teodoro Eduardo Ferreira  Ricardo Ribeiro"
 
-            android:typeface="serif" />
+    <ImageView
+        android:id="@+id/settingsLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132"
+        app:srcCompat="@drawable/settingslogo" />
 
+    <TextView
+        android:id="@+id/settingsText"
+        android:layout_width="183dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/candy_beans"
+        android:text="SETTINGS"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TextView
+        android:id="@+id/ourteamview"
+
+        android:layout_width="183dp"
+        android:layout_height="40dp"
+        android:fontFamily="@font/candy_beans"
+
+        android:text="Our Team:"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.943"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <TextView
+        android:id="@+id/nomesEsquerda"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/candy_beans"
+        android:text="Carlos Antunes Daniel Morais Eduardo Ferreira"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <TextView
+        android:id="@+id/nomesDireita"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:fontFamily="@font/candy_beans"
+        android:text="Jorge Mimoso Marco Teodoro Ricardo Ribeiro"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="190dp"
+        android:layout_height="184dp"
+        android:background="@drawable/imagem_branca"
+
+        app:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.434"
+        app:rowCount="2"
+        >
 
         <ImageButton
             android:id="@+id/PortugalIcon"
-            android:layout_width="64dp"
+            android:layout_width="91dp"
             android:layout_height="64dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="-300dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/portugal"
 
-            />
-
-        <ImageButton
-            android:id="@+id/muteIcon"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="260dp"
-            android:layout_marginTop="20dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/mute" />
-
-        <ImageButton
-            android:id="@+id/musicIcon"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="-65dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/music" />
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/portugal" />
 
         <ImageButton
             android:id="@+id/reinoUnido"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginStart="260dp"
-            android:layout_marginTop="-150dp"
-            android:background="@android:color/transparent" />
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:layout_column="1"
+            app:layout_row="0"
+            app:srcCompat="@drawable/reino_unido" />
 
         <ImageButton
-            android:id="@+id/leftArrow"
+            android:id="@+id/musicIcon"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="-150dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/arrow" />
+            android:scaleType="fitXY"
+            app:layout_column="0"
+            app:layout_row="1"
+            app:srcCompat="@drawable/music" />
 
-        <ImageView
-            android:id="@+id/settingsLogo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="115dp"
-            android:layout_marginTop="-40dp"
-            app:srcCompat="@drawable/settings32px" />
+        <ImageButton
+            android:id="@+id/muteIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            app:layout_column="1"
+            app:layout_row="1"
+            app:srcCompat="@drawable/mute" />
+    </androidx.gridlayout.widget.GridLayout>
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="67dp"
+        android:layout_height="94dp"
+        android:background="@drawable/back"
+        android:scaleType="fitXY"
 
-        <TextView
-            android:id="@+id/settingsText"
-            android:layout_width="183dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="-40dp"
-            android:text="SETTINGS"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:typeface="serif" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068" />
 
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 

@@ -7,65 +7,83 @@
     android:background="@drawable/background_main_menu">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="219dp">
+    <EditText
+        android:id="@+id/OldPassword"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="@string/insert_old_password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        app:cornerRadius="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
-        <ImageButton
-            android:id="@+id/leftArrow"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/arrow" />
+    <EditText
+        android:id="@+id/NewPassword"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="@string/insert_new_password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
-        <Button
-            android:id="@+id/btnchange"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="350dp"
-            android:text="@string/Confirm"
-            app:cornerRadius="20dp"
-            app:backgroundTint="#E10C0C"
+    <EditText
+        android:id="@+id/ConfirmNewPassword"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:background="@drawable/text_box"
+        android:ems="10"
+        android:hint="@string/confirm_new_password"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.626" />
 
-            />
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077"
+        app:srcCompat="@drawable/back"
+        android:background=""/>
 
-        <EditText
-            android:id="@+id/OldPassword"
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="-350dp"
-            android:background="@color/white"
-            android:inputType="textPassword"
-             />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.834"
+        android:text="@string/Confirm"
+        app:backgroundTint="#FF4444"
+        app:cornerRadius="12dp"
+        />
 
-        <EditText
-            android:id="@+id/NewPassword"
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:layout_marginStart="150dp"
-            android:background="@color/white"
-            android:layout_marginTop="20dp"
-            android:inputType="textPassword" />
-        <EditText
-            android:id="@+id/ConfirmNewPassword"
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="20dp"
-            android:background="@color/white"
-            android:inputType="textPassword" />
-
-
-</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
