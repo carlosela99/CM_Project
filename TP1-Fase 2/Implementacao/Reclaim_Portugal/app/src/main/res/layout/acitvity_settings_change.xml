@@ -21,14 +21,15 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/arrow" />
+            app:srcCompat="@drawable/back"
+            android:scaleType="fitXY" />
 
         <Button
             android:id="@+id/btnchange"
             android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_marginStart="150dp"
-            android:layout_marginTop="350dp"
+            android:layout_marginTop="200dp"
             android:text="@string/Confirm"
             app:cornerRadius="20dp"
             app:backgroundTint="#E10C0C"
@@ -37,32 +38,41 @@
 
         <EditText
             android:id="@+id/OldPassword"
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="-350dp"
+            android:layout_width="291dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="-250dp"
             android:background="@color/white"
-            android:inputType="textPassword"
-             />
+            android:ems="10"
+            android:hint="@string/insert_old_password"
+            android:fontFamily="@font/candy_beans"
+            android:padding="6dp"
+            android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/NewPassword"
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:layout_marginStart="150dp"
+            android:layout_width="291dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="30dp"
             android:background="@color/white"
-            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/insert_new_password"
+            android:padding="6dp"
+            android:fontFamily="@font/candy_beans"
             android:inputType="textPassword" />
+
         <EditText
             android:id="@+id/ConfirmNewPassword"
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="291dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="30dp"
             android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/confirm_new_password"
+            android:fontFamily="@font/candy_beans"
+            android:padding="6dp"
             android:inputType="textPassword" />
 
 
