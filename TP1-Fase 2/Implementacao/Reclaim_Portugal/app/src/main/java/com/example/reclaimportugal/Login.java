@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Login extends AppCompatActivity {
@@ -34,9 +35,11 @@ public class Login extends AppCompatActivity {
         startActivity(new Intent(Login.this, Welcome.class));
     }
 
-    private void showMainMenu(){
-        startActivity(new Intent(Login.this, MainMenu.class));
-        finish();
+    private void showMainMenu(String username, String email){
+        Intent intent = new Intent(Login.this, MainMenu.class);
+        intent.putExtra("USERNAME", username);
+        intent.putExtra("EMAIL", email);
+        startActivity(intent);
     }
 
     public void loginUser(View v){
@@ -61,7 +64,16 @@ public class Login extends AppCompatActivity {
 
         isBusy = false;
         Log.i("auth", "login success!");
-        showMainMenu();
+
+        try{
+            String username = response.getString("username");
+            String email = response.getString("email");
+
+            showMainMenu(username, email);
+        }
+        catch (JSONException e) {
+            failLogin.setVisibility(View.VISIBLE);
+        }
     }
 
     public void loginErrorResult(){

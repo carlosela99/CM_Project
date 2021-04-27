@@ -1,5 +1,6 @@
 
 module.exports.ok = ok
+module.exports.playerProfile = playerProfile
 module.exports.unauthorized = unauthorized
 module.exports.badRequest = badRequest
 module.exports.internalError = internalError
@@ -9,6 +10,17 @@ function ok(response){
 
     var json = JSON.stringify({
         status: "ok"
+    });
+
+    sendResponse(json, response, 200);
+}
+
+function playerProfile(response, username, email){
+
+    var json = JSON.stringify({
+        status: "ok",
+        username: username,
+        email: email
     });
 
     sendResponse(json, response, 200);
