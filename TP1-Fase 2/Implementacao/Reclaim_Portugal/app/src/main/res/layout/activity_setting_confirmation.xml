@@ -35,8 +35,8 @@
             android:typeface="serif"
             android:fontFamily="@font/candy_beans"
             android:textSize="17sp"
-            android:text="Your password has been changed succefully.            Next time,you can use your new password to login into the game
-" />
+            android:text="@string/yourPassSuccefully"
+/>
         <TextView
             android:id="@+id/confirmationPass"
             android:layout_width="200dp"

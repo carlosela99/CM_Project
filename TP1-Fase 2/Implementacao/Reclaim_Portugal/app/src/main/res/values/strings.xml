@@ -39,7 +39,15 @@
     <string name="questionSubmited">A tua questão foi submetida!</string>
     <string name="questionTextInfo">A tua questão foi submetida com sucesso para revisão. Ap´s a validação da nossa equipa, será adicionada ao jogo! </string>
     <string name="typeYourQuestion">Escreve a tua questão </string>
-    <string name="submitYourQuestion">Submete a tua questão </string> />
+    <string name="submitYourQuestion">Submete a tua questão! </string>
+    <string name="ourTeam">Nossa equipa: </string>
+    <string name="LeftNames">Carlos Antunes Daniel Morais Eduardo Ferreira  </string>
+    <string name="rightNames">Jorge Mimoso Marco Teodoro Ricardo Ribeiro </string>
+    <string name="type_yourQuestion">Escreve a tua questão </string> />
+    <string name="yourPassSuccefully">Your password has been changed succefully.            Next time,you can use your new password to login into the game</string> />
+    />/>
+    />
+    />
     />
     />
     />
