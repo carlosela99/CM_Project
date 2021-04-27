@@ -17,7 +17,7 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         String username = getIntent().getStringExtra("USERNAME");
-        String email = getIntent().getStringExtra("EMAIL");
+        String email1 = getIntent().getStringExtra("EMAIL");
 
         imageButton = (ImageButton) findViewById(R.id.settings_icon);
         imageButton.setOnClickListener(new View.OnClickListener() {
