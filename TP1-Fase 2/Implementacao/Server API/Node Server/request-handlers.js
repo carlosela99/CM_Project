@@ -39,8 +39,9 @@ async function login(request, response){
       var [login] = await connection.query('SELECT COUNT(*) as user FROM players WHERE id = ? and password = ?', [user[0].id, password]);
 
       if (login[0].user > 0){
+        var [profile] = await connection.query('SELECT username, email FROM players WHERE id = ?', [user[0].id]);
         console.log("New login with " + json.User);
-        jsonResponse.ok(response);
+        jsonResponse.playerProfile(response, profile[0].username, profile[0].email);
         connection.end();
         return;
       }
