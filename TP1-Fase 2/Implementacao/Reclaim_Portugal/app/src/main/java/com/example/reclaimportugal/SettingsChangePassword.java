@@ -3,7 +3,6 @@ package com.example.reclaimportugal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +13,7 @@ public class SettingsChangePassword extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.acitvity_settings_change);
+        setContentView(R.layout.acitvity_settings_change_password);
 
         imageButton = (ImageButton) findViewById(R.id.backSettings);
         imageButton.setOnClickListener(new View.OnClickListener() {
