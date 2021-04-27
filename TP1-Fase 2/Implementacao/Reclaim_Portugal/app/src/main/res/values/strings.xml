@@ -37,7 +37,7 @@
     <string name="wrong_Answer">Resposta Errada</string>
     <string name="questionText">As questões são submetidas para a nossa equipa antes de serem publicadas</string>
     <string name="questionSubmited">A tua questão foi submetida!</string>
-    <string name="questionTextInfo">A tua questão foi submetida com sucesso para revisão. Ap´s a validação da nossa equipa, será adicionada ao jogo! </string>
+    <string name="questionTextInfo">A tua questão foi submetida com sucesso para revisão. Após a validação da nossa equipa, será adicionada ao jogo! </string>
     <string name="typeYourQuestion">Escreve a tua questão </string>
     <string name="submitYourQuestion">Submete a tua questão! </string>
     <string name="ourTeam">Nossa equipa: </string>

@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.458" />
 
     <Button
-        android:id="@+id/mainmenu2"
+        android:id="@+id/mainmenu"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:text="@string/title_activity_main_menu"
@@ -34,7 +34,7 @@
         app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874" />
+        app:layout_constraintVertical_bias="0.88" />
 
     <TextView
         android:id="@+id/confirmationPass2"
