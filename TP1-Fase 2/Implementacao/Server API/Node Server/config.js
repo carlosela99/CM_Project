@@ -1,8 +1,8 @@
 let config = {
     host    : 'localhost',
-    user    : 'reclaimportugal',
-    password: 'Reclaim$admin_21',
-    database: 'reclaimportugal_db'
+    user    : 'coinjump_client',
+    password: 'Admin$coinJump_99',
+    database: 'coinjump_db'
   };
   
   module.exports = config;
