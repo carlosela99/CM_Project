@@ -3,7 +3,4 @@
     <string name="app_name">Reclaim Portugal</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="play">Play</string>
-    <string name="question">Make a Question!</string>
-    <string name="settings">Settings</string>
 </resources>

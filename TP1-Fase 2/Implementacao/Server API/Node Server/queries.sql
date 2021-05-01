@@ -7,9 +7,7 @@ CREATE TABLE IF NOT EXISTS players (
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    confirmation_code INT NOT NULL,
-	confirmed TINYINT DEFAULT 0 NOT NULL
+    password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS questions (
