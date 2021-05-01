@@ -2,4 +2,57 @@
     <string name="app_name">Reclaim Portugal</string>
     <string name="login">Iniciar sessão</string>
     <string name="register">Registo</string>
+    <string name="play">Jogar</string>
+    <string name="question">Faz uma Questão!</string>
+    <string name="settings">Configurações</string>
+    <string name="title_activity_main_menu">Main Menu</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="Confirm">Confirmar </string>
+      <string name="username_email">Username / email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Esqueci-me da Password</string>
+    <string name="verification_code">Verificar o código</string>
+    <string name="insert_new_password">Insira uma nova password</string>
+    <string name="confirm_new_password">Confirme a nova password</string>
+    <string name="confirm_password">Confirme a password</string>
+    <string name="username">Nome do Utilizador</string>
+    <string name="confirm">Confirmar</string>
+    <string name="send_verification_code">Envio do código de verificação</string>
+    <string name="password_was_changed">Password foi alterada</string>
+    <string name="registration_complete">Registo Completo</string>
+    <string name="change_password_description">A sua senha foi alterada com sucesso. Da próxima vez, pode usar a sua nova senha para entrar no jogo!</string>
+    <string name="register_description">Foi registado com sucesso no Reclaim Portugal. Agora pode fazer o login e começar a jogar!</string>
+    <string name="verification_code_1">O códiogo de verificação foi enviado <br/> para a sua conta e-mail!</string>
+    <string name="login_fail">Dados inseridos inválidos</string>
+    <string name="code">Código de verificação</string>
+    <string name="change_password">Mudar Palavra-Passe</string>
+    <string name="insert_old_password">Insira a password antiga</string>
+    <string name="correct_Answer">Resposta Correta</string>
+    <string name="wrong_Answer">Resposta Errada</string>
+    <string name="questionText">As questões são submetidas para a nossa equipa antes de serem publicadas</string>
+    <string name="questionSubmited">A tua questão foi submetida!</string>
+    <string name="questionTextInfo">A tua questão foi submetida com sucesso para revisão. Após a validação da nossa equipa, será adicionada ao jogo! </string>
+    <string name="typeYourQuestion">Escreve a tua questão </string>
+    <string name="submitYourQuestion">Submete a tua questão! </string>
+    <string name="ourTeam">Nossa equipa: </string>
+    <string name="LeftNames">Carlos Antunes Daniel Morais Eduardo Ferreira  </string>
+    <string name="rightNames">Jorge Mimoso Marco Teodoro Ricardo Ribeiro </string>
+    <string name="type_yourQuestion">Escreve a tua questão </string> />
+    <string name="yourPassSuccefully">Your password has been changed succefully.            Next time,you can use your new password to login into the game</string> />
+    />/>
+    />
+    />
+    />
+    />
+    />
+    />
+    />
+    />
+    />
 </resources>

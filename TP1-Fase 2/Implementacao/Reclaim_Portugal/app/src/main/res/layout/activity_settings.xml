@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main_menu"
+    tools:context=".Settings">
+
+
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="@string/change_password"
+        app:backgroundTint="#E10C0C"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863" />
+
+    <ImageView
+        android:id="@+id/settingsLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/settingsText"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:srcCompat="@drawable/settingslogo" />
+
+    <TextView
+        android:id="@+id/settingsText"
+        android:layout_width="183dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/candy_beans"
+        android:text="SETTINGS"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/settingsLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ourteamview"
+
+        android:layout_width="114dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/candy_beans"
+
+        android:text="@string/ourTeam"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.774" />
+
+    <TextView
+        android:id="@+id/nomesEsquerda"
+        android:layout_width="138dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/candy_beans"
+        android:text="@string/LeftNames"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nomesDireita"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/nomesDireita"
+        android:layout_width="109dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/candy_beans"
+        android:text="@string/rightNames"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/PortugalIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/musicIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/portugal" />
+
+    <ImageButton
+        android:id="@+id/musicIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="136dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/music" />
+
+    <ImageButton
+        android:id="@+id/reinoUnido"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/muteIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toEndOf="@+id/PortugalIcon"
+        app:srcCompat="@drawable/reino_unido" />
+
+    <ImageButton
+        android:id="@+id/muteIcon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="136dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/musicIcon"
+        app:srcCompat="@drawable/mute" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="67dp"
+        android:layout_height="94dp"
+        android:background="@drawable/back"
+
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
