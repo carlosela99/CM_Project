@@ -6,38 +6,44 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_auth"
     tools:context=".RegisterComplete">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="8">
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5">
+            android:layout_weight="80">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="5">
+                    android:layout_weight="100">>
+
+                    <ImageButton
+                        android:id="@+id/button3"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/back" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="15"
+                    android:layout_height="match_parent">
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="36dp"
@@ -49,64 +55,7 @@
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="30sp" />
-
-
                 </RelativeLayout>
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:fontFamily="@font/candy_beans"
-                        android:shadowColor="@color/black"
-                        android:shadowRadius="4"
-                        android:text="@string/register_description"
-                        android:textAlignment="center"
-                        android:textAllCaps="false"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5">>
-
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="210dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="45dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:fontFamily="@font/candy_beans"
-                        android:onClick="showLogin"
-                        android:padding="10dp"
-                        android:shadowColor="@color/black"
-                        android:shadowRadius="2"
-                        android:text="@string/login"
-                        android:textAllCaps="true"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        app:backgroundTint="#DD2828"
-                        app:cornerRadius="12dp" />
-                </RelativeLayout>
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6"></RelativeLayout>
 
             </LinearLayout>
         </RelativeLayout>
@@ -114,10 +63,103 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="5">
+            android:layout_weight="80">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
 
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5">
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="0dp"
+                                android:fontFamily="@font/candy_beans"
+                                android:shadowColor="@color/black"
+                                android:shadowRadius="4"
+                                android:text="@string/register_description"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5">>
+
+                            <Button
+                                android:id="@+id/button"
+                                android:layout_width="210dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="45dp"
+                                android:layout_marginBottom="0dp"
+                                android:fontFamily="@font/candy_beans"
+                                android:onClick="showLogin"
+                                android:padding="10dp"
+                                android:shadowColor="@color/black"
+                                android:shadowRadius="2"
+                                android:text="@string/login"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                app:backgroundTint="#DD2828"
+                                app:cornerRadius="12dp" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="6"></RelativeLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
+
+
+                </RelativeLayout>
+            </LinearLayout>
         </RelativeLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
