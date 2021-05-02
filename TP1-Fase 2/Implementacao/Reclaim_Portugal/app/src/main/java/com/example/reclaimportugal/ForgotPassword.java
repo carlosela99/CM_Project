@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 public class ForgotPassword extends AppCompatActivity {
 
-    private TextView failLogin;
+    private TextView failEmail;
 
     private boolean isBusy;
 
@@ -22,7 +22,7 @@ public class ForgotPassword extends AppCompatActivity {
         setContentView(R.layout.activity_forgot_password);
 
         isBusy = false;
-        failLogin = (TextView)findViewById(R.id.text_fail);
+        failEmail = (TextView)findViewById(R.id.text_fail);
     }
 
     public void showLogin(View v){
@@ -40,10 +40,10 @@ public class ForgotPassword extends AppCompatActivity {
         String email = emailText.getText().toString();
 
         if (email.isEmpty()){
-            failLogin.setVisibility(View.VISIBLE);
+            failEmail.setVisibility(View.VISIBLE);
         }
         else{
-            failLogin.setVisibility(View.INVISIBLE);
+            failEmail.setVisibility(View.INVISIBLE);
             isBusy = true;
             Server.forgotPassword(email, this);
         }
@@ -58,6 +58,6 @@ public class ForgotPassword extends AppCompatActivity {
     public void forgotErrorResult(){
 
         isBusy = false;
-        failLogin.setVisibility(View.VISIBLE);
+        failEmail.setVisibility(View.VISIBLE);
     }
 }
