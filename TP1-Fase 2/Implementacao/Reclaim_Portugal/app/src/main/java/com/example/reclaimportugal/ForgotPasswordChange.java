@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
-public class ForgotPassword extends AppCompatActivity {
+public class ForgotPasswordChange extends AppCompatActivity {
 
     private TextView failLogin;
 
@@ -18,23 +18,23 @@ public class ForgotPassword extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
+        setContentView(R.layout.activity_forgot_password_change);
 
         isBusy = false;
         failLogin = (TextView)findViewById(R.id.text_fail);
     }
 
-    private void showChangeActivity(){
-        startActivity(new Intent(ForgotPassword.this, ForgotPasswordChange.class));
+    private void showConfirmationActivity(){
+        startActivity(new Intent(ForgotPasswordChange.this, ForgotPasswordComplete.class));
     }
 
-    public void forgotResult(JSONObject response){
+    public void changePasswordResult(JSONObject response){
 
         isBusy = false;
-        showChangeActivity();
+        showConfirmationActivity();
     }
 
-    public void forgotErrorResult(){
+    public void changePasswordErrorResult(){
 
         isBusy = false;
         failLogin.setVisibility(View.VISIBLE);

@@ -18,6 +18,7 @@ public class Server {
     private static final String REGISTER_PATH = "register";
     private static final String CONFIRM_REGISTER_PATH = "confirm-register";
     private static final String FORGET_PASSWORD_PATH = "forget-password";
+    private static final String FORGET_PASSWORD_CONFIRM_PATH = "forget-password-confirm";
 
     public static void loginRequest(String user, String password, Login instance){
         String url = SERVER_ADDRESS + LOGIN_PATH;
@@ -142,6 +143,39 @@ public class Server {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         instance.forgotErrorResult();
+                    }
+                });
+        RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);
+    }
+
+    public static void forgotPasswordChange(String email, String code, String new_password, ForgotPasswordChange instance){
+        String url = SERVER_ADDRESS + FORGET_PASSWORD_CONFIRM_PATH;
+        JSONObject request = new JSONObject();
+
+        try{
+            request.put("Email", email);
+            request.put("Code", code);
+            request.put("Password", hashMD5(new_password));
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+            instance.changePasswordErrorResult();
+        }
+
+        NukeSSLCerts.nuke();
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
+                (Request.Method.POST, url, request, new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        instance.changePasswordResult(response);
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        instance.changePasswordErrorResult();
                     }
                 });
         RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);

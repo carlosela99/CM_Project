@@ -29,16 +29,13 @@
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".PasswordChangeComplete"
+            android:name=".ForgotPasswordComplete"
             android:screenOrientation="landscape" />
         <activity
             android:name=".RegisterComplete"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".ForgetPasswordChange"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".ForgetPasswordCode"
+            android:name=".ForgotPasswordChange"
             android:screenOrientation="landscape" />
         <activity
             android:name=".ForgotPassword"
