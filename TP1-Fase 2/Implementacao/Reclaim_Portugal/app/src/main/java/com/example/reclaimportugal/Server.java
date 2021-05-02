@@ -17,6 +17,7 @@ public class Server {
     private static final String LOGIN_PATH = "login";
     private static final String REGISTER_PATH = "register";
     private static final String CONFIRM_REGISTER_PATH = "confirm-register";
+    private static final String FORGET_PASSWORD_PATH = "forget-password";
 
     public static void loginRequest(String user, String password, Login instance){
         String url = SERVER_ADDRESS + LOGIN_PATH;
@@ -110,6 +111,37 @@ public class Server {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         instance.registerConfirmationErrorResult();
+                    }
+                });
+        RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);
+    }
+
+    public static void forgotPassword(String email, ForgotPassword instance){
+        String url = SERVER_ADDRESS + FORGET_PASSWORD_PATH;
+        JSONObject request = new JSONObject();
+
+        try{
+            request.put("Email", email);
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+            instance.forgotErrorResult();
+        }
+
+        NukeSSLCerts.nuke();
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
+                (Request.Method.POST, url, request, new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        instance.forgotResult(response);
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        instance.forgotErrorResult();
                     }
                 });
         RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);

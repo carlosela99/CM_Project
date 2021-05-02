@@ -35,10 +35,10 @@
             android:name=".RegisterComplete"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Forget3"
+            android:name=".ForgetPasswordChange"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".Forget2"
+            android:name=".ForgetPasswordCode"
             android:screenOrientation="landscape" />
         <activity
             android:name=".ForgotPassword"
