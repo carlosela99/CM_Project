@@ -15,6 +15,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="Confirm">Confirmar </string>
       <string name="username_email">Username / email</string>
+    <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgot_password">Esqueci-me da Password</string>
     <string name="verification_code">Verificar o código</string>

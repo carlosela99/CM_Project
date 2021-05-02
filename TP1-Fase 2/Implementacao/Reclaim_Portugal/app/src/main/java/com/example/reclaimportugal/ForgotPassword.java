@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.json.JSONObject;
@@ -24,8 +25,28 @@ public class ForgotPassword extends AppCompatActivity {
         failLogin = (TextView)findViewById(R.id.text_fail);
     }
 
+    public void showLogin(View v){
+        startActivity(new Intent(ForgotPassword.this, Login.class));
+    }
+
     private void showChangeActivity(){
         startActivity(new Intent(ForgotPassword.this, ForgotPasswordChange.class));
+    }
+
+    public void confirmEmail(View v){
+
+        EditText emailText = (EditText)findViewById(R.id.text_email);
+
+        String email = emailText.getText().toString();
+
+        if (email.isEmpty()){
+            failLogin.setVisibility(View.VISIBLE);
+        }
+        else{
+            failLogin.setVisibility(View.INVISIBLE);
+            isBusy = true;
+            Server.forgotPassword(email, this);
+        }
     }
 
     public void forgotResult(JSONObject response){

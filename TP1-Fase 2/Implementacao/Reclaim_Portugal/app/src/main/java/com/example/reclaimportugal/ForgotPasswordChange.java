@@ -24,6 +24,10 @@ public class ForgotPasswordChange extends AppCompatActivity {
         failLogin = (TextView)findViewById(R.id.text_fail);
     }
 
+    public void backToSubmitEmail(View v){
+        startActivity(new Intent(ForgotPasswordChange.this, ForgotPassword.class));
+    }
+
     private void showConfirmationActivity(){
         startActivity(new Intent(ForgotPasswordChange.this, ForgotPasswordComplete.class));
     }
