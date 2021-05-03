@@ -15,6 +15,10 @@ module.exports.getQuestions = getQuestions;
 const jsonResponse = require("./response");
 const mailer = require("./mailer");
 
+function generateCode(){
+  return Math.floor(Math.random() * (99999 - 10000 + 1) ) + 10000;
+}
+
 async function login(request, response){
 
   try{
@@ -22,7 +26,7 @@ async function login(request, response){
 
     console.log(request.body);
 
-    if(/*!IsJsonString(json) ||*/ !json.hasOwnProperty('User') || !json.hasOwnProperty('Password')){
+    if(!json.hasOwnProperty('User') || !json.hasOwnProperty('Password')){
       jsonResponse.badRequest(response);
       return;
     }
@@ -61,7 +65,7 @@ async function register(request, response){
   try{
     var json = request.body;
 
-    if(/*!IsJsonString(json) ||*/ !json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
+    if(!json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
       jsonResponse.badRequest(response);
       return;
     }
@@ -76,7 +80,7 @@ async function register(request, response){
 
     if (users[0].count == 0){
 
-      var code = Math.floor(Math.random() * (99999 - 10000 + 1) ) + 10000;
+      var code = generateCode();
       await connection.query('INSERT INTO players (email, username, password, confirmation_code) VALUES (?,?,?,?)', [email, username, password, code]);
       mailer.sendRegisterConfirmationCode(email, code);
 
@@ -101,14 +105,14 @@ async function confirmRegister(request, response){
   try{
     var json = request.body;
 
-    if(/*!IsJsonString(json) ||*/ !json.hasOwnProperty('Email') || !json.hasOwnProperty('Code')){
+    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('Code')){
       jsonResponse.badRequest(response);
       return;
     }
 
     var email = json.Email;
     var code = json.Code;
-console.log(code);
+
     var connection = await mysql.createConnection(config);
 
     var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ? and confirmation_code = ?', [email, code]);
@@ -135,10 +139,71 @@ console.log(code);
 
 async function forgotPassword(request, response){
 
+  try{
+    var json = request.body;
+
+    if(!json.hasOwnProperty('Email')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ?', [email]);
+
+    if (users[0].count == 1){
+
+      var code = generateCode();
+      await connection.query('UPDATE players SET confirmation_code = ? WHERE email = ?', [code, email]);
+      mailer.sendForgetPasswordCode(email, code);
+
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
 }
 
 async function changePassword(request, response){
+  try{
+    var json = request.body;
 
+    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var password = json.Password;
+
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ?', [email]);
+
+    if (users[0].count == 1){
+
+      await connection.query('UPDATE players SET password = ? WHERE email = ?', [password, email]);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
 }
 
 async function submitQuestion(request, response){
@@ -147,13 +212,4 @@ async function submitQuestion(request, response){
 
 async function getQuestions(request, response){
 
-}
-
-function IsJsonString(str) {
-  try {
-      JSON.parse(str);
-  } catch (e) {
-      return false;
-  }
-  return true;
 }
