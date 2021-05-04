@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_main_menu"
     tools:context=".Settings">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,21 +16,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="13">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="140">
+
                     <ImageButton
                         android:id="@+id/menuSettingsBack"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/back"
                         android:layout_marginStart="40dp"
                         android:layout_marginTop="20dp"
+                        android:background="@drawable/back"
                         android:scaleType="fitXY" />
                 </RelativeLayout>
 
@@ -37,17 +41,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="23">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
 
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="31">
+
                             <ImageView
                                 android:id="@+id/settingsLogo"
                                 android:layout_width="40dp"
@@ -55,6 +60,7 @@
                                 android:layout_marginStart="18dp"
                                 android:layout_marginTop="30dp"
                                 app:srcCompat="@drawable/settingslogo" />
+
                             <TextView
                                 android:id="@+id/settingsText"
                                 android:layout_width="183dp"
@@ -64,8 +70,7 @@
                                 android:fontFamily="@font/candy_beans"
                                 android:text="@string/settingsname"
                                 android:textColor="@color/white"
-                                android:textSize="30sp"
-                                 />
+                                android:textSize="30sp" />
 
 
                         </RelativeLayout>
@@ -76,9 +81,6 @@
                             android:layout_weight="15">
 
                         </RelativeLayout>
-
-
-
 
                     </LinearLayout>
                 </RelativeLayout>
@@ -91,10 +93,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="10">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -106,23 +110,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="23">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
 
 
-
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="30">
+
                             <ImageButton
                                 android:id="@+id/PortugalIcon"
                                 android:layout_width="64dp"
                                 android:layout_height="64dp"
-                                android:layout_marginTop="5dp"
                                 android:layout_marginStart="24dp"
+                                android:layout_marginTop="5dp"
                                 android:background="@android:color/transparent"
 
                                 app:srcCompat="@drawable/portugal" />
@@ -144,9 +149,9 @@
                                 android:layout_width="64dp"
                                 android:layout_height="64dp"
                                 android:layout_marginStart="100dp"
+                                android:layout_marginTop="5dp"
                                 android:background="@android:color/transparent"
                                 android:scaleType="fitXY"
-                                android:layout_marginTop="5dp"
                                 app:srcCompat="@drawable/reino_unido" />
 
                             <ImageButton
@@ -170,13 +175,10 @@
                         </RelativeLayout>
 
 
-
-
                     </LinearLayout>
                 </RelativeLayout>
 
             </LinearLayout>
-
 
 
         </RelativeLayout>
@@ -184,8 +186,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="10"
-            >
+            android:layout_weight="10">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -196,6 +197,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="10">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -205,6 +207,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="10">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -213,21 +216,21 @@
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="20">
-                                </RelativeLayout>
+                                    android:layout_weight="20"></RelativeLayout>
+
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="12">
+
                                     <Button
                                         android:id="@+id/btnChangePassword"
                                         android:layout_width="wrap_content"
                                         android:layout_height="60dp"
+                                        android:layout_marginTop="40dp"
                                         android:text="@string/change_password"
                                         app:backgroundTint="#E10C0C"
-                                        android:layout_marginTop="40dp"
-                                        app:cornerRadius="20dp"
-                                         />
+                                        app:cornerRadius="20dp" />
                                 </RelativeLayout>
                             </LinearLayout>
 
@@ -247,21 +250,23 @@
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="40">
-                                </RelativeLayout>
+                                    android:layout_weight="40"></RelativeLayout>
+
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="12">
+
                                     <TextView
                                         android:id="@+id/ourteamview"
-                                        android:layout_marginStart="50dp"
-                                        android:layout_marginTop="40dp"
                                         android:layout_width="114dp"
                                         android:layout_height="20dp"
+                                        android:layout_marginStart="50dp"
+                                        android:layout_marginTop="40dp"
                                         android:fontFamily="@font/candy_beans"
                                         android:text="@string/ourTeam"
                                         android:textColor="@color/white" />
+
                                     <TextView
                                         android:id="@+id/nomesEsquerda"
                                         android:layout_width="128dp"
@@ -269,8 +274,7 @@
                                         android:layout_marginTop="60dp"
                                         android:fontFamily="@font/candy_beans"
                                         android:text="@string/LeftNames"
-                                        android:textColor="@color/white"
-                                         />
+                                        android:textColor="@color/white" />
 
                                     <TextView
                                         android:id="@+id/nomesDireita"
@@ -280,9 +284,8 @@
                                         android:layout_marginTop="60dp"
                                         android:fontFamily="@font/candy_beans"
                                         android:text="@string/rightNames"
-                                        android:textColor="@color/white"
-                                         />
-                                        />
+                                        android:textColor="@color/white" />
+                                    />
                                 </RelativeLayout>
                             </LinearLayout>
 
