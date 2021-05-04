@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/estremadura_ribatejo_background">
+
+    <LinearLayout
+        android:id="@+id/region_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/back_region_selection"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:background="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="Go Back Button" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/region_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/candy_beans"
+            android:shadowColor="@color/black"
+            android:shadowRadius="4"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:gravity=""
+            android:text="Title" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/region_middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_top_layout">
+
+        <TextView
+            android:id="@+id/region_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/regions_shape_box"
+            android:fontFamily="@font/candy_beans"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:shadowColor="@android:color/white"
+            android:shadowRadius="4"
+            android:text="Text gets inserted here!"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_play"
+        android:layout_width="202dp"
+        android:layout_height="86dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:color="@android:color/holo_red_light"
+        android:fontFamily="@font/candy_beans"
+        android:text="Play"
+        android:textSize="28sp"
+        app:backgroundTint="@color/red_button"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/region_slider"
+        android:layout_width="360dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="24dp"
+        app:auto_cycle="true"
+        app:corner_radius="5"
+
+        app:delay="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:period="1000">
+
+    </com.denzcoskun.imageslider.ImageSlider>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

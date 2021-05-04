@@ -1,7 +1,5 @@
 package com.example.reclaimportugal;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,13 +7,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Welcome extends AppCompatActivity {
+public class RegionDetails extends AppCompatActivity {
     private ImageButton back;
     private Button playButton;
     private TextView description;
@@ -58,7 +58,7 @@ public class Welcome extends AppCompatActivity {
         description = findViewById(R.id.region_description);
         description.setText("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
-        title = findViewById(R.id.region_title);
+       title = findViewById(R.id.region_title);
         title.setText("Estremadura e Ribatejo");
     }
 
