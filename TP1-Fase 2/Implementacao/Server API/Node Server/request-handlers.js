@@ -6,7 +6,8 @@ let config = require('./config.js');
 module.exports.login = login;
 module.exports.register = register;
 module.exports.confirmRegister = confirmRegister;
-module.exports.forgotPassword = forgotPassword;
+module.exports.forgetPassword = forgetPassword;
+module.exports.forgetPasswordChange = forgetPasswordChange;
 module.exports.changePassword = changePassword;
 module.exports.submitQuestion = submitQuestion;
 module.exports.getQuestions = getQuestions;
@@ -137,7 +138,7 @@ async function confirmRegister(request, response){
   }
 }
 
-async function forgotPassword(request, response){
+async function forgetPassword(request, response){
 
   try{
     var json = request.body;
@@ -173,25 +174,60 @@ async function forgotPassword(request, response){
   }
 }
 
-async function changePassword(request, response){
+async function forgetPasswordChange(request, response){
   try{
     var json = request.body;
 
-    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
+    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('Code') || !json.hasOwnProperty('Password')){
       jsonResponse.badRequest(response);
       return;
     }
 
     var email = json.Email;
+    var code = json.Code;
     var password = json.Password;
 
     var connection = await mysql.createConnection(config);
 
-    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ?', [email]);
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ? and confirmation_code = ?', [email, code]);
 
     if (users[0].count == 1){
 
       await connection.query('UPDATE players SET password = ? WHERE email = ?', [password, email]);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
+}
+
+async function changePassword(request, response){
+  try{
+    var json = request.body;
+
+    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('OldPassword') || !json.hasOwnProperty('NewPassword')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var old_pass = json.OldPassword;
+    var new_pass = json.NewPassword;
+
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ? and password = ?', [email, old_pass]);
+
+    if (users[0].count == 1){
+
+      await connection.query('UPDATE players SET password = ? WHERE email = ?', [new_pass, email]);
       jsonResponse.ok(response);
     }
     else{

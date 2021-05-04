@@ -18,7 +18,7 @@ public class Server {
     private static final String REGISTER_PATH = "register";
     private static final String CONFIRM_REGISTER_PATH = "confirm-register";
     private static final String FORGET_PASSWORD_PATH = "forget-password";
-    private static final String FORGET_PASSWORD_CONFIRM_PATH = "forget-password-confirm";
+    private static final String FORGET_PASSWORD_CHANGE_PATH = "forget-password-change";
 
     public static void loginRequest(String user, String password, Login instance){
         String url = SERVER_ADDRESS + LOGIN_PATH;
@@ -149,7 +149,7 @@ public class Server {
     }
 
     public static void forgotPasswordChange(String email, String code, String new_password, ForgotPasswordChange instance){
-        String url = SERVER_ADDRESS + FORGET_PASSWORD_CONFIRM_PATH;
+        String url = SERVER_ADDRESS + FORGET_PASSWORD_CHANGE_PATH;
         JSONObject request = new JSONObject();
 
         try{

@@ -25,7 +25,10 @@ const options = {
 app.post("/login", requestHandlers.login);
 app.post("/register", requestHandlers.register);
 app.post("/confirm-register", requestHandlers.confirmRegister);
-app.post("/forgot-password", requestHandlers.forgotPassword);
+app.post("/forget-password", requestHandlers.forgetPassword);
+app.post("/forget-password-change", requestHandlers.forgetPasswordChange);
+
+// Profile requests
 app.post("/change-password", requestHandlers.changePassword);
 
 // Game requests

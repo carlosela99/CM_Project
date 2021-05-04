@@ -14,6 +14,7 @@ public class ForgotPasswordChange extends AppCompatActivity {
 
     private TextView failChange;
 
+    private String email;
     private boolean isBusy;
 
     @Override
@@ -23,6 +24,7 @@ public class ForgotPasswordChange extends AppCompatActivity {
 
         isBusy = false;
         failChange = (TextView)findViewById(R.id.text_fail);
+        email = getIntent().getStringExtra("EMAIL");
     }
 
     public void backToSubmitEmail(View v){
@@ -38,14 +40,25 @@ public class ForgotPasswordChange extends AppCompatActivity {
         String password = passwordText.getText().toString();
         String passwordConfirm = passwordConfirmText.getText().toString();
 
-        if (code.isEmpty() || password.isEmpty() || passwordConfirm.isEmpty() || !password.equals(passwordConfirm)){
-            failChange.setVisibility(View.VISIBLE);
+        if (code.isEmpty()){
+            showErrorMessage(getString(R.string.mandatory_code));
+        }
+        else if (!Validations.PasswordFormat(password)){
+            showErrorMessage(getString(R.string.invalid_password));
+        }
+        else if (!password.equals(passwordConfirm)){
+            showErrorMessage(getString(R.string.invalid_password_compare));
         }
         else{
             failChange.setVisibility(View.INVISIBLE);
             isBusy = true;
-            Server.forgotPasswordChange(code, password, passwordConfirm, this);
+            Server.forgotPasswordChange(email, code, password, this);
         }
+    }
+
+    private void showErrorMessage(String message){
+        failChange.setText(message);
+        failChange.setVisibility(View.VISIBLE);
     }
 
     private void showConfirmationActivity(){
@@ -61,6 +74,6 @@ public class ForgotPasswordChange extends AppCompatActivity {
     public void changePasswordErrorResult(){
 
         isBusy = false;
-        failChange.setVisibility(View.VISIBLE);
+        showErrorMessage(getString(R.string.invalid_code));
     }
 }

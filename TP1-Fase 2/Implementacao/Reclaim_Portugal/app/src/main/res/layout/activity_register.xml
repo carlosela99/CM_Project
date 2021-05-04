@@ -92,8 +92,7 @@
                             <EditText
                                 android:id="@+id/text_username"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_margin="8dp"
+                                android:layout_height="60dp"
                                 android:background="@drawable/text_box"
                                 android:ems="10"
                                 android:fontFamily="@font/candy_beans"
@@ -111,16 +110,12 @@
                             <EditText
                                 android:id="@+id/text_email"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:layout_marginBottom="8dp"
+                                android:layout_height="60dp"
                                 android:background="@drawable/text_box"
                                 android:ems="10"
                                 android:fontFamily="@font/candy_beans"
                                 android:hint="Email"
-                                android:inputType="textPersonName"
+                                android:inputType="textEmailAddress"
                                 android:padding="16dp" />
 
                         </RelativeLayout>
@@ -133,11 +128,7 @@
                             <EditText
                                 android:id="@+id/text_password"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:layout_marginBottom="8dp"
+                                android:layout_height="60dp"
                                 android:background="@drawable/text_box"
                                 android:ems="10"
                                 android:fontFamily="@font/candy_beans"
@@ -155,11 +146,7 @@
                             <EditText
                                 android:id="@+id/text_password_confirm"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="8dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="8dp"
-                                android:layout_marginBottom="8dp"
+                                android:layout_height="60dp"
                                 android:background="@drawable/text_box"
                                 android:ems="10"
                                 android:fontFamily="@font/candy_beans"
@@ -172,24 +159,18 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_weight="7">
+                            android:layout_weight="6">
 
                             <TextView
                                 android:id="@+id/text_fail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
+                                android:textAlignment="center"
                                 android:fontFamily="@font/candy_beans"
                                 android:text="@string/login_fail"
                                 android:textColor="@color/red_incorrect"
                                 android:visibility="invisible" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="7">
-
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -202,18 +183,19 @@
 
                     <Button
                         android:id="@+id/button2"
-                        android:layout_width="145dp"
-                        android:layout_height="60dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginEnd="8dp"
                         android:layout_marginBottom="50dp"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="12dp"
                         android:background="#FFFFFF"
                         android:color="@android:color/holo_red_light"
                         android:fontFamily="@font/candy_beans"
                         android:onClick="registerUser"
                         android:text="Register"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         app:backgroundTint="@color/red_button"
                         app:cornerRadius="12dp" />
                 </RelativeLayout>

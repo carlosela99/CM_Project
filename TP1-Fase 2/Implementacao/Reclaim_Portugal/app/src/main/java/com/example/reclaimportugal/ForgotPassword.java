@@ -14,6 +14,7 @@ public class ForgotPassword extends AppCompatActivity {
 
     private TextView failEmail;
 
+    private String email;
     private boolean isBusy;
 
     @Override
@@ -30,23 +31,30 @@ public class ForgotPassword extends AppCompatActivity {
     }
 
     private void showChangeActivity(){
-        startActivity(new Intent(ForgotPassword.this, ForgotPasswordChange.class));
+        Intent intent = new Intent(ForgotPassword.this, ForgotPasswordChange.class);
+        intent.putExtra("EMAIL", email);
+        startActivity(intent);
     }
 
     public void confirmEmail(View v){
 
         EditText emailText = (EditText)findViewById(R.id.text_email);
 
-        String email = emailText.getText().toString();
+        email = emailText.getText().toString();
 
-        if (email.isEmpty()){
-            failEmail.setVisibility(View.VISIBLE);
+        if (!Validations.EmailFormat(email)){
+            showErrorMessage(getString(R.string.invalid_email));
         }
         else{
             failEmail.setVisibility(View.INVISIBLE);
             isBusy = true;
             Server.forgotPassword(email, this);
         }
+    }
+
+    private void showErrorMessage(String message){
+        failEmail.setText(message);
+        failEmail.setVisibility(View.VISIBLE);
     }
 
     public void forgotResult(JSONObject response){
@@ -58,6 +66,6 @@ public class ForgotPassword extends AppCompatActivity {
     public void forgotErrorResult(){
 
         isBusy = false;
-        failEmail.setVisibility(View.VISIBLE);
+        showErrorMessage(getString(R.string.error_email_not_exists));
     }
 }

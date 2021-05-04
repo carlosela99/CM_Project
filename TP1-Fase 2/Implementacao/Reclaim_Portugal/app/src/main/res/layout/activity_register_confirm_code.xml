@@ -71,7 +71,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="75"/>
+                android:layout_weight="70"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -91,11 +91,9 @@
                         <EditText
                             android:id="@+id/text_code"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="60dp"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
-                            android:layout_marginHorizontal="20dp"
-                            android:layout_marginVertical="16dp"
                             android:background="@drawable/text_box"
                             android:ems="10"
                             android:fontFamily="@font/candy_beans"
@@ -109,7 +107,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="60">
+                        android:layout_weight="70">
 
                         <TextView
                             android:id="@+id/text_fail"
@@ -125,7 +123,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="50">
+                        android:layout_weight="60">
 
                         <Button
                             android:id="@+id/button"
@@ -151,7 +149,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="45">
+                        android:layout_weight="55">
 
                     </RelativeLayout>
 

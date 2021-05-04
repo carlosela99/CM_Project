@@ -3,12 +3,14 @@ package com.example.reclaimportugal;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONObject;
@@ -54,8 +56,17 @@ public class Register extends AppCompatActivity {
         String password = passwordText.getText().toString();
         String confirmPassword = confirmPasswordText.getText().toString();
 
-        if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || !password.equals(confirmPassword)){
-            failRegister.setVisibility(View.VISIBLE);
+        if (username.isEmpty()){
+            showErrorMessage(getString(R.string.invalid_username));
+        }
+        else if (!Validations.EmailFormat(email)){
+            showErrorMessage(getString(R.string.invalid_email));
+        }
+        else if (!Validations.PasswordFormat(password)){
+            showErrorMessage(getString(R.string.invalid_password));
+        }
+        else if (!password.equals(confirmPassword)){
+            showErrorMessage(getString(R.string.invalid_password_compare));
         }
         else{
             failRegister.setVisibility(View.INVISIBLE);
@@ -63,6 +74,11 @@ public class Register extends AppCompatActivity {
             submittedEmail = email;
             Server.registerRequest(username, email, password, this);
         }
+    }
+
+    private void showErrorMessage(String message){
+        failRegister.setText(message);
+        failRegister.setVisibility(View.VISIBLE);
     }
 
     public void registerResult(JSONObject response){
@@ -75,6 +91,6 @@ public class Register extends AppCompatActivity {
     public void registerErrorResult(){
         submittedEmail = null;
         isBusy = false;
-        failRegister.setVisibility(View.VISIBLE);
+        showErrorMessage(getString(R.string.invalid_register));
     }
 }

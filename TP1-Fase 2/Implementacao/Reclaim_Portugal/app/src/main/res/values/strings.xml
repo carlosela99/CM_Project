@@ -18,6 +18,14 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgot_password">Esqueci-me da Password</string>
+    <string name="invalid_username">O Nome de Utilizador é obrigatório</string>
+    <string name="invalid_email">O Email é inválido</string>
+    <string name="invalid_password">A password requer um mínimo de 6 caracteres</string>
+    <string name="invalid_password_compare">As passwords inseridas são diferentes</string>
+    <string name="invalid_register">Já existe uma conta com esse Email ou Nome de Utilizador</string>
+    <string name="mandatory_code">É necessário inserir o código de verificação</string>
+    <string name="invalid_code">O código inserido é inválido</string>
+    <string name="error_email_not_exists">O Email inserido não corresponde a nenhuma conta</string>
     <string name="verification_code">Verificar o código</string>
     <string name="insert_new_password">Insira uma nova password</string>
     <string name="confirm_new_password">Confirme a nova password</string>
@@ -29,7 +37,8 @@
     <string name="registration_complete">Registo Completo</string>
     <string name="change_password_description">A sua senha foi alterada com sucesso. Da próxima vez, pode usar a sua nova senha para entrar no jogo!</string>
     <string name="register_description">Foi registado com sucesso no Reclaim Portugal. Agora pode fazer o login e começar a jogar!</string>
-    <string name="verification_code_1">O códiogo de verificação foi enviado <br/> para a sua conta e-mail!</string>
+    <string name="verification_code_1">O código de verificação foi enviado <br/> para o seu e-mail!</string>
+    <string name="verification_code_sent">Será enviado um código de verificação <br/> para o seu e-mail!</string>
     <string name="login_fail">Dados inseridos inválidos</string>
     <string name="code">Código de verificação</string>
     <string name="change_password">Mudar Palavra-Passe</string>
