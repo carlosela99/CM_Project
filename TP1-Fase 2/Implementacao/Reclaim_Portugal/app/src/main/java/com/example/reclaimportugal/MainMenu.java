@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainMenu extends AppCompatActivity {
-    private ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +19,14 @@ public class MainMenu extends AppCompatActivity {
         String username = getIntent().getStringExtra("USERNAME");
         String email = getIntent().getStringExtra("EMAIL");
 
-        imageButton = (ImageButton) findViewById(R.id.settings_icon);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSettings();
-            }
-        });
+        TextView tvUsername = (TextView) findViewById(R.id.username);
+        tvUsername.setText(username);
+
+        TextView tvEmail = (TextView) findViewById(R.id.email);
+        tvEmail.setText(email);
     }
 
-    public void openSettings() {
+    public void openSettings(View view) {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }

@@ -15,7 +15,7 @@ public class SubmitQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submit_question);
 
-        imageButton = (ImageButton) findViewById(R.id.settingsBack);
+        imageButton = (ImageButton) findViewById(R.id.submitQuestionBack);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

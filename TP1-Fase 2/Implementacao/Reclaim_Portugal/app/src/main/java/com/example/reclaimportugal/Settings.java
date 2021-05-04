@@ -22,7 +22,7 @@ public class Settings extends AppCompatActivity {
             }
         });
 
-        ImageButton btnBack = findViewById(R.id.back);
+        ImageButton btnBack = (ImageButton) findViewById(R.id.menuSettingsBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

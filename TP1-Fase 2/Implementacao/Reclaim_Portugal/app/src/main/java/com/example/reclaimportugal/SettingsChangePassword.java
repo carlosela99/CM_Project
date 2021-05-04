@@ -8,14 +8,13 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SettingsChangePassword extends AppCompatActivity {
-    private ImageButton imageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acitvity_settings_change_password);
 
-        imageButton = (ImageButton) findViewById(R.id.backSettings);
+        ImageButton imageButton = (ImageButton) findViewById(R.id.settingsChangePasswordBack);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
