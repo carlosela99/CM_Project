@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void showForgotPassword(View v){
-        startActivity(new Intent(Login.this, Welcome.class));
+        startActivity(new Intent(Login.this, ForgotPassword.class));
     }
 
     private void showMainMenu(String username, String email){
