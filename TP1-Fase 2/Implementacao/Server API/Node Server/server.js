@@ -10,25 +10,30 @@ const app = express();
 app.use(express.json());
 
 // service listening port
-const port = 5656; // MUDAR
+const port = 5407;
 
 // import local modules
 const requestHandlers = require("./request-handlers");
 
 // ssl certificate
 const options = {
-    key: fs.readFileSync('./certs/self-signed.key'), // GERAR NOVOS
+    key: fs.readFileSync('./certs/self-signed.key'),
     cert: fs.readFileSync('./certs/self-signed.crt')
 };
 
-// requests
+// Authentication requests
+app.post("/login", requestHandlers.login);
+app.post("/register", requestHandlers.register);
+app.post("/confirm-register", requestHandlers.confirmRegister);
+app.post("/forget-password", requestHandlers.forgetPassword);
+app.post("/forget-password-change", requestHandlers.forgetPasswordChange);
+
+// Profile requests
+app.post("/change-password", requestHandlers.changePassword);
+
+// Game requests
 app.get("/questions", requestHandlers.getQuestions);
-app.put("/login", requestHandlers.login);
-app.put("/register", requestHandlers.register);
-app.put("/forgot-password", requestHandlers.forgotPassword);
-app.put("/change-password", requestHandlers.changePassword);
-app.put("/submit-question", requestHandlers.submitQuestion);
-// MUDAR PARA POSTS
+app.post("/submit-question", requestHandlers.submitQuestion);
 
 // 404 not found
 app.use(function (req, res, next) {

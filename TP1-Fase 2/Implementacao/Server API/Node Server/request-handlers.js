@@ -5,87 +5,241 @@ let config = require('./config.js');
 // export module functions
 module.exports.login = login;
 module.exports.register = register;
-module.exports.forgotPassword = forgotPassword;
+module.exports.confirmRegister = confirmRegister;
+module.exports.forgetPassword = forgetPassword;
+module.exports.forgetPasswordChange = forgetPasswordChange;
 module.exports.changePassword = changePassword;
 module.exports.submitQuestion = submitQuestion;
 module.exports.getQuestions = getQuestions;
 
+// import local modules
+const jsonResponse = require("./response");
+const mailer = require("./mailer");
+
+function generateCode(){
+  return Math.floor(Math.random() * (99999 - 10000 + 1) ) + 10000;
+}
 
 async function login(request, response){
 
   try{
-    var body = request.body;
+    var json = request.body;
 
-    if(!IsJsonString(request.body) || !json.hasOwnProperty('User') || !json.hasOwnProperty('Password')){
-      response.sendStatus(400);
+    console.log(request.body);
+
+    if(!json.hasOwnProperty('User') || !json.hasOwnProperty('Password')){
+      jsonResponse.badRequest(response);
       return;
     }
 
-    var username_email = body.User;
-    var password = body.Password;
+    var username_email = json.User;
+    var password = json.Password;
 
     var connection = await mysql.createConnection(config);
 
-    var [user] = await connection.query('SELECT id as user FROM players WHERE username = ? or email = ?', username_email, username_email);
+    var [user] = await connection.query('SELECT id FROM players WHERE username = ? or email = ?', [username_email, username_email]);
 
-    if (user.id != undefined){
+    if (user.length > 0){
 
-      var [login] = await connection.query('SELECT COUNT(*) as user FROM players WHERE id = ? and password = ?', user.id, password);
+      var [login] = await connection.query('SELECT COUNT(*) as user FROM players WHERE id = ? and password = ?', [user[0].id, password]);
 
-      if (login.user > 0){
-
-        response.sendStatus(200);
+      if (login[0].user > 0){
+        var [profile] = await connection.query('SELECT username, email FROM players WHERE id = ?', [user[0].id]);
+        console.log("New login with " + json.User);
+        jsonResponse.playerProfile(response, profile[0].username, profile[0].email);
         connection.end();
         return;
       }
     }
+    console.log("Fail login with " + json.User);
     connection.end();
-    response.sendStatus(201);
+    jsonResponse.unauthorized(response);
   }
-  catch{
-    response.sendStatus(500);
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
   }
 }
 
 async function register(request, response){
 
   try{
-    var body = request.body;
+    var json = request.body;
 
-    if(!IsJsonString(request.body) || !json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
-      response.sendStatus(400);
+    if(!json.hasOwnProperty('Username') || !json.hasOwnProperty('Email') || !json.hasOwnProperty('Password')){
+      jsonResponse.badRequest(response);
       return;
     }
 
-    var username = body.Username;
-    var email = body.Email;
-    var password = body.Password;
+    var username = json.Username;
+    var email = json.Email;
+    var password = json.Password;
 
     var connection = await mysql.createConnection(config);
 
-    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE username = ? or email = ?', username, email);
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE username = ? or email = ?', [username, email]);
 
-    if (users.count == 0){
+    if (users[0].count == 0){
 
-      var [register] = await connection.query('INSERT INTO player (email, username, password) VALUES (?,?,?)', email, username, password);
+      var code = generateCode();
+      await connection.query('INSERT INTO players (email, username, password, confirmation_code) VALUES (?,?,?,?)', [email, username, password, code]);
+      mailer.sendRegisterConfirmationCode(email, code);
 
-      response.sendStatus(200);
-      return;
+      console.log("New register with " + json.Email);
+      jsonResponse.ok(response);
     }
-    connection.end();
-    response.sendStatus(201);
+    else{
+
+      console.log("Fail register with " + json.Email);
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
   }
-  catch{
-    response.sendStatus(500);
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
   }
 }
 
-async function forgotPassword(request, response){
+async function confirmRegister(request, response){
 
+  try{
+    var json = request.body;
+
+    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('Code')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var code = json.Code;
+
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ? and confirmation_code = ?', [email, code]);
+    console.log(users[0].count);
+    if (users[0].count == 1){
+
+      await connection.query('UPDATE players SET confirmed = 1 WHERE email = ? and confirmation_code = ?', [email, code]);
+
+      console.log("Email confirmed with " + json.Email);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      console.log("Fail confirmation with " + json.Email);
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
+}
+
+async function forgetPassword(request, response){
+
+  try{
+    var json = request.body;
+
+    if(!json.hasOwnProperty('Email')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ?', [email]);
+
+    if (users[0].count == 1){
+
+      var code = generateCode();
+      await connection.query('UPDATE players SET confirmation_code = ? WHERE email = ?', [code, email]);
+      mailer.sendForgetPasswordCode(email, code);
+
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
+}
+
+async function forgetPasswordChange(request, response){
+  try{
+    var json = request.body;
+
+    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('Code') || !json.hasOwnProperty('Password')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var code = json.Code;
+    var password = json.Password;
+
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ? and confirmation_code = ?', [email, code]);
+
+    if (users[0].count == 1){
+
+      await connection.query('UPDATE players SET password = ? WHERE email = ?', [password, email]);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
 }
 
 async function changePassword(request, response){
+  try{
+    var json = request.body;
 
+    if(!json.hasOwnProperty('Email') || !json.hasOwnProperty('OldPassword') || !json.hasOwnProperty('NewPassword')){
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var old_pass = json.OldPassword;
+    var new_pass = json.NewPassword;
+
+    var connection = await mysql.createConnection(config);
+
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ? and password = ?', [email, old_pass]);
+
+    if (users[0].count == 1){
+
+      await connection.query('UPDATE players SET password = ? WHERE email = ?', [new_pass, email]);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
 }
 
 async function submitQuestion(request, response){
@@ -94,13 +248,4 @@ async function submitQuestion(request, response){
 
 async function getQuestions(request, response){
 
-}
-
-function IsJsonString(str) {
-  try {
-      JSON.parse(str);
-  } catch (e) {
-      return false;
-  }
-  return true;
 }
