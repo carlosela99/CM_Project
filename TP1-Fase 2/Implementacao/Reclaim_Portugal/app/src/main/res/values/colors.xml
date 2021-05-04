@@ -11,4 +11,9 @@
     <color name="yellow">#ffbf00</color>
     <color name="red_button">#D31E1E</color>
     <color name="red_incorrect">#FF0000</color>
+    <color name="orange">#e59400</color>
+    <color name="blue">#0EC1ED</color>
+
+
+
 </resources>

@@ -16,7 +16,6 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-
         <activity
             android:name=".RegisterConfirmCode"
             android:screenOrientation="landscape"/>
@@ -46,6 +45,18 @@
             android:name=".Register"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".GameOngoing"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RegionDetails"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RegionSelect"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MatchResult"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".Welcome"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -53,6 +64,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        
     </application>
 
 </manifest>
