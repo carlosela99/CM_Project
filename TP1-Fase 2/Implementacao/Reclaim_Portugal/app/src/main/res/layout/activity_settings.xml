@@ -34,7 +34,8 @@
                         android:layout_marginStart="40dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/back"
-                        android:scaleType="fitXY" />
+                        android:scaleType="fitXY"
+                        android:onClick="openMainMenu"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -216,7 +217,9 @@
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="20"></RelativeLayout>
+                                    android:layout_weight="20">
+
+                                </RelativeLayout>
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
@@ -230,7 +233,8 @@
                                         android:layout_marginTop="40dp"
                                         android:text="@string/change_password"
                                         app:backgroundTint="#E10C0C"
-                                        app:cornerRadius="20dp" />
+                                        app:cornerRadius="20dp"
+                                        android:onClick="openSettingsChangePassword"/>
                                 </RelativeLayout>
                             </LinearLayout>
 

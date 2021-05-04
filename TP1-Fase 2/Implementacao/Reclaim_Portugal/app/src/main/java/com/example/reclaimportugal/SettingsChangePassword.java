@@ -13,17 +13,9 @@ public class SettingsChangePassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acitvity_settings_change_password);
-
-        ImageButton imageButton = (ImageButton) findViewById(R.id.settingsChangePasswordBack);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSettings();
-            }
-        });
     }
 
-    public void openSettings() {
+    public void openSettings(View view) {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }

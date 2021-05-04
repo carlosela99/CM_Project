@@ -13,30 +13,14 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-        Button btnChangePassword = findViewById(R.id.btnChangePassword);
-        btnChangePassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSettingsChangePassword();
-            }
-        });
-
-        ImageButton btnBack = (ImageButton) findViewById(R.id.menuSettingsBack);
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMainMenu();
-            }
-        });
     }
 
-    public void openSettingsChangePassword() {
+    public void openSettingsChangePassword(View view) {
         Intent intent = new Intent(this, SettingsChangePassword.class);
         startActivity(intent);
     }
 
-    public void openMainMenu() {
+    public void openMainMenu(View view) {
         Intent intent = new Intent(this, MainMenu.class);
         startActivity(intent);
     }

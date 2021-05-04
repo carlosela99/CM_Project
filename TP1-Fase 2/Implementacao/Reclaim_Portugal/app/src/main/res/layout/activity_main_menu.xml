@@ -92,10 +92,10 @@
                         android:adjustViewBounds="true"
                         android:background="@android:color/transparent"
                         android:contentDescription="@string/settings"
-                        android:onClick="openSettings"
                         android:padding="10dp"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/settings" />
+                        app:srcCompat="@drawable/settings"
+                        android:onClick="openSettings" />
                 </RelativeLayout>
             </LinearLayout>
 
