@@ -9,10 +9,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Settings extends AppCompatActivity {
+
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        email = getIntent().getStringExtra("EMAIL");
 
         Button btnChangePassword = findViewById(R.id.btnChangePassword);
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +38,7 @@ public class Settings extends AppCompatActivity {
 
     public void openSettingsChangePassword() {
         Intent intent = new Intent(this, SettingsChangePassword.class);
+        intent.putExtra("EMAIL", email);
         startActivity(intent);
     }
 

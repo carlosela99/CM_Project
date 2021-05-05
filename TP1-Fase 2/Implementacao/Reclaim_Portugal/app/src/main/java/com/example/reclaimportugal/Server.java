@@ -182,14 +182,14 @@ public class Server {
         RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);
     }
 
-    public static void changePasswordSettings(String email, String code, String new_password, ForgotPasswordChange instance){
-        String url = SERVER_ADDRESS + FORGET_PASSWORD_CHANGE_PATH;
+    public static void changePasswordSettings(String email, String old_password, String new_password, SettingsChangePassword instance){
+        String url = SERVER_ADDRESS + CHANGE_PASSWORD_PATH;
         JSONObject request = new JSONObject();
 
         try{
             request.put("Email", email);
-            request.put("Code", code);
-            request.put("Password", hashMD5(new_password));
+            request.put("OldPassword", hashMD5(old_password));
+            request.put("NewPassword", hashMD5(new_password));
         }
         catch (JSONException e){
             e.printStackTrace();

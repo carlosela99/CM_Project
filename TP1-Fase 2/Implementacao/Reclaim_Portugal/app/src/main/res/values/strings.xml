@@ -22,6 +22,7 @@
     <string name="invalid_email">O Email é inválido</string>
     <string name="invalid_password">A password requer um mínimo de 6 caracteres</string>
     <string name="invalid_password_compare">As passwords inseridas são diferentes</string>
+    <string name="invalid_old_password">A password atual está inválida</string>
     <string name="invalid_register">Já existe uma conta com esse Email ou Nome de Utilizador</string>
     <string name="mandatory_code">É necessário inserir o código de verificação</string>
     <string name="invalid_code">O código inserido é inválido</string>
@@ -50,7 +51,7 @@
     <string name="questionTextInfo">A tua questão foi submetida com sucesso para revisão. Após a validação da nossa equipa, será adicionada ao jogo! </string>
     <string name="typeYourQuestion">Escreve a tua questão </string>
     <string name="submitYourQuestion">Submete a tua questão! </string>
-    <string name="ourTeam">Nossa equipa: </string>
+    <string name="ourTeam">A nossa equipa:</string>
     <string name="LeftNames">Carlos Antunes Daniel Morais Eduardo Ferreira  </string>
     <string name="rightNames">Jorge Mimoso Marco Teodoro Ricardo Ribeiro </string>
     <string name="type_yourQuestion">Escreve a tua questão </string>
