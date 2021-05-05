@@ -16,9 +16,10 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
         <activity
             android:name=".RegisterConfirmCode"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Settings"
             android:screenOrientation="landscape" />
@@ -29,9 +30,15 @@
             android:name=".SettingsConfirmation"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".SubmitQuestion"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SubmitQuestionConfimation"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ForgotPasswordComplete"
             android:screenOrientation="landscape" />
@@ -70,8 +77,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        
     </application>
-
 </manifest>

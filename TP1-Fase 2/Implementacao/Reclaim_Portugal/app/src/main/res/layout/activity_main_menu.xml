@@ -92,10 +92,10 @@
                         android:adjustViewBounds="true"
                         android:background="@android:color/transparent"
                         android:contentDescription="@string/settings"
+                        android:onClick="openSettings"
                         android:padding="10dp"
                         android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/settings"
-                        android:onClick="openSettings" />
+                        app:srcCompat="@drawable/settings" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -114,7 +114,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="10">
+                    android:layout_weight="13">
 
                 </RelativeLayout>
 
@@ -122,6 +122,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="10">
+
+                    <ImageView
+                        android:id="@+id/separator_icon"
+                        android:layout_width="5dp"
+                        android:layout_height="110dp"
+                        app:srcCompat="@drawable/separator"
+                        android:layout_centerInParent="true"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -171,6 +178,7 @@
                                                 android:id="@+id/trophies_total"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
                                                 android:text="TextView" />
                                         </RelativeLayout>
                                     </LinearLayout>
@@ -183,6 +191,37 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="10">
 
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="10">
+
+                                            <ImageView
+                                                android:id="@+id/friends_icon"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                app:srcCompat="@drawable/friends" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="10">
+
+                                            <TextView
+                                                android:id="@+id/friends_total"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:text="TextView" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
                                 </RelativeLayout>
 
                             </LinearLayout>
@@ -203,6 +242,38 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="10">
 
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="10">
+
+                                            <ImageView
+                                                android:id="@+id/wrong_icon"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                app:srcCompat="@drawable/wrong" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="10">
+
+                                            <TextView
+                                                android:id="@+id/wrong_total"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:text="TextView" />
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
                                 </RelativeLayout>
 
                                 <RelativeLayout
@@ -210,59 +281,42 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="10">
 
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="10">
+
+                                            <ImageView
+                                                android:id="@+id/right_icon"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_centerInParent="true"
+                                                app:srcCompat="@drawable/right" />
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="10">
+
+                                            <TextView
+                                                android:id="@+id/right_total"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:text="TextView" />
+                                        </RelativeLayout>
+                                    </LinearLayout>
                                 </RelativeLayout>
                             </LinearLayout>
                         </RelativeLayout>
 
                     </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/right_total"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/friends_total"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/separator_icon"
-                        android:layout_width="5dp"
-                        android:layout_height="110dp"
-                        app:srcCompat="@drawable/separator" />
-
-                    <TextView
-                        android:id="@+id/wrong_total"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:text="TextView" />
-
-                    <ImageView
-                        android:id="@+id/right_icon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="136dp"
-                        app:srcCompat="@drawable/right" />
-
-                    <ImageView
-                        android:id="@+id/friends_icon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        app:srcCompat="@drawable/friends" />
-
-                    <ImageView
-                        android:id="@+id/wrong_icon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_marginEnd="348dp"
-                        app:srcCompat="@drawable/wrong" />
 
 
                 </RelativeLayout>
@@ -328,7 +382,8 @@
                         app:backgroundTint="#FE9823"
                         app:cornerRadius="30dp"
                         app:strokeColor="#000000"
-                        app:strokeWidth="3dp" />
+                        app:strokeWidth="3dp"
+                        android:onClick="openSubmitQuestion"/>
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
