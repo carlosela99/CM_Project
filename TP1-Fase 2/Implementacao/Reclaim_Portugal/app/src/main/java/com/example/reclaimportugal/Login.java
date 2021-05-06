@@ -39,6 +39,7 @@ public class Login extends AppCompatActivity {
         Intent intent = new Intent(Login.this, MainMenu.class);
         intent.putExtra("USERNAME", username);
         intent.putExtra("EMAIL", email);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 

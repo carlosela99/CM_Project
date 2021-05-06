@@ -40,6 +40,7 @@ public class Register extends AppCompatActivity {
         if (submittedEmail != null){
             Intent intent = new Intent(Register.this, RegisterConfirmCode.class);
             intent.putExtra("EMAIL_ADDRESS", submittedEmail);
+            finish();
             startActivity(intent);
         }
     }

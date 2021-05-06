@@ -10,145 +10,106 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="80">
+            android:layout_weight="8">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="100">>
-
-                    <ImageButton
-                        android:id="@+id/button3"
-                        android:layout_width="50dp"
-                        android:layout_height="60dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/back" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_weight="15"
-                    android:layout_height="match_parent">
+                    android:layout_weight="5">
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_centerVertical="true"
+                        android:layout_centerInParent="true"
                         android:fontFamily="@font/candy_beans"
                         android:shadowColor="@color/black"
                         android:shadowRadius="4"
+                        android:textAlignment="center"
                         android:text="@string/registration_complete"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
                         android:textSize="30sp" />
                 </RelativeLayout>
 
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/candy_beans"
+                        android:shadowColor="@color/black"
+                        android:shadowRadius="4"
+                        android:text="@string/register_description"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">>
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/candy_beans"
+                        android:onClick="showLogin"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:shadowColor="@color/black"
+                        android:shadowRadius="2"
+                        android:text="@string/login"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:backgroundTint="#DD2828"
+                        app:cornerRadius="12dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"></RelativeLayout>
+
             </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="20">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="8">
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+            android:layout_weight="5">
 
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="5">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:fontFamily="@font/candy_beans"
-                                android:shadowColor="@color/black"
-                                android:shadowRadius="4"
-                                android:text="@string/register_description"
-                                android:textAlignment="center"
-                                android:textAllCaps="false"
-                                android:textColor="@color/white"
-                                android:textSize="20sp" />
-                        </RelativeLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="5">>
-
-                            <Button
-                                android:id="@+id/button"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerVertical="true"
-                                android:layout_centerHorizontal="true"
-                                android:fontFamily="@font/candy_beans"
-                                android:onClick="showLogin"
-                                android:paddingVertical="10dp"
-                                android:paddingHorizontal="20dp"
-                                android:shadowColor="@color/black"
-                                android:shadowRadius="2"
-                                android:text="@string/login"
-                                android:textAllCaps="true"
-                                android:textColor="@color/white"
-                                android:textSize="20sp"
-                                app:backgroundTint="#DD2828"
-                                app:cornerRadius="12dp" />
-                        </RelativeLayout>
-
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="6"></RelativeLayout>
-
-                    </LinearLayout>
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5">
-
-
-                </RelativeLayout>
-            </LinearLayout>
         </RelativeLayout>
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
