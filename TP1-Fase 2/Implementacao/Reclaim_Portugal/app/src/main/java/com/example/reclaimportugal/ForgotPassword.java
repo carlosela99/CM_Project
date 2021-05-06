@@ -27,12 +27,13 @@ public class ForgotPassword extends AppCompatActivity {
     }
 
     public void showLogin(View v){
-        startActivity(new Intent(ForgotPassword.this, Login.class));
+        finish();
     }
 
     private void showChangeActivity(){
         Intent intent = new Intent(ForgotPassword.this, ForgotPasswordChange.class);
         intent.putExtra("EMAIL", email);
+        finish();
         startActivity(intent);
     }
 

@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void showWelcome(View v){
-        startActivity(new Intent(Login.this, Welcome.class));
+        finish();
     }
 
     public void showForgotPassword(View v){

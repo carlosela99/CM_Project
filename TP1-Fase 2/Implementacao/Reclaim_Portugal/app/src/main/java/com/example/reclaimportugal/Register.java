@@ -33,7 +33,7 @@ public class Register extends AppCompatActivity {
     }
 
     public void showWelcome(View v){
-        startActivity(new Intent(Register.this, Welcome.class));
+        finish();
     }
 
     private void showConfirm(){

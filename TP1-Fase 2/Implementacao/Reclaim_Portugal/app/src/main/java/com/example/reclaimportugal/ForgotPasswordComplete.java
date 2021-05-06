@@ -15,6 +15,6 @@ public class ForgotPasswordComplete extends AppCompatActivity {
     }
 
     public void showLogin(View v){
-        startActivity(new Intent(ForgotPasswordComplete.this, Login.class));
+        finish();
     }
 }
