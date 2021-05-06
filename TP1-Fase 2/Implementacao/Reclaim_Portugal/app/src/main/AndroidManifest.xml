@@ -22,7 +22,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".Settings"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".SettingsChangePassword"
             android:screenOrientation="landscape" />

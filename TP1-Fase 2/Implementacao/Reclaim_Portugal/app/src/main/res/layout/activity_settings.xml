@@ -56,8 +56,8 @@
                                 app:srcCompat="@drawable/settingslogo" />
                             <TextView
                                 android:id="@+id/settingsText"
-                                android:layout_width="183dp"
-                                android:layout_height="40dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_marginStart="70dp"
                                 android:layout_centerVertical="true"
                                 android:fontFamily="@font/candy_beans"
@@ -125,9 +125,9 @@
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_centerInParent="true"
-                                        android:background="@android:color/transparent"
-                                        android:scaleType="fitXY"
-                                        app:srcCompat="@drawable/portugal" />
+                                        android:background="@drawable/portugal"
+                                        android:onClick="changeLanguagePT"
+                                        android:scaleType="fitXY" />
                                 </RelativeLayout>
 
                                 <RelativeLayout
@@ -136,13 +136,13 @@
                                     android:layout_weight="100">
 
                                     <ImageButton
-                                        android:id="@+id/reinoUnido"
+                                        android:id="@+id/EnglishIcon"
                                         android:layout_width="50dp"
                                         android:layout_height="50dp"
                                         android:layout_centerInParent="true"
-                                        android:background="@android:color/transparent"
-                                        android:scaleType="fitXY"
-                                        app:srcCompat="@drawable/reino_unido" />
+                                        android:background="@drawable/reino_unido"
+                                        android:onClick="changeLanguageEN"
+                                        android:scaleType="fitXY" />
                                 </RelativeLayout>
 
                             </LinearLayout>
@@ -271,7 +271,7 @@
                                         android:layout_marginRight="10dp"
                                         android:layout_alignParentEnd="true"
                                         android:fontFamily="@font/candy_beans"
-                                        android:text="@string/LeftNames"
+                                        android:text="@string/leftNames"
                                         android:textAlignment="textEnd"
                                         android:textColor="@color/white" />
                                 </RelativeLayout>

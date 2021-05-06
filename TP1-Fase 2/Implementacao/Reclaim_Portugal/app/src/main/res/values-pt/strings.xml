@@ -1,11 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Reclaim Portugal</string>
     <string name="login">Iniciar sessão</string>
     <string name="register">Registo</string>
     <string name="play">Jogar</string>
     <string name="question">Faz uma Questão!</string>
     <string name="settings">Configurações</string>
-    <string name="title_activity_main_menu" translatable="false">Main Menu</string>
     <string name="next">Próximo</string>
     <string name="previous">Anterior</string>
     <string name="Confirm">Confirmar </string>
@@ -47,8 +46,6 @@
     <string name="typeYourQuestion">Escreve a tua questão </string>
     <string name="submitYourQuestion">Submete a tua questão! </string>
     <string name="ourTeam">A nossa equipa:</string>
-    <string name="leftNames" translatable="false">Carlos Antunes <br /> Daniel Morais <br /> Eduardo Ferreira</string>
-    <string name="rightNames" translatable="false">Jorge Mimoso <br /> Marco Teodoro <br /> Ricardo Ribeiro</string>
     <string name="type_yourQuestion">Escreve a tua questão </string>
     <string name="settingsname">Configurações </string>
 </resources>

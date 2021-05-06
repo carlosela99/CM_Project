@@ -244,6 +244,49 @@ async function changePassword(request, response){
 
 async function submitQuestion(request, response){
 
+  try{
+    var json = request.body;
+
+    if(!json.hasOwnProperty('Email') 
+      || !json.hasOwnProperty('Question')
+      || !json.hasOwnProperty('RightAnswer')
+      || !json.hasOwnProperty('WrongAnswer')
+      || !json.hasOwnProperty('RegionA')
+      || !json.hasOwnProperty('RegionB')){
+
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var question = json.Question;
+    var right_answer = json.RightAnswer;
+    var wrong_answer = json.WrongAnswer;
+    var region_a = json.RegionA;
+    var region_b = json.RegionB;
+
+    var connection = await mysql.createConnection(config);
+
+    // verify if user exists
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ?', [email]);
+
+    if (users[0].count == 1){
+
+      var [user] = await connection.query('SELECT id FROM players WHERE email = ?', [email]);
+      var id = user[0].id;
+      await connection.query('INSERT INTO players (creator_id, question, right_answer, wrong_answer, region_a, region_b)', [id, question, right_answer, wrong_answer, region_a, region_b]);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
 }
 
 async function getQuestions(request, response){

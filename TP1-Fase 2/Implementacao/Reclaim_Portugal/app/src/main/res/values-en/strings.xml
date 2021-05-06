@@ -37,7 +37,7 @@
     <string name="verification_code_sent">Será enviado um código de verificação <br /> para o seu e-mail!</string>
     <string name="login_fail">Dados inseridos inválidos</string>
     <string name="code">Código de verificação</string>
-    <string name="change_password">Mudar Palavra-Passe</string>
+    <string name="change_password">Change password</string>
     <string name="insert_old_password">Insira a password antiga</string>
     <string name="correct_Answer">Resposta Correta</string>
     <string name="wrong_Answer">Resposta Errada</string>
@@ -45,8 +45,8 @@
     <string name="questionSubmited">A tua questão foi submetida!</string>
     <string name="questionTextInfo">A tua questão foi submetida com sucesso para revisão. Após a validação da nossa equipa, será adicionada ao jogo! </string>
     <string name="typeYourQuestion">Escreve a tua questão </string>
-    <string name="submitYourQuestion">Submit your Question!</string>
-    <string name="ourTeam">Our time:</string>
+    <string name="submitYourQuestion">Submit your question!</string>
+    <string name="ourTeam">Our team:</string>
     <string name="type_yourQuestion">Escreve a tua questão </string>
     <string name="settingsname">Settings</string>
 </resources>
