@@ -250,9 +250,7 @@ async function submitQuestion(request, response){
     if(!json.hasOwnProperty('Email') 
       || !json.hasOwnProperty('Question')
       || !json.hasOwnProperty('RightAnswer')
-      || !json.hasOwnProperty('WrongAnswer')
-      || !json.hasOwnProperty('RegionA')
-      || !json.hasOwnProperty('RegionB')){
+      || !json.hasOwnProperty('WrongAnswer')){
 
       jsonResponse.badRequest(response);
       return;
@@ -262,8 +260,6 @@ async function submitQuestion(request, response){
     var question = json.Question;
     var right_answer = json.RightAnswer;
     var wrong_answer = json.WrongAnswer;
-    var region_a = json.RegionA;
-    var region_b = json.RegionB;
 
     var connection = await mysql.createConnection(config);
 
@@ -274,7 +270,7 @@ async function submitQuestion(request, response){
 
       var [user] = await connection.query('SELECT id FROM players WHERE email = ?', [email]);
       var id = user[0].id;
-      await connection.query('INSERT INTO players (creator_id, question, right_answer, wrong_answer, region_a, region_b)', [id, question, right_answer, wrong_answer, region_a, region_b]);
+      await connection.query('INSERT INTO players (creator_id, question, right_answer, wrong_answer)', [id, question, right_answer, wrong_answer]);
       jsonResponse.ok(response);
     }
     else{

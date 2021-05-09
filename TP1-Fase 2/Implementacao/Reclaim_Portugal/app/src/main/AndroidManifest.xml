@@ -22,7 +22,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".Settings"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".SettingsChangePassword"
             android:screenOrientation="landscape" />
@@ -33,7 +33,7 @@
             android:name=".SubmitQuestion"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".SubmitQuestionConfimation"
+            android:name=".SubmitQuestionComplete"
             android:screenOrientation="landscape" />
         <activity
             android:name=".MainMenu"
@@ -74,8 +74,10 @@
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

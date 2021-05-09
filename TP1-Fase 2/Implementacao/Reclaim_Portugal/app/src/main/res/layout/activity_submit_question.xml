@@ -107,7 +107,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="10">
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/typeyourQuestion"
+                        android:id="@+id/questionText"
                         android:layout_width="550dp"
                         android:layout_height="130dp"
                         android:background="@drawable/text_box"

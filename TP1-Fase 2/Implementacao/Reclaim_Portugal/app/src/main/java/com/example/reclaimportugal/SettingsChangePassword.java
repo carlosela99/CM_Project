@@ -37,8 +37,7 @@ public class SettingsChangePassword extends AppCompatActivity {
     }
 
     private void openSettings() {
-        Intent intent = new Intent(this, Settings.class);
-        startActivity(intent);
+        finish();
     }
 
     public void changePassword(View v){

@@ -61,8 +61,7 @@ public class Settings extends AppCompatActivity {
     }
 
     public void openMainMenu() {
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
+        finish();
     }
 
     public void changeLanguagePT(View v){

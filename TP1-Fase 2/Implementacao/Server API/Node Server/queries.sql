@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS questions (
     question VARCHAR(2000) NOT NULL,
     right_answer VARCHAR(255) NOT NULL,
     wrong_answer VARCHAR(255) NOT NULL,
-    region_a INT NOT NULL,
+    region_a INT,
     region_b INT,
     approved TINYINT DEFAULT 0 NOT NULL
 );
