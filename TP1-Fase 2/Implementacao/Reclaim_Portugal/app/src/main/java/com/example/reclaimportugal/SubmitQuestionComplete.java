@@ -14,18 +14,9 @@ public class SubmitQuestionComplete extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submit_question_complete);
-
-        button = (Button) findViewById(R.id.mainmenu);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMainMenu();
-            }
-        });
     }
 
-    public void openMainMenu() {
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
+    public void openMainMenu(View v) {
+        finish();
     }
 }

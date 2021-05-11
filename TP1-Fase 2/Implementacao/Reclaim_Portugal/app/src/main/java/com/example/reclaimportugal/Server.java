@@ -222,9 +222,9 @@ public class Server {
 
         try{
             request.put("Email", email);
-            request.put("Question", hashMD5(question));
-            request.put("RightAnswer", hashMD5(right_ans));
-            request.put("WrongAnswer", hashMD5(wrong_ans));
+            request.put("Question", question);
+            request.put("RightAnswer", right_ans);
+            request.put("WrongAnswer", wrong_ans);
         }
         catch (JSONException e){
             e.printStackTrace();

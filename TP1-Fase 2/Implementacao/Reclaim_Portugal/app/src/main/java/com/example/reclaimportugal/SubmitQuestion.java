@@ -14,7 +14,7 @@ import org.json.JSONObject;
 public class SubmitQuestion extends AppCompatActivity {
     private ImageButton imageButton;
 
-    private TextView failChange;
+    private TextView failSubmit;
 
     private String email;
     private boolean isBusy;
@@ -24,23 +24,17 @@ public class SubmitQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submit_question);
 
-        imageButton = (ImageButton) findViewById(R.id.submitQuestionBack);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMainMenu();
-            }
-        });
+        failSubmit = (TextView)findViewById(R.id.text_fail);
+        email = getIntent().getStringExtra("EMAIL");
     }
 
-    public void openMainMenu() {
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
+    public void backToMenu(View v) {
+        finish();
     }
 
     public void submitQuestion(View v){
         EditText questionText = (EditText)findViewById(R.id.questionText);
-        EditText correctAnswerText = (EditText)findViewById(R.id.corretAnswer);
+        EditText correctAnswerText = (EditText)findViewById(R.id.correctAnswer);
         EditText wrongAnswerText = (EditText)findViewById(R.id.wrongAnswer);
 
         String question = questionText.getText().toString();
@@ -48,24 +42,21 @@ public class SubmitQuestion extends AppCompatActivity {
         String wrongAnswer = wrongAnswerText.getText().toString();
 
         if (question.isEmpty()){
-            //showErrorMessage(getString(R.string.mandatory_code));
+            showErrorMessage(getString(R.string.mandatory_question));
         }
-        else if (correctAnswer.isEmpty()){
-            //showErrorMessage(getString(R.string.invalid_password));
-        }
-        else if (wrongAnswer.isEmpty()){
-            //showErrorMessage(getString(R.string.invalid_password_compare));
+        else if (correctAnswer.isEmpty() || wrongAnswer.isEmpty()){
+            showErrorMessage(getString(R.string.mandatory_answer));
         }
         else{
-            failChange.setVisibility(View.INVISIBLE);
+            failSubmit.setVisibility(View.INVISIBLE);
             isBusy = true;
             Server.submitQuestion(email, question, correctAnswer, wrongAnswer, this);
         }
     }
 
     private void showErrorMessage(String message){
-        failChange.setText(message);
-        failChange.setVisibility(View.VISIBLE);
+        failSubmit.setText(message);
+        failSubmit.setVisibility(View.VISIBLE);
     }
 
     private void showConfirmationActivity(){

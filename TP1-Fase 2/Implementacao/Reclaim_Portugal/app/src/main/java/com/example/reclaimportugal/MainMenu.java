@@ -36,6 +36,7 @@ public class MainMenu extends AppCompatActivity {
 
     public void openSubmitQuestion(View view) {
         Intent intent = new Intent(this, SubmitQuestion.class);
+        intent.putExtra("EMAIL", email);
         startActivity(intent);
     }
 }

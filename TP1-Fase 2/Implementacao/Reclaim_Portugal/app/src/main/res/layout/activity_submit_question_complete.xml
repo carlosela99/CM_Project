@@ -14,7 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="13">
+            android:layout_weight="40">
 
         </RelativeLayout>
 
@@ -40,31 +40,71 @@
                     android:layout_height="match_parent"
                     android:layout_weight="15">
 
-                    <TextView
-                        android:id="@+id/questionSubmited"
-                        android:layout_width="360dp"
-                        android:layout_height="50dp"
-                        android:fontFamily="@font/candy_beans"
-                        android:text="@string/questionSubmited"
-                        android:textColor="@color/white"
-                        android:textSize="27sp"
-                        android:typeface="serif"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                        />
-                    <TextView
-                        android:id="@+id/questionSubmitedText"
-                        android:layout_width="410dp"
-                        android:layout_height="150dp"
-                        android:fontFamily="@font/candy_beans"
-                        android:text="@string/questionTextInfo"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:typeface="serif"
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="70">
 
-                        android:layout_marginTop="35dp"
-                        />
+                            <TextView
+                                android:id="@+id/questionSubmited"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/candy_beans"
+                                android:text="@string/questionSubmited"
+                                android:textColor="@color/white"
+                                android:layout_centerVertical="true"
+                                android:textSize="27sp"
+                                android:typeface="serif"
 
+                                />
+                        </RelativeLayout>
 
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50">
+
+                            <TextView
+                                android:id="@+id/questionSubmitedText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="35dp"
+                                android:fontFamily="@font/candy_beans"
+                                android:text="@string/questionTextInfo"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
+                                android:layout_centerInParent="true"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50">
+
+                            <Button
+                                android:id="@+id/submitQuestionConfirmedMainMenu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/candy_beans"
+                                android:onClick="openMainMenu"
+                                android:paddingHorizontal="25dp"
+                                android:paddingVertical="15dp"
+                                android:shadowColor="@color/black"
+                                android:shadowRadius="2"
+                                android:text="@string/title_activity_main_menu"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                app:backgroundTint="#B31414"
+                                app:cornerRadius="16dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
 
 
                 </RelativeLayout>
@@ -82,42 +122,5 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="10"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="10">
-                    <Button
-                        android:id="@+id/submitQuestionConfirmedMainMenu"
-                        android:layout_width="200dp"
-                        android:layout_height="60dp"
-                        android:text="@string/title_activity_main_menu"
-                        app:backgroundTint="#E10C0C"
-                        app:cornerRadius="20dp"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginTop="65dp"
-                        />
-
-                </RelativeLayout>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="6">
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-        </RelativeLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
