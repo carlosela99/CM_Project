@@ -270,7 +270,7 @@ async function submitQuestion(request, response){
 
       var [user] = await connection.query('SELECT id FROM players WHERE email = ?', [email]);
       var id = user[0].id;
-      await connection.query('INSERT INTO players (creator_id, question, right_answer, wrong_answer)', [id, question, right_answer, wrong_answer]);
+      await connection.query('INSERT INTO questions (creator_id, question, right_answer, wrong_answer) VALUES (?,?,?,?)', [id, question, right_answer, wrong_answer]);
       jsonResponse.ok(response);
     }
     else{
