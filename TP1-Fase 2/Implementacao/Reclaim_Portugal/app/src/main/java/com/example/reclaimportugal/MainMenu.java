@@ -39,4 +39,9 @@ public class MainMenu extends AppCompatActivity {
         intent.putExtra("EMAIL", email);
         startActivity(intent);
     }
+
+    public void openRegions(View v){
+        Intent intent = new Intent(this, RegionSelect.class);
+        startActivity(intent);
+    }
 }
