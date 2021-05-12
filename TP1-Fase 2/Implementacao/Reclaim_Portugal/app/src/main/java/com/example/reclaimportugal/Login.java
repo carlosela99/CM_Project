@@ -44,6 +44,7 @@ public class Login extends AppCompatActivity {
         intent.putExtra("EMAIL", email);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     public void loginUser(View v){

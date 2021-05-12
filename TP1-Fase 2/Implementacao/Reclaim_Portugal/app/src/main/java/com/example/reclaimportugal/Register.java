@@ -24,6 +24,9 @@ public class Register extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // load language from user settings
+        Translations.loadLanguage(getApplicationContext(), getResources());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
