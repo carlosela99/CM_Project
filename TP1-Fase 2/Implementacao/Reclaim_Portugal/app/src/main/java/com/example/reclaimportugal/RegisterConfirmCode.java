@@ -28,12 +28,14 @@ public class RegisterConfirmCode extends AppCompatActivity {
         failConfirmation = (TextView)findViewById(R.id.text_fail);
     }
 
-    public void backToForm(View v){
-        startActivity(new Intent(RegisterConfirmCode.this, Register.class));
+    public void backToLogin(View v){
+        finish();
     }
 
     private void showComplete(){
-        startActivity(new Intent(RegisterConfirmCode.this, RegisterComplete.class));
+        Intent intent = new Intent(RegisterConfirmCode.this, RegisterComplete.class);
+        finish();
+        startActivity(intent);
     }
 
     public void confirmCode(View v){

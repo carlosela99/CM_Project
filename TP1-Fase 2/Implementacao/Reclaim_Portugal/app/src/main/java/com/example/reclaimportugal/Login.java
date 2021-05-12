@@ -28,7 +28,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void showWelcome(View v){
-        startActivity(new Intent(Login.this, Welcome.class));
+        finish();
     }
 
     public void showForgotPassword(View v){
@@ -39,6 +39,7 @@ public class Login extends AppCompatActivity {
         Intent intent = new Intent(Login.this, MainMenu.class);
         intent.putExtra("USERNAME", username);
         intent.putExtra("EMAIL", email);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 

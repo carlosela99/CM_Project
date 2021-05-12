@@ -27,8 +27,8 @@ public class ForgotPasswordChange extends AppCompatActivity {
         email = getIntent().getStringExtra("EMAIL");
     }
 
-    public void backToSubmitEmail(View v){
-        startActivity(new Intent(ForgotPasswordChange.this, ForgotPassword.class));
+    public void backToLogin(View v){
+        finish();
     }
 
     public void changePassword(View v){
@@ -62,7 +62,9 @@ public class ForgotPasswordChange extends AppCompatActivity {
     }
 
     private void showConfirmationActivity(){
-        startActivity(new Intent(ForgotPasswordChange.this, ForgotPasswordComplete.class));
+        Intent intent = new Intent(ForgotPasswordChange.this, ForgotPasswordComplete.class);
+        finish();
+        startActivity(intent);
     }
 
     public void changePasswordResult(JSONObject response){

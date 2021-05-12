@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.denzcoskun.imageslider.ImageSlider;
-import com.denzcoskun.imageslider.models.SlideModel;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +23,7 @@ public class RegionDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_region_detail);
 
-        ImageSlider imageSlider = findViewById(R.id.region_slider);
+        /*ImageSlider imageSlider = findViewById(R.id.region_slider);
 
         List<SlideModel> slideModels = new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.er_torre_de_belem,"Torre de Belem"));
@@ -37,7 +34,7 @@ public class RegionDetails extends AppCompatActivity {
         slideModels.add(new SlideModel(R.drawable.er_castelo_de_tomar,"Castelo de Tomár"));
         slideModels.add(new SlideModel(R.drawable.er_praca_pedro,"Praça de D. Pedro"));
         slideModels.add(new SlideModel(R.drawable.er_obidos,"Castelo de Óbidos"));
-        imageSlider.setImageList(slideModels, true);
+        imageSlider.setImageList(slideModels, true);*/
 
         back = findViewById(R.id.back_region_selection);
         back.setOnClickListener(new View.OnClickListener() {

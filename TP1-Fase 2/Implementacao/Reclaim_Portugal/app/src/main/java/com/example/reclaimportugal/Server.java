@@ -19,6 +19,8 @@ public class Server {
     private static final String CONFIRM_REGISTER_PATH = "confirm-register";
     private static final String FORGET_PASSWORD_PATH = "forget-password";
     private static final String FORGET_PASSWORD_CHANGE_PATH = "forget-password-change";
+    private static final String CHANGE_PASSWORD_PATH = "change-password";
+    private static final String SUBMIT_QUESTION_PATH = "submit-question";
 
     public static void loginRequest(String user, String password, Login instance){
         String url = SERVER_ADDRESS + LOGIN_PATH;
@@ -176,6 +178,73 @@ public class Server {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         instance.changePasswordErrorResult();
+                    }
+                });
+        RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);
+    }
+
+    public static void changePasswordSettings(String email, String old_password, String new_password, SettingsChangePassword instance){
+        String url = SERVER_ADDRESS + CHANGE_PASSWORD_PATH;
+        JSONObject request = new JSONObject();
+
+        try{
+            request.put("Email", email);
+            request.put("OldPassword", hashMD5(old_password));
+            request.put("NewPassword", hashMD5(new_password));
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+            instance.changePasswordErrorResult();
+        }
+
+        NukeSSLCerts.nuke();
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
+                (Request.Method.POST, url, request, new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        instance.changePasswordResult(response);
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        instance.changePasswordErrorResult();
+                    }
+                });
+        RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);
+    }
+
+    public static void submitQuestion(String email, String question, String right_ans, String wrong_ans, SubmitQuestion instance){
+        String url = SERVER_ADDRESS + SUBMIT_QUESTION_PATH;
+        JSONObject request = new JSONObject();
+
+        try{
+            request.put("Email", email);
+            request.put("Question", question);
+            request.put("RightAnswer", right_ans);
+            request.put("WrongAnswer", wrong_ans);
+        }
+        catch (JSONException e){
+            e.printStackTrace();
+            instance.submitQuestioErrorResult();
+        }
+
+        NukeSSLCerts.nuke();
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
+                (Request.Method.POST, url, request, new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        instance.submitQuestionResult(response);
+                    }
+                }, new Response.ErrorListener() {
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        instance.submitQuestioErrorResult();
                     }
                 });
         RequestManager.getInstance(instance).addToRequestQueue(jsonObjectRequest);

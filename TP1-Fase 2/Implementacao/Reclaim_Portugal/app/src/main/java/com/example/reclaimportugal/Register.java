@@ -33,13 +33,14 @@ public class Register extends AppCompatActivity {
     }
 
     public void showWelcome(View v){
-        startActivity(new Intent(Register.this, Welcome.class));
+        finish();
     }
 
     private void showConfirm(){
         if (submittedEmail != null){
             Intent intent = new Intent(Register.this, RegisterConfirmCode.class);
             intent.putExtra("EMAIL_ADDRESS", submittedEmail);
+            finish();
             startActivity(intent);
         }
     }

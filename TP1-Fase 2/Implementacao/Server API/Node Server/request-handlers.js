@@ -244,6 +244,45 @@ async function changePassword(request, response){
 
 async function submitQuestion(request, response){
 
+  try{
+    var json = request.body;
+
+    if(!json.hasOwnProperty('Email') 
+      || !json.hasOwnProperty('Question')
+      || !json.hasOwnProperty('RightAnswer')
+      || !json.hasOwnProperty('WrongAnswer')){
+
+      jsonResponse.badRequest(response);
+      return;
+    }
+
+    var email = json.Email;
+    var question = json.Question;
+    var right_answer = json.RightAnswer;
+    var wrong_answer = json.WrongAnswer;
+
+    var connection = await mysql.createConnection(config);
+
+    // verify if user exists
+    var [users] = await connection.query('SELECT COUNT(*) as count FROM players WHERE email = ?', [email]);
+
+    if (users[0].count == 1){
+
+      var [user] = await connection.query('SELECT id FROM players WHERE email = ?', [email]);
+      var id = user[0].id;
+      await connection.query('INSERT INTO questions (creator_id, question, right_answer, wrong_answer) VALUES (?,?,?,?)', [id, question, right_answer, wrong_answer]);
+      jsonResponse.ok(response);
+    }
+    else{
+
+      connection.end();
+      jsonResponse.unauthorized(response);
+    } 
+  }
+  catch(e){
+    console.log(e);
+    jsonResponse.internalError(response);
+  }
 }
 
 async function getQuestions(request, response){

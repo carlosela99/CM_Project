@@ -16,6 +16,6 @@ public class RegisterComplete extends AppCompatActivity {
     }
 
     public void showLogin(View v){
-        startActivity(new Intent(RegisterComplete.this, Login.class));
+        finish();
     }
 }

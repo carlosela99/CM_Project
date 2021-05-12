@@ -11,23 +11,32 @@ import android.widget.TextView;
 
 public class MainMenu extends AppCompatActivity {
 
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
         String username = getIntent().getStringExtra("USERNAME");
-        String email = getIntent().getStringExtra("EMAIL");
+        email = getIntent().getStringExtra("EMAIL");
 
-        TextView tvUsername = (TextView) findViewById(R.id.username);
+        TextView tvUsername = findViewById(R.id.username);
         tvUsername.setText(username);
 
-        TextView tvEmail = (TextView) findViewById(R.id.email);
+        TextView tvEmail = findViewById(R.id.email);
         tvEmail.setText(email);
     }
 
     public void openSettings(View view) {
         Intent intent = new Intent(this, Settings.class);
+        intent.putExtra("EMAIL", email);
+        startActivity(intent);
+    }
+
+    public void openSubmitQuestion(View view) {
+        Intent intent = new Intent(this, SubmitQuestion.class);
+        intent.putExtra("EMAIL", email);
         startActivity(intent);
     }
 }
