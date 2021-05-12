@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -65,7 +66,7 @@ public class Settings extends AppCompatActivity {
     }
 
     public void changeLanguagePT(View v){
-        if (currentLang != PT){
+        if (!currentLang.equals(PT)){
             changeLanguage(PT);
             btnPT.getBackground().setAlpha(255);
             btnEN.getBackground().setAlpha(64);
@@ -73,7 +74,7 @@ public class Settings extends AppCompatActivity {
     }
 
     public void changeLanguageEN(View v){
-        if (currentLang != EN){
+        if (!currentLang.equals(EN)){
             changeLanguage(EN);
             btnPT.getBackground().setAlpha(64);
             btnEN.getBackground().setAlpha(255);
@@ -82,9 +83,10 @@ public class Settings extends AppCompatActivity {
 
     private void loadLanguage(){
         String lang = Local.getLanguage(getApplicationContext());
+        Log.i("DEBUG", lang);
         currentLang = lang;
 
-        if (lang == PT){
+        if (lang.equals(PT)){
             btnPT.getBackground().setAlpha(255);
             btnEN.getBackground().setAlpha(64);
         }
