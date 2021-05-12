@@ -124,7 +124,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="13">
+                    android:layout_weight="16">
 
                 </RelativeLayout>
 
@@ -132,13 +132,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="10">
-
-                    <ImageView
-                        android:id="@+id/separator_icon"
-                        android:layout_width="5dp"
-                        android:layout_height="110dp"
-                        app:srcCompat="@drawable/separator"
-                        android:layout_centerInParent="true"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -244,6 +237,19 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_weight="16">
+
+                            <ImageView
+                                android:id="@+id/separator_icon"
+                                android:layout_width="5dp"
+                                android:layout_height="110dp"
+                                android:layout_centerInParent="true"
+                                app:srcCompat="@drawable/separator" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_weight="10">
 
                             <LinearLayout
@@ -342,7 +348,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="10">
+                    android:layout_weight="11">
 
                 </RelativeLayout>
             </LinearLayout>
@@ -362,7 +368,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="10">
+                    android:layout_weight="12">
 
                     <Button
                         android:id="@+id/btnPlay"
