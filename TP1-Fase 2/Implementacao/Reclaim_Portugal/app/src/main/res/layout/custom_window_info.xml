@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomWindowInfo"
+    android:orientation="vertical"
+    android:weightSum="2"
+    android:layout_alignParentRight="true"
+    android:background="#7bd2ff"
+    android:padding="10dp"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"/>
+
+    <include layout="@layout/content_custom_window_info" />
+
+    <ImageView
+        android:id="@+id/picImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:src="@android:drawable/ic_popup_disk_full"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:id="@+id/title"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Snipp"
+        android:id="@+id/snipp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_marginTop="3dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
