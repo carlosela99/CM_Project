@@ -14,6 +14,7 @@ import java.util.List;
 
 public class RegionDetails extends AppCompatActivity {
     private ImageButton back;
+    private ImageButton goMap;
     private Button playButton;
     private TextView description;
     private TextView title;
@@ -35,6 +36,15 @@ public class RegionDetails extends AppCompatActivity {
         slideModels.add(new SlideModel(R.drawable.er_praca_pedro,"Praça de D. Pedro"));
         slideModels.add(new SlideModel(R.drawable.er_obidos,"Castelo de Óbidos"));
         imageSlider.setImageList(slideModels, true);*/
+
+        goMap = findViewById(R.id.go_to_map);
+        goMap.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               goToMap();
+           }
+       });
+
 
         back = findViewById(R.id.back_region_selection);
         back.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +76,12 @@ public class RegionDetails extends AppCompatActivity {
 
     private void openActivityBack() {
         Intent intent = new Intent(this, RegionSelect.class);
+        startActivity(intent);
+    }
+
+    private void goToMap(){
+        Intent intent = new Intent(this, MapsActivity.class);
+        //intent.putExtra("LOCATION", "Belem");
         startActivity(intent);
     }
 }
