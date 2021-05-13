@@ -1,0 +1,202 @@
+ [
+    {
+      "QuestionPt": "Em que ano  D. Afonso Henriques conquistou o castelo de Obidos",
+      "QuestionEn": "In which year did the king Afonso Henriques conquered Óbidos castle?",
+      "CorrectAnswerPt": "1148",
+      "CorrectAnswerEn": "1148",
+      "WrongAnswerPt": "1242",
+      "WrongAnswerEn": "1242",
+      "RegionA": 0,
+      "RegionB": -1
+    },
+    {
+      "QuestionPt": "Qual a figura mais associada com o palácio da pena?",
+      "QuestionEn": "Which figure/creature tends to be associated Pena’s Palace?",
+      "CorrectAnswerPt": "O Tritão",
+      "CorrectAnswerEn": "The Newt",
+      "WrongAnswerPt": "O Polvo",
+      "WrongAnswerEn": "The Octopus",
+      "RegionA": 0,
+      "RegionB": -1
+    },
+   {
+     "QuestionPt": "Qual destes foi declarado como património mundial pela UNESCO",
+     "QuestionEn": "Which of these buildings has entered the World Heritage List by UNESCO?",
+     "CorrectAnswerPt": "Torre de Belém",
+     "CorrectAnswerEn": "Belem’s Tower",
+     "WrongAnswerPt": "Castelo de São Jorge",
+     "WrongAnswerEn": "Saint Jorge's Castle",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Qual o Rio possível de admirar no topo da Torre de Belém?",
+     "QuestionEn": "Which River is possible to admire atop Belem’s Tower?",
+     "CorrectAnswerPt": "Rio Tejo",
+     "CorrectAnswerEn": "River Tejo",
+     "WrongAnswerPt": "Rio Sado",
+     "WrongAnswerEn": "Sado River",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "A Praça do Rossio também pode ser conhecida como",
+     "QuestionEn": "The Plaza of Rossio is also known as?",
+     "CorrectAnswerPt": "Praça de D. Pedro IV",
+     "CorrectAnswerEn": "King Pedro IV’s Plaza",
+     "WrongAnswerPt": "Praça de D. João III",
+     "WrongAnswerEn": "King John the III",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Em que Região se situa o Castelo de São Jorge",
+     "QuestionEn": "In which Region is Saint Jorge’s castle located?",
+     "CorrectAnswerPt": "Estremadura",
+     "CorrectAnswerEn": "Estremadure",
+     "WrongAnswerPt": "Ribatejo",
+     "WrongAnswerEn": "Ribatejo",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Quantos arcos possui o aqueduto de pegões altos?",
+     "QuestionEn": "How many arches does the Pegões aqueduct have?",
+     "CorrectAnswerPt": "180",
+     "CorrectAnswerEn": "180",
+     "WrongAnswerPt": "190",
+     "WrongAnswerEn": "190",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Em que País nasce o Rio Tejo?",
+     "QuestionEn": "Which Country is the Tejo’s River born?",
+     "CorrectAnswerPt": "Espanha",
+     "CorrectAnswerEn": "Spain",
+     "WrongAnswerPt": "Portugal",
+     "WrongAnswerEn": "Portugal",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Qual o estilo arquitetônico que possui a igreja de Santa Maria?",
+     "QuestionEn": "What’s Saint Mary’s Church architectonic style?",
+     "CorrectAnswerPt": "Gótico",
+     "CorrectAnswerEn": "Gothic",
+     "WrongAnswerPt": "Barroco",
+     "WrongAnswerEn": "Barroque",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Em que seculo for erguida Igreja de Santa Maria?",
+     "QuestionEn": "Which Century was Saint Mary’s Church Founded?",
+     "CorrectAnswerPt": "14",
+     "CorrectAnswerEn": "14",
+     "WrongAnswerPt": "13",
+     "WrongAnswerEn": "13",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Qual destes desportos mais se relaciona com o Aquapolis?",
+     "QuestionEn": "Which of this sports is more known to be practiced in Aquapolis?",
+     "CorrectAnswerPt": "Canoagem",
+     "CorrectAnswerEn": "Canoeing",
+     "WrongAnswerPt": "Surfing",
+     "WrongAnswerEn": "Surfing",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Qual destes locais é mais conhecido como ser um ponto de “turismo religioso”?",
+     "QuestionEn": "Which of these two locations is more known for being a religious tourist spot?",
+     "CorrectAnswerPt": "Fátima",
+     "CorrectAnswerEn": "Fátima",
+     "WrongAnswerPt": "Mafra",
+     "WrongAnswerEn": "Mafra",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Em que região se situa a capital de Portugal?",
+     "QuestionEn": "Which region in particular does the capital of Portugal resides in?",
+     "CorrectAnswerPt": "Estremadura",
+     "CorrectAnswerEn": "Estremadure",
+     "WrongAnswerPt": "Ribatejo",
+     "WrongAnswerEn": "Ribatejo",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Qual destes Concelhos pertence á região do Ribatejo?",
+     "QuestionEn": "Which of these zones belongs to the region of Ribatejo?",
+     "CorrectAnswerPt": "Abrantes",
+     "CorrectAnswerEn": "Abrantes",
+     "WrongAnswerPt": "Seixal",
+     "WrongAnswerEn": "Seixal",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Qual destes Concelhos pertence á região do Estremadura?",
+     "QuestionEn": "Which of these zones belongs to the region of Estremadure?",
+     "CorrectAnswerPt": "Mafra",
+     "CorrectAnswerEn": "Mafra",
+     "WrongAnswerPt": "Serpa",
+     "WrongAnswerEn": "Serpa",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Onde se situa o Festival Nacional de Gastronomia de Portugal?",
+     "QuestionEn": "Where is the National gastronomy Festival of Portugal located?",
+     "CorrectAnswerPt": "Santarém",
+     "CorrectAnswerEn": "Santarém",
+     "WrongAnswerPt": "Lisboa",
+     "WrongAnswerEn": "Lisboa",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Devido ao sucesso em servir como defesa perante os muçulmanos, qual foi o apelido dado á porta do castelo templário de Tomar?",
+     "QuestionEn": "Due to the successful defense before the Muslim invasion, which nickname was given to the Templar’s castle door?",
+     "CorrectAnswerPt": "Porta do Sangue",
+     "CorrectAnswerEn": "Door of Blood",
+     "WrongAnswerPt": "Porta da vitória",
+     "WrongAnswerEn": "Door of Victory",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Qual destas localizações possui uma zona para a prática dos desportos náuticos?",
+     "QuestionEn": "Which of these locations has a special zone solely used to practice watersports?",
+     "CorrectAnswerPt": "Barragem do Castelo de Bode",
+     "CorrectAnswerEn": "Bode’s castle dam",
+     "WrongAnswerPt": "Praia do Seixal",
+     "WrongAnswerEn": "Seixal's Beach",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "A igreja Matriz foi mandada contrui por?",
+     "QuestionEn": "Who ordered the Matrix church to be built",
+     "CorrectAnswerPt": "O médico real",
+     "CorrectAnswerEn": "The Royal Doctor",
+     "WrongAnswerPt": "O Bispo",
+     "WrongAnswerEn": "The Bishop",
+     "RegionA": 0,
+     "RegionB": -1
+   },
+   {
+     "QuestionPt": "Em que zona a ordem dos templários estabeleceram a sua sede?",
+     "QuestionEn": "Which zone did the Templars choose to establish their headquarters?",
+     "CorrectAnswerPt": "Tomar",
+     "CorrectAnswerEn": "Tomár",
+     "WrongAnswerPt": "Santarém",
+     "WrongAnswerEn": "Santarém",
+     "RegionA": 0,
+     "RegionB": -1
+   }
+    ]

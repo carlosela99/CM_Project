@@ -1,0 +1,213 @@
+ [
+   {
+     "Id": 0,
+     "Name": "Douro e Minho",
+     "DescriptionPt": "O Douro é uma terra cheia de história, como se costuma dizer, 1 semana no Porto não chega para admirar toda a beleza da região. O Porto é conhecido pela sua vasta gastronomia, indo dos vinhos regionais, às francesinhas. Temos também para visitar cidades cheias de história e onde se situam dos sítios mais bonitos do mundo, como é o caso da livraria Lello, ou até mesmo a casa da música, ou a ponte D. Luís I.",
+     "DescriptionEn": "O Douro é uma terra cheia de história, como se costuma dizer, 1 semana no Porto não chega para admirar toda a beleza da região. O Porto é conhecido pela sua vasta gastronomia, indo dos vinhos regionais, às francesinhas. Temos também para visitar cidades cheias de história e onde se situam dos sítios mais bonitos do mundo, como é o caso da livraria Lello, ou até mesmo a casa da música, ou a ponte D. Luís I.",
+     "Location": "34433ddd3d",
+     "Places": [
+       {
+         "ImageId": 0,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 1,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 2,
+         "Location": "fdfdfdf8343"
+       }
+     ]
+   },
+   {
+     "Id": 1,
+     "Name": "Alentejo",
+     "DescriptionPt": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
+     "DescriptionEn": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
+     "Location": "34433ddd3d",
+     "Places": [
+       {
+         "ImageId": 0,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 1,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 2,
+         "Location": "fdfdfdf8343"
+       }
+     ]
+   },
+   {
+     "Id": 2,
+     "Name": "Algarve",
+     "DescriptionPt": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
+     "DescriptionEn": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
+     "Location": "34433ddd3d",
+     "Places": [
+       {
+         "ImageId": 0,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 1,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 2,
+         "Location": "fdfdfdf8343"
+       }
+     ]
+   },
+   {
+     "Id": 3,
+     "Name": "Beira Interior",
+     "DescriptionPt": "O turismo da Beira Interior, apesar de estar a ganhar mais reconhecimentos nos últimos tempos, ainda não está muito desenvolvido, mas tem um grande potencial. Na beira Interior, podemos optar por um turismo mais rural, indo visitar a capela do Bom Fim, parque Arqueológico do Vale do Côa e com alguma sorte, nos tempos mais frios ir brincar com a neve à Serra da Estrela e na vinda para casa passar pelo museu do Pão e comer um dos melhores pães do mundo.",
+     "DescriptionEn": "O turismo da Beira Interior, apesar de estar a ganhar mais reconhecimentos nos últimos tempos, ainda não está muito desenvolvido, mas tem um grande potencial. Na beira Interior, podemos optar por um turismo mais rural, indo visitar a capela do Bom Fim, parque Arqueológico do Vale do Côa e com alguma sorte, nos tempos mais frios ir brincar com a neve à Serra da Estrela e na vinda para casa passar pelo museu do Pão e comer um dos melhores pães do mundo.",
+     "Location": "34433ddd3d",
+     "Places": [
+       {
+         "ImageId": 0,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 1,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 2,
+         "Location": "fdfdfdf8343"
+       }
+     ]
+   },
+   {
+     "Id": 4,
+     "Name": "Lisboa",
+     "DescriptionPt": "Sendo esta a capital do país, podemos contar com uma cidade cheia de atividades para fazer durante o dia, como ir ao jardim zoológico, ou ao oceanário. Podemos também dar uma volta por belém e aproveitar para observar o padrão dos descobrimentos e a torre de belém enquanto comemos um pastel de nata, ou podemos ir para o museu dos coches, ou se preferir pode também ir até ao castelo de S.Jorge.  Podemos também ir dar uma volta de teleférico no parque das nações e passar pela expo 1998.",
+     "DescriptionEn": "Sendo esta a capital do país, podemos contar com uma cidade cheia de atividades para fazer durante o dia, como ir ao jardim zoológico, ou ao oceanário. Podemos também dar uma volta por belém e aproveitar para observar o padrão dos descobrimentos e a torre de belém enquanto comemos um pastel de nata, ou podemos ir para o museu dos coches, ou se preferir pode também ir até ao castelo de S.Jorge.  Podemos também ir dar uma volta de teleférico no parque das nações e passar pela expo 1998.",
+     "Location": "34433ddd3d",
+     "Places": [
+       {
+         "ImageId": 0,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 1,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 2,
+         "Location": "fdfdfdf8343"
+       }
+     ]
+   },
+   {
+     "Id": 5,
+     "Name": "Estremadura e Ribatejo",
+     "DescriptionPt": "Estremadura e Ribatejo são duas magníficas regiões para visitar e apreciar devido aos inúmeros pontos turísticos que tem para oferecer. Desde desfrutar do cenário de diversos monumentos históricos até localizações mais recentes com inúmeras actividades para a juventude. \nO castelo de Obidos por exemplo encontra-se acima do nível do mar por 79 metros com uma bonita mistura de estilos desde gotico ao barroco, este castelo está protegido por uma muralha em toda  a sua volta. Este castelo foi conquistado pelo primeiro rei de Portugal D. Afonso Henriques  em 1148.\nTambém existe um palácio de estilo gótico chamado de palácio da pena que perfeitamente expressa um toque de romanticismo que era popular na sua época. Foi também elegido como uma das sete maravilhas de Portugal e está associado com a figura do tritão.\nPara além disso esta região também tem a torre de Belém que se encontra como uma das heranças mundiais, no topo da torre é possível admirar o Rio Tejo, um dos rios mais conhecidos do País que origina de Espanha.\nEm termos religiosos embora Fátima seja o local mais conhecido devido á peregrinação, existe também  a igreja de Santa Maria que foi criada durante o seculo 14 mas apenas terminou a sua construção no seculo 16, é usado predominantemente os estilos dessas épocas (Gótico). Tambem existe a Igreja matriz que foi fundada não por um membro do clero nem de realeza mas pelo médico real.\nExiste também o aqueduto de pegões que foi construído com o propósito de reabastecer o convento de cristo em tomar que é o mesmo lugar onde os templários tiveram uma grande batalha e vitoria contra os muçulmanos, e como forma de celebrar eles deram como apelido á porta do castelo como “A porta do Sangue”.\n",
+     "DescriptionEn": "Estremadure and Ribatejo stand as a magnific region to visit and revel in the many touristic spots is has to offer. From simply enjoying the scenery of old/medieval monuments to more recent locations sporting numerous activities for the youth, this regions provides good information into understanding the culture and history of the country.\nThe castle of Óbidos for example who stands above sea level by 79 meters with a beautiful merge of styles ranging from gothic to barroco, this castle itself is reinforced/protected by a wall surrounding it. This castle was conquered by the first king of Portugal D Afonso Henriques in 1148.\nWe also have the gothic style palace named Pena’s Palace who perfectly expresses the romanticism style which was popular for it’s time. It was elected as one of the seven wonders of Portugal and has associated with it the figure of a Newt.\nBesides that this region also has the Belem’s Tower who has entered the World Heritage List and from the top of it it’s is possible to admire the Tejo River, one of the biggest and most well known rivers from Portugal even though it’s birth is in Spain.\nIn terms of religious spots even though Fatima is a very well know town due to its annual pilgrimage there’s also the Saint Mary’s church which was founded during the 14 century but only finished its construction in the century 16 due to being rebuilt, it uses the predominant style of those years (gothic) and now stands a national patrimony. As well as the Matrix church which was founded/ issed to be created not by any member of the clergy or nobility but by the royal doctor of the king of that time.\nThere’s also the Pegões aqueduct which was built with the purpose of resupply water to the covenant of Christ in Tomár which is the same place the Templars chose to establish their headquarters. Besides that it was there where the Templars had such a successful defense from the powerful muslim invasion that in order to celebrate they nicknamed the castle’s door as the Door of Blood.\nOf course Portugal isn’t just about recalling the past and its achievements, in these regions there some establishments such as Bode’s castle dam and Aquapolis who specialize in watersports for the younger folk.\n",
+     "Location": "34433ddd3d",
+     "Places": [
+       {
+         "ImageId": 0,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 1,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 2,
+         "Location": "fdfdfdf8343"
+       }
+     ]
+   },
+   {
+     "Id": 6,
+     "Name": "Açores",
+     "DescriptionPt": "abcd",
+     "DescriptionEn": "abcd",
+     "Location": "34433ddd3d",
+     "Places": [
+       {
+         "ImageId": 0,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 1,
+         "Location": "fdfdfdf8343"
+       },
+       {
+         "ImageId": 2,
+         "Location": "fdfdfdf8343"
+       }
+     ]
+   },
+    {
+      "Id": 7,
+      "Name": "Madeira",
+      "DescriptionPt": "abcd",
+      "DescriptionEn": "abcd",
+      "Location": "34433ddd3d",
+      "Places": [
+        {
+          "ImageId": 0,
+          "Location": "fdfdfdf8343"
+        },
+        {
+          "ImageId": 1,
+          "Location": "fdfdfdf8343"
+        },
+        {
+          "ImageId": 2,
+          "Location": "fdfdfdf8343"
+        }
+        ]
+    },
+    {
+      "Id": 8,
+      "Name": "Beira Litoral",
+      "DescriptionPt": "abcd",
+      "DescriptionEn": "abcd",
+      "Location": "34433ddd3d",
+      "Places": [
+        {
+          "ImageId": 0,
+          "Location": "fdfdfdf8343"
+        },
+        {
+          "ImageId": 1,
+          "Location": "fdfdfdf8343"
+        },
+        {
+          "ImageId": 2,
+          "Location": "fdfdfdf8343"
+        }
+        ]
+    },
+   {
+   "Id": 9,
+   "Name": "Trás os Montes Alto Douro",
+   "DescriptionPt": "abcd",
+   "DescriptionEn": "abcd",
+   "Location": "34433ddd3d",
+   "Score": 90,
+   "Places": [
+     {
+       "ImageId": 0,
+       "Location": "fdfdfdf8343"
+     },
+     {
+       "ImageId": 1,
+       "Location": "fdfdfdf8343"
+     },
+     {
+       "ImageId": 2,
+       "Location": "fdfdfdf8343"
+     }
+   ]
+ }
+    ]
