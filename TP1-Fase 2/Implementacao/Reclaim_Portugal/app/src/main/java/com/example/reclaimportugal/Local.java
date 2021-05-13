@@ -18,6 +18,19 @@ public class Local {
         editor.apply();
     }
 
+    private static int loadInt(String tag, String namespace, Context app_context) {
+        SharedPreferences sharedPreferences = app_context.getSharedPreferences(namespace, Context.MODE_PRIVATE);
+        return sharedPreferences.getInt(tag, 0);
+    }
+
+    private static void saveInt(String tag, String namespace, int value, Context app_context){
+        SharedPreferences sharedPref = app_context.getSharedPreferences(namespace, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.clear();
+        editor.putInt(tag, value);
+        editor.apply();
+    }
+
     private static String loadString(String tag, String namespace, Context app_context) {
         SharedPreferences sharedPreferences = app_context.getSharedPreferences(namespace, Context.MODE_PRIVATE);
         return sharedPreferences.getString(tag, "");
@@ -53,5 +66,13 @@ public class Local {
 
     public static void setLanguage(String language, Context context){
         saveString("language", "settings", language, context);
+    }
+
+    public static void setRegionScore(int score, String region, Context context){
+        saveInt(region, "game", score, context);
+    }
+
+    public static int getRegionScore(String region, Context context){
+        return loadInt(region, "game", context);
     }
 }
