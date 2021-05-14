@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -14,6 +16,7 @@ import android.view.View;
 import java.util.Locale;
 
 public class Welcome extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // load language from user settings
@@ -21,6 +24,13 @@ public class Welcome extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        PlayBackgroundMusic();
+    }
+
+    private void PlayBackgroundMusic() {
+        Intent intent = new Intent(Welcome.this, BackgroundMusic.class);
+        startService(intent);
     }
 
     public void showRegister(View v) {

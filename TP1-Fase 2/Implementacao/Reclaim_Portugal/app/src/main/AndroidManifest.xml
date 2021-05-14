@@ -17,6 +17,7 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+        <service android:name=".BackgroundMusic" />
         <activity
             android:name=".RegisterConfirmCode"
             android:screenOrientation="landscape"/>
