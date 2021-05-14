@@ -81,7 +81,10 @@ public class MatchResult extends AppCompatActivity {
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MatchResult.this, RegionSelect.class));
+                Intent intent = new Intent(MatchResult.this, GameOngoing.class);
+                intent.putExtra("regionIDGame", id);
+                finish();
+                startActivity(intent);
             }
         });
 
@@ -89,7 +92,7 @@ public class MatchResult extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MatchResult.this, MainMenu.class));
+                finish();
             }
         });
 

@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -73,7 +74,7 @@ public class RegionDetails extends AppCompatActivity {
         description = findViewById(R.id.region_description);
         description.setMovementMethod(new ScrollingMovementMethod());
         try {
-            if(language == "en"){
+            if(language.equals("en")){
             description.setText(obj.getString("DescriptionEn"));
             }else{
             description.setText(obj.getString("DescriptionPt"));
@@ -97,8 +98,7 @@ public class RegionDetails extends AppCompatActivity {
     }
 
     private void openActivityBack() {
-        Intent intent = new Intent(this, RegionSelect.class);
-        startActivity(intent);
+        finish();
     }
 
     private String getJson(){
@@ -108,7 +108,7 @@ public class RegionDetails extends AppCompatActivity {
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            json = new String(buffer, "UTF-8");
+            json = new String(buffer, StandardCharsets.UTF_8);
             return json;
 
         }catch(IOException e){
