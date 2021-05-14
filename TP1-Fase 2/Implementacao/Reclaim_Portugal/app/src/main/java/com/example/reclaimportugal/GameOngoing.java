@@ -1,6 +1,10 @@
 package com.example.reclaimportugal;
 
 import android.content.Intent;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.Gravity;
@@ -25,7 +29,7 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Random;
 
-public class GameOngoing extends AppCompatActivity {
+public class GameOngoing extends AppCompatActivity implements SensorEventListener {
     private TextView countdownText;
     private ImageButton pauseButton;
     private CountDownTimer countDownTimer;
@@ -46,68 +50,62 @@ public class GameOngoing extends AppCompatActivity {
     private int wrongAnswers = 0;
     private boolean rightOrWrong;
     private HashMap<String, Boolean> highlightQuestions;
-    private int start;
     private int nQuestions;
 
-
-
+    private SensorManager sensorManager;
+    double az;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_ongoing);
 
-        id = getIntent().getIntExtra("regionIDGame", -1);
-        try {
-            jArray = new JSONArray(getJson());
+        sensorManager=(SensorManager) getSystemService(SENSOR_SERVICE);
+        sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
 
-            if(id == 0){
-                start = 0;
-                nQuestions = 20;
-            }else if(id == 1){
-                start = 20;
-                nQuestions = 16;
-            }else if(id == 2){
-                start = 36;
-                nQuestions = 15;
-            }else if(id == 3){
-                start = 51;
-                nQuestions = 16;
-            }else if(id == 4){
-                start = 67;
-                nQuestions = 15;
-            }else if(id == 5){
-                start = 82;
-                nQuestions = 20;
-            }else if(id == 6){
-                start = 102;
-                nQuestions = 13;
-            }else if(id == 7){
-                start = 116;
-                nQuestions = 15;
-            }else if(id == 8){
-                start = 131;
-                nQuestions = 16;
-            }else if(id == 9){
-                start = 147;
-                nQuestions = 13;
-            }else{
-                start = 0;
-                nQuestions = 30;
+        //get the id of the region in specific so we can know which questions to get
+        id = getIntent().getIntExtra("regionIDGame", -1);
+
+        //if id is 99 then user selected quickmatch which contains all questions, else code goes to find the questions which belong to a certain id
+        if(id == 99){
+            try {
+                jArray = new JSONArray(getJson());
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-            counter = nQuestions;
+            //quickmatch will have 30 questions needed to answer within the time limit
+            counter = 30;
+        }else{
+        try {
+            JSONArray tempJArray;
+            tempJArray = new JSONArray(getJson());
+            jArray = new JSONArray();
+            for(int x = 0; x < tempJArray.length(); x++){
+                if(tempJArray.getJSONObject(x).getInt("RegionID") == id){
+                    jArray.put(tempJArray.getJSONObject(x));
+                }
+            }
+            //since some regions have more questions than others we use the length of the jArray to know how many questions there are
+            counter = jArray.length();
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
+        }
+
+        nQuestions = counter;
         language = Locale.getDefault().getLanguage();
         countdownText = findViewById(R.id.countdown);
         question = findViewById(R.id.gameQuestion);
         answerLeft = findViewById(R.id.answerLeft);
         answerRight = findViewById(R.id.answerRight);
 
+        //so we know which questions he got right and which he got wrong
         highlightQuestions = new HashMap<>();
 
+        //method to trigger questions / the game itself
         newQuestion();
 
+        //this button will trigger the popup
         pauseButton = findViewById(R.id.pauseGame);
         pauseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,6 +116,33 @@ public class GameOngoing extends AppCompatActivity {
         startTimer();
     }
 
+    @Override
+    public void onAccuracyChanged(Sensor arg0, int arg1){
+
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event){
+        if (event.sensor.getType()==Sensor.TYPE_ACCELEROMETER){
+            if (az - event.values[2] > 2){
+                try {
+                    chooseRight();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (az - event.values[2] < -2){
+                try {
+                    chooseLeft();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            az=event.values[2];
+        }
+    }
+
+    //begins the timer for the quiz
     public void startTimer() {
         countDownTimer = new CountDownTimer(timeLeftInMilli, 1000) {
             @Override
@@ -128,17 +153,13 @@ public class GameOngoing extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                //startActivity(new Intent(GameOngoing.this, MatchResult.class));
-                Intent intent = new Intent(GameOngoing.this, MatchResult.class);
-                intent.putExtra("score", correctAnswers);
-                intent.putExtra("wrong", wrongAnswers);
-                //intent.putExtra("regionID", id);
-                startActivity(intent);
+                endGame();
             }
         }.start();
         timerRunning = true;
     }
 
+    //updates timer
     public void updateTimer() {
         int minutes = (int) timeLeftInMilli / 60000;
         int seconds = (int) timeLeftInMilli % 60000 / 1000;
@@ -153,9 +174,8 @@ public class GameOngoing extends AppCompatActivity {
         countdownText.setText(timeLeftText);
     }
 
+    //Brings out the pop-up
     public void onButtonShowPopupWindowClick(View view) {
-
-
         LayoutInflater inflater = (LayoutInflater)
                 getSystemService(LAYOUT_INFLATER_SERVICE);
         View popupView = inflater.inflate(R.layout.activity_game_popup, null);
@@ -178,19 +198,19 @@ public class GameOngoing extends AppCompatActivity {
         });
     }
 
+    //dismisses the popup
     public void continueGame(View v) {
         popupWindow.dismiss();
     }
 
+    //if users clicks on quit in popup then goes to results
     public void quitGame(View v) {
-        Intent intent = new Intent(Intent.ACTION_MAIN);
-        intent.addCategory(Intent.CATEGORY_HOME);
-        startActivity(intent);
+        endGame();
     }
 
+    //fetches all questions
     public String getJson() {
         try {
-            //InputStream is = getAssets().open("regionquestions" + id + ".json");
             InputStream is = getAssets().open("questions.json");
             int size = is.available();
             byte[] buffer = new byte[size];
@@ -205,7 +225,9 @@ public class GameOngoing extends AppCompatActivity {
         }
     }
 
-    public void chooseLeft(View v) throws JSONException {
+    //left answer
+    private void chooseLeft() throws JSONException {
+        SoundManager.ClickSound(getApplicationContext());
         counter--;
         if(rightOrWrong == false){
             correctAnswers++;
@@ -217,7 +239,9 @@ public class GameOngoing extends AppCompatActivity {
         newQuestion();
     }
 
-    public void chooseRight(View v) throws JSONException {
+    //right answer
+    private void chooseRight() throws JSONException {
+        SoundManager.ClickSound(getApplicationContext());
         counter--;
         if(rightOrWrong) {
             correctAnswers++;
@@ -228,6 +252,18 @@ public class GameOngoing extends AppCompatActivity {
         }newQuestion();
     }
 
+
+    //left answer
+    public void chooseLeft(View v) throws JSONException {
+        chooseLeft();
+    }
+
+    //right answer
+    public void chooseRight(View v) throws JSONException {
+        chooseRight();
+    }
+
+    //places the questions into the arraylist
     public void placeQuestion(Boolean correct) throws JSONException {
         if(correct){
             if (language == "en")
@@ -242,11 +278,10 @@ public class GameOngoing extends AppCompatActivity {
         }
     }
 
+    //calls a new question
     public void newQuestion() {
         Random rightOrLeft = new Random();
         Boolean choice = rightOrLeft.nextBoolean();
-
-
 
         if (counter > 0) {
             if(id==99){
@@ -259,8 +294,7 @@ public class GameOngoing extends AppCompatActivity {
                 }
             }else{
             try {
-                //
-                random = new Random().nextInt(counter) + start;
+                random = new Random().nextInt(counter);
                 obj = jArray.getJSONObject(random);
                 jArray.remove(random);
             } catch (JSONException e) {
@@ -318,13 +352,17 @@ public class GameOngoing extends AppCompatActivity {
                 rightOrWrong = true;
             }
         } else {
-            Intent intent = new Intent(GameOngoing.this, MatchResult.class);
-            intent.putExtra("score", correctAnswers);
-            intent.putExtra("wrong", wrongAnswers);
-            intent.putExtra("highlightedQuestions", highlightQuestions);
-            intent.putExtra("regionID", id);
-            startActivity(intent);
+            endGame();
         }
+    }
 
+    public void endGame(){
+        Intent intent = new Intent(GameOngoing.this, MatchResult.class);
+        intent.putExtra("score", correctAnswers);
+        intent.putExtra("wrong", wrongAnswers);
+        intent.putExtra("highlightedQuestions", highlightQuestions);
+        intent.putExtra("regionID", id);
+        intent.putExtra("numberQuestions", nQuestions);
+        startActivity(intent);
     }
 }

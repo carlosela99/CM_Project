@@ -36,8 +36,8 @@ public class MatchResult extends AppCompatActivity {
     private int score;
     private int wrong;
     private HashMap<String, Boolean> highlightQuestions;
-    private String [] arrayScore;
     private int id;
+    private int nQuestions;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -48,6 +48,7 @@ public class MatchResult extends AppCompatActivity {
 
         score = getIntent().getIntExtra("score", -1);
         wrong =  getIntent().getIntExtra("wrong", -1);
+        nQuestions = getIntent().getIntExtra("numberQuestions", 20);
         id =  getIntent().getIntExtra("regionID", -1);
         highlightQuestions.putAll((HashMap<String, Boolean>)getIntent().getSerializableExtra("highlightedQuestions"));
 
@@ -66,6 +67,9 @@ public class MatchResult extends AppCompatActivity {
         }
         allQuestions.setMovementMethod(new ScrollingMovementMethod());
 
+        Local.incrementGamesCount(getApplicationContext());
+        Local.incrementCorrectAnswersCount(score, getApplicationContext());
+        Local.incrementWrongAnswersCount(wrong, getApplicationContext());
 
         rightScore.setText("Correct\n"  + score);
         wrongScore.setText("Wrong\n" + wrong);

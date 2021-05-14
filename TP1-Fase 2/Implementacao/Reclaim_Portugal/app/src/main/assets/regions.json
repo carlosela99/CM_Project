@@ -3,7 +3,7 @@
      "Id": 0,
      "Name": "Douro e Minho",
      "DescriptionPt": "O Douro é uma terra cheia de história, como se costuma dizer, 1 semana no Porto não chega para admirar toda a beleza da região. O Porto é conhecido pela sua vasta gastronomia, indo dos vinhos regionais, às francesinhas. Temos também para visitar cidades cheias de história e onde se situam dos sítios mais bonitos do mundo, como é o caso da livraria Lello, ou até mesmo a casa da música, ou a ponte D. Luís I.",
-     "DescriptionEn": "O Douro é uma terra cheia de história, como se costuma dizer, 1 semana no Porto não chega para admirar toda a beleza da região. O Porto é conhecido pela sua vasta gastronomia, indo dos vinhos regionais, às francesinhas. Temos também para visitar cidades cheias de história e onde se situam dos sítios mais bonitos do mundo, como é o caso da livraria Lello, ou até mesmo a casa da música, ou a ponte D. Luís I.",
+     "DescriptionEn": "The Douro is a land full of history, as they say, 1 week in Porto is not enough to admire all the beauty of the region. Porto is known for its vast gastronomy, ranging from regional wines to francesinhas. We also have to visit cities full of history and where they are located in the most beautiful places in the world, as is the case of the Lello bookstore, or even the house of music, or the D. Luís I bridge.",
      "Location": "34433ddd3d",
      "Places": [
        {
@@ -24,7 +24,7 @@
      "Id": 1,
      "Name": "Alentejo",
      "DescriptionPt": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
-     "DescriptionEn": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
+     "DescriptionEn": "Alentejo tourism is one of those that has been growing the most recently. In the Alentejo, we can combine the useful with the pleasant and have the possibility of rural tourism, visiting monuments such as the Diana temple, we can also take the opportunity to sample all the typical dishes, all of which are well known all over the world. Finally, we can also take the opportunity to do a more bathing tourism, here we will have the possibility to visit numerous dams, many of them having blue flags and winners of several prizes.",
      "Location": "34433ddd3d",
      "Places": [
        {
@@ -43,9 +43,9 @@
    },
    {
      "Id": 2,
-     "Name": "Algarve",
-     "DescriptionPt": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
-     "DescriptionEn": "O turismo do Alentejo é um dos que tem vindo a crescer mais nos últimos tempos. No Alentejo poderemos juntar o útil ao agradável e ter a possibilidade de realizar um turismo rural, visitando monumentos tal como o templo de Diana, podemos também aproveitar para provar todos os pratos típicos, sendo todos estes bastante conhecidos pelo mundo inteiro. Por fim podemos também aproveitar para fazer um turismo mais balnear, aqui teremos a possibilidade de visitar inúmeras barragens, tendo muitas delas bandeira azul e vencedoras de diversos prémios.",
+       "Name": "Algarve",
+     "DescriptionPt": "O turismo no Algarve sempre foi muito conhecido pelo mundo inteiro. O turismo balnear do Algarve é considerado por muitos o melhor turismo balnear melhor do mundo. Mas apesar de as praias do Algarve serem magnificas, não podemos deixar de salientar o facto de ser uma terra com imensa história, tanto pelas suas iguarias, como a melosa, medronho entre outros, as suas típicas festas e monumentos.",
+     "DescriptionEn": "Tourism in the Algarve has always been well known throughout the world. The bathing tourism of the Algarve is considered by many to be the best bathing tourism in the world. But although the beaches in the Algarve are magnificent, we cannot fail to point out the fact that it is a land with an immense history, both for its delicacies, as well as the honeycomb, strawberry tree among others, its typical festivals and monuments.",
      "Location": "34433ddd3d",
      "Places": [
        {
@@ -66,7 +66,7 @@
      "Id": 3,
      "Name": "Beira Interior",
      "DescriptionPt": "O turismo da Beira Interior, apesar de estar a ganhar mais reconhecimentos nos últimos tempos, ainda não está muito desenvolvido, mas tem um grande potencial. Na beira Interior, podemos optar por um turismo mais rural, indo visitar a capela do Bom Fim, parque Arqueológico do Vale do Côa e com alguma sorte, nos tempos mais frios ir brincar com a neve à Serra da Estrela e na vinda para casa passar pelo museu do Pão e comer um dos melhores pães do mundo.",
-     "DescriptionEn": "O turismo da Beira Interior, apesar de estar a ganhar mais reconhecimentos nos últimos tempos, ainda não está muito desenvolvido, mas tem um grande potencial. Na beira Interior, podemos optar por um turismo mais rural, indo visitar a capela do Bom Fim, parque Arqueológico do Vale do Côa e com alguma sorte, nos tempos mais frios ir brincar com a neve à Serra da Estrela e na vinda para casa passar pelo museu do Pão e comer um dos melhores pães do mundo.",
+     "DescriptionEn": "Beira Interior tourism, although it has been gaining more recognition lately, is not yet very developed, but it has great potential. In the Interior, we can opt for a more rural tourism, going to visit the chapel of Bom Fim, Archaeological park of Vale do Côa and with some luck, in the colder times go to play with the snow to the Serra da Estrela and when coming home to pass by the Bread museum and eat one of the best breads in the world.",
      "Location": "34433ddd3d",
      "Places": [
        {
@@ -87,7 +87,7 @@
      "Id": 4,
      "Name": "Lisboa",
      "DescriptionPt": "Sendo esta a capital do país, podemos contar com uma cidade cheia de atividades para fazer durante o dia, como ir ao jardim zoológico, ou ao oceanário. Podemos também dar uma volta por belém e aproveitar para observar o padrão dos descobrimentos e a torre de belém enquanto comemos um pastel de nata, ou podemos ir para o museu dos coches, ou se preferir pode também ir até ao castelo de S.Jorge.  Podemos também ir dar uma volta de teleférico no parque das nações e passar pela expo 1998.",
-     "DescriptionEn": "Sendo esta a capital do país, podemos contar com uma cidade cheia de atividades para fazer durante o dia, como ir ao jardim zoológico, ou ao oceanário. Podemos também dar uma volta por belém e aproveitar para observar o padrão dos descobrimentos e a torre de belém enquanto comemos um pastel de nata, ou podemos ir para o museu dos coches, ou se preferir pode também ir até ao castelo de S.Jorge.  Podemos também ir dar uma volta de teleférico no parque das nações e passar pela expo 1998.",
+     "DescriptionEn": "This being the capital of the country, we can count on a city full of activities to do during the day, such as going to the zoo, or to the oceanarium. We can also take a stroll around Belém and take the opportunity to observe the pattern of the discoveries and the Belém Tower while we eat a pastel de nata, or we can go to the coach museum, or if you prefer you can also go to the castle of S. Jorge. We can also go for a cable car ride in Parque das Nações and go through Expo 1998.",
      "Location": "34433ddd3d",
      "Places": [
        {
@@ -128,8 +128,8 @@
    {
      "Id": 6,
      "Name": "Açores",
-     "DescriptionPt": "abcd",
-     "DescriptionEn": "abcd",
+     "DescriptionPt": "Os Açores é um arquipélago, constituído por 9 ilhas maravilhosas. O turismo dos Açores é muito procurado pelo contacto que a ilha tem com a natureza, juntando o campo ao mar. Lá podemos visitar cascatas maravilhosas, observar flores típicas da região e ainda saborear o prato típico, que é o cozido dos Açores, sendo este feito em furnas. As furnas dos Açores não servem apenas para a cozinha, mas também como forma de lazer. Por fim podemos também observar os vastos campos, pastados por vacas.",
+     "DescriptionEn": "The Azores is an archipelago, consisting of 9 wonderful islands. Tourism in the Azores is highly sought after due to the contact that the island has with nature, joining the countryside to the sea. There we can visit wonderful waterfalls, observe typical flowers of the region and even taste the typical dish, which is the Azorean stew, which is made in furnas. Furnas in the Azores are not only used for cooking, but also as a form of leisure. Finally, we can also observe the vast fields, grazed by cows.",
      "Location": "34433ddd3d",
      "Places": [
        {
@@ -149,8 +149,8 @@
     {
       "Id": 7,
       "Name": "Madeira",
-      "DescriptionPt": "abcd",
-      "DescriptionEn": "abcd",
+      "DescriptionPt": "A ilha da Madeira é uma referência turística para inúmeras pessoas. Tanto para portugueses como estrangeiros. Na ilha da Madeira podemos contar tanto com um turismo cultural, podendo visitar o museu do melhor jogador do mundo, Cristiano Ronaldo, podemos também saborear as maravilhosas ponchas, a acompanhar de um bolo do caco e ainda a Reserva Mundial da Biosfera e muito mais. Temos ainda imensas paisagens que são admiradas por muitos.",
+      "DescriptionEn": "The island of Madeira is a tourist reference for countless people. For both Portuguese and foreigners. On the island of Madeira we can count on both a cultural tourism, being able to visit the museum of the best player in the world, Cristiano Ronaldo, we can also taste the wonderful ponchas, accompanied by a bolo do caco and also the World Biosphere Reserve and much more. We still have immense landscapes that are admired by many.",
       "Location": "34433ddd3d",
       "Places": [
         {
@@ -170,8 +170,8 @@
     {
       "Id": 8,
       "Name": "Beira Litoral",
-      "DescriptionPt": "abcd",
-      "DescriptionEn": "abcd",
+      "DescriptionPt": "A Beira Litoral é constituída por 4 distritos, sendo estes Aveiro, Coimbra, Leiria e Santarém. Todas estas cidades trazem muita história e muitos pontos turísticos para se observar. Sítios como o pinhal de Leiria, dar um passeio à beira do rio Mondego. Podemos também passar por Aveiro, conhecido por muitos como Veneza de Portugal, comer uns ovos moles e dar um passeio de barco pelo rio. Podemos ainda visitar o Mosteiro de Lorvão que se situa em Coimbra e que é tão apreciado por muitos.",
+      "DescriptionEn": "Beira Litoral consists of 4 districts, Aveiro, Coimbra, Leiria and Santarém. All of these cities bring a lot of history and many sights to see. Places like the pine forest of Leiria, take a stroll along the Mondego river. We can also go through Aveiro, known to many as the Venice of Portugal, to eat some soft eggs and take a boat trip on the river. We can also visit the Monastery of Lorvão, which is located in Coimbra and is so appreciated by many.",
       "Location": "34433ddd3d",
       "Places": [
         {
@@ -191,10 +191,9 @@
    {
    "Id": 9,
    "Name": "Trás os Montes Alto Douro",
-   "DescriptionPt": "abcd",
-   "DescriptionEn": "abcd",
+   "DescriptionPt": "Trás-os-Montes e Alto Douro, foram as regiões onde cresceram Portugal, pois foi onde se assinou o tratado de Zamora, tendo assim Portugal conquistado a sua independência. Podemos aproveitar também a parte das iguarias da região e saborear bons vinhos da região, que para muitos são os melhores do mundo, enquanto comemos uma posta à mirandesa. Podemos também aproveitar para visitar o parque Arqueológico do Vale do Côa e passar pela estação do Pinhão, situada no Douro.",
+   "DescriptionEn": "Trás-os-Montes and Alto Douro, were the regions where Portugal grew, as it was where the Zamora treaty was signed, thus having Portugal gained its independence. We can also enjoy some of the region's delicacies and taste good wines from the region, which for many are the best in the world, while we eat a slice of Mirandese. We can also take the opportunity to visit the Archaeological Park of Vale do Côa and pass by the Pinhão station, located in the Douro.",
    "Location": "34433ddd3d",
-   "Score": 90,
    "Places": [
      {
        "ImageId": 0,

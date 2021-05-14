@@ -1,6 +1,7 @@
 [
   {
     "Id": 0,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Onde se situa a casa da música?",
@@ -12,6 +13,7 @@
   },
   {
     "Id": 1,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Em que jardim se realiza o festival Primavera Sound?",
@@ -23,6 +25,7 @@
   },
   {
     "Id": 2,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual destes pratos é típico da cidade do Porto?",
@@ -34,6 +37,7 @@
   },
   {
     "Id": 3,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "No Porto, um café pode ser chamado de …?",
@@ -45,6 +49,7 @@
   },
   {
     "Id": 4,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o nome da ponte que passa o Porto para Vila Nova de Gaia?",
@@ -56,6 +61,7 @@
   },
   {
     "Id": 5,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o nome da livraria mais bonita do país?",
@@ -67,6 +73,7 @@
   },
   {
     "Id": 6,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual destes animais representa Barcelos?",
@@ -78,6 +85,7 @@
   },
   {
     "Id": 7,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Onde se situa o rali mais conhecido de Portugal?",
@@ -89,6 +97,7 @@
   },
   {
     "Id": 8,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o nome do estádio do Sporting Braga?",
@@ -100,6 +109,7 @@
   },
   {
     "Id": 9,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o nome do teatro de Braga?",
@@ -111,6 +121,7 @@
   },
   {
     "Id": 10,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o nome da igreja de Braga?",
@@ -122,6 +133,7 @@
   },
   {
     "Id": 11,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o rio que banha a cidade do Porto?",
@@ -133,6 +145,7 @@
   },
   {
     "Id": 12,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o vinho regional do Porto?",
@@ -144,6 +157,7 @@
   },
   {
     "Id": 13,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Onde se situa a Ponte de Lima?",
@@ -155,6 +169,7 @@
   },
   {
     "Id": 14,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o nome das famosas festas da ponte de Lima?",
@@ -166,6 +181,7 @@
   },
   {
     "Id": 15,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Onde se situa o Mc Donalds mais famoso de Portugal?",
@@ -177,6 +193,7 @@
   },
   {
     "Id": 16,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Na ponte S.João apenas passam?",
@@ -188,6 +205,7 @@
   },
   {
     "Id": 17,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Qual o nome do barco que transportava as pipas de vinho do Porto no Douro?",
@@ -199,6 +217,7 @@
   },
   {
     "Id": 18,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Quantos habitantes tem o conselho de Guimarães?",
@@ -210,6 +229,7 @@
   },
   {
     "Id": 19,
+    "RegionID": 0,
     "RegionA": "Douro e Minho",
     "RegionB": "",
     "QuestionPt": "Quem mandou construir o Paço dos Duques?",
@@ -221,6 +241,7 @@
   },
   {
     "Id": 20,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Qual destes pratos é típico do Alentejo",
@@ -232,6 +253,7 @@
   },
   {
     "Id": 21,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "O que foi considerado pela UNESCO Património Imaterial da Humanidade?",
@@ -243,6 +265,7 @@
   },
   {
     "Id": 22,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Quantos habitantes tem o Alentejo?",
@@ -254,6 +277,7 @@
   },
   {
     "Id": 23,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Qual destas cidades é considerada património Mundial da Humanidade?",
@@ -265,6 +289,7 @@
   },
   {
     "Id": 24,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Onde poderei visitar o templo de Diana?",
@@ -276,6 +301,7 @@
   },
   {
     "Id": 25,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "A igreja de S. Francisco em Évora enctra-se forrada a...?",
@@ -287,6 +313,7 @@
   },
   {
     "Id": 26,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Quem vivia na igreja de S.Francisco?",
@@ -298,6 +325,7 @@
   },
   {
     "Id": 27,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Qual a cidade mais populosa do Alentejo?",
@@ -309,6 +337,7 @@
   },
   {
     "Id": 28,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Na capela dos ossos, os Ossos são de que especíe?",
@@ -320,6 +349,7 @@
   },
   {
     "Id": 29,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Qual o rio que banha a cidade de Mertola?",
@@ -331,19 +361,21 @@
   },
   {
     "Id": 30,
+    "RegionID": 1,
     "RegionA": "Alentejo",
-    "RegionB": "",
+    "RegionB": "Beira Litoral",
     "QuestionPt": "Qual é a maior região Portuguesa?",
     "QuestionEn": "What is the largest English region?",
     "CorrectAnswerPt": "Alentejo",
     "CorrectAnswerEn": "Alentejo",
     "WrongAnswerPt": "Beiras",
-    "WrongAnswerEn": "Beiras"
+    "WrongAnswerEn": "Beira Litoral"
   },
   {
     "Id": 31,
+    "RegionID": 1,
     "RegionA": "Alentejo",
-    "RegionB": "",
+    "RegionB": "Beira Interior",
     "QuestionPt": "Onde se situa o maior lago artífical da Europa ?",
     "QuestionEn": "Where is the largest artificial lake in Europe?",
     "CorrectAnswerPt": "Alqueva",
@@ -353,6 +385,7 @@
   },
   {
     "Id": 32,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Quantos habitantes tem a cidade de Portalegre?",
@@ -364,6 +397,7 @@
   },
   {
     "Id": 33,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Qual dos produtos mais produzidos no Alentejo?",
@@ -375,6 +409,7 @@
   },
   {
     "Id": 34,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "O touro do brasão da cidade de Beja representa…?",
@@ -386,6 +421,7 @@
   },
   {
     "Id": 35,
+    "RegionID": 1,
     "RegionA": "Alentejo",
     "RegionB": "",
     "QuestionPt": "Qual o ponto mais alto do Alentejo?",
@@ -397,6 +433,7 @@
   },
   {
     "Id": 36,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Qual destas iguarias é tradicional do Algarve?",
@@ -408,6 +445,7 @@
   },
   {
     "Id": 37,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Qual a bebida tradicional do Algarve?",
@@ -419,6 +457,7 @@
   },
   {
     "Id": 38,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Qual o numero de habitantes do Algarve?",
@@ -430,6 +469,7 @@
   },
   {
     "Id": 39,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Em que século Foi construÍda a Sé de Faro?",
@@ -441,6 +481,7 @@
   },
   {
     "Id": 40,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Onde se situa o museu municipal de Arqueologia?",
@@ -452,6 +493,7 @@
   },
   {
     "Id": 41,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "A galeria de Arte Bongard expõe e vende peças de…?",
@@ -463,6 +505,7 @@
   },
   {
     "Id": 42,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Qual a dança típica do Algarve?",
@@ -474,6 +517,7 @@
   },
   {
     "Id": 43,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Onde se celebra o Carnaval no Algarve?",
@@ -485,6 +529,7 @@
   },
   {
     "Id": 44,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Os Maios em Olhão é conhecido por...?",
@@ -496,6 +541,7 @@
   },
   {
     "Id": 45,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Onde se realiza a festa medieval?",
@@ -507,6 +553,7 @@
   },
   {
     "Id": 46,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Onde se situa a praia da rocha?",
@@ -518,6 +565,7 @@
   },
   {
     "Id": 47,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "O castelo de Silves foi contrído por…?",
@@ -529,6 +577,7 @@
   },
   {
     "Id": 48,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Como se chama a serra do Algarve?",
@@ -540,6 +589,7 @@
   },
   {
     "Id": 49,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Quantos distritos tem o Algarve?",
@@ -551,6 +601,7 @@
   },
   {
     "Id": 50,
+    "RegionID": 2,
     "RegionA": "Algarve",
     "RegionB": "",
     "QuestionPt": "Qual a capital do Algarve?",
@@ -562,6 +613,7 @@
   },
   {
     "Id": 51,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Qual o número de habitante da Beira Interior?",
@@ -573,8 +625,9 @@
   },
   {
     "Id": 52,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
-    "RegionB": "",
+    "RegionB": "Ribatejo",
     "QuestionPt": "Qual destas serras é conhecida pela sua neve?",
     "QuestionEn": "Which of these saws is known for its snow?",
     "CorrectAnswerPt": "Serra da Estrela",
@@ -584,6 +637,7 @@
   },
   {
     "Id": 53,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Onde se localiza o Museu do Pão?",
@@ -595,6 +649,7 @@
   },
   {
     "Id": 54,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "A Beira Interior é conhecida pela ...?",
@@ -606,6 +661,7 @@
   },
   {
     "Id": 55,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Onde se realiza o acanac?",
@@ -617,6 +673,7 @@
   },
   {
     "Id": 56,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Qual a sigla da faculdade da Beira?",
@@ -628,6 +685,7 @@
   },
   {
     "Id": 57,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Qual destas é a bebida é tradicional de Obitos",
@@ -639,6 +697,7 @@
   },
   {
     "Id": 58,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Onde se situa a Capela do Bom Fim?",
@@ -650,6 +709,7 @@
   },
   {
     "Id": 59,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Onde se situa as termas de Longroiva?",
@@ -661,6 +721,7 @@
   },
   {
     "Id": 60,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Qual destes rios banha a vila da Ratoeira?",
@@ -672,6 +733,7 @@
   },
   {
     "Id": 61,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Quantos concelhos tem a Beira Interior?",
@@ -683,6 +745,7 @@
   },
   {
     "Id": 62,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Onde se pode visitar o Parque Arqueológico do Vale do Côa?",
@@ -694,6 +757,7 @@
   },
   {
     "Id": 63,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "O que se pode ver no museu da casa grande?",
@@ -705,6 +769,7 @@
   },
   {
     "Id": 64,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Qual a arquitetura tradicional da Beira Interior?",
@@ -716,6 +781,7 @@
   },
   {
     "Id": 65,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Qual a altura da Serra da Estrela?",
@@ -727,6 +793,7 @@
   },
   {
     "Id": 66,
+    "RegionID": 3,
     "RegionA": "Beira Interior",
     "RegionB": "",
     "QuestionPt": "Onde se situa o jardim do Paço Episcopal?",
@@ -738,8 +805,9 @@
   },
   {
     "Id": 67,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Porto",
     "QuestionPt": "Onde se situa a Praça do Rossio?",
     "QuestionEn": "Where is the Rossio Square?",
     "CorrectAnswerPt": "Lisboa",
@@ -749,6 +817,7 @@
   },
   {
     "Id": 68,
+    "RegionID": 4,
     "RegionA": "Lisboa",
     "RegionB": "",
     "QuestionPt": "Qual dos monumentos pertencem a Lisboa?",
@@ -760,8 +829,9 @@
   },
   {
     "Id": 69,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Porto",
     "QuestionPt": "Onde fica o maior oceanário de Portugal?",
     "QuestionEn": "Where is the largest oceanarium in Portugal?",
     "CorrectAnswerPt": "Lisboa",
@@ -771,6 +841,7 @@
   },
   {
     "Id": 70,
+    "RegionID": 4,
     "RegionA": "Lisboa",
     "RegionB": "",
     "QuestionPt": "Qual é o animal considerado o guardião de Lisboa",
@@ -782,8 +853,9 @@
   },
   {
     "Id": 71,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Alto Douro",
     "QuestionPt": "Onde se encontra o Padrão dos descobrimentos",
     "QuestionEn": "Where is the Monument to the Discoveries",
     "CorrectAnswerPt": "Lisboa",
@@ -793,6 +865,7 @@
   },
   {
     "Id": 72,
+    "RegionID": 4,
     "RegionA": "Lisboa",
     "RegionB": "",
     "QuestionPt": "Em que seculo foi construído o Mosteiro dos Jerónimos?",
@@ -804,6 +877,7 @@
   },
   {
     "Id": 73,
+    "RegionID": 4,
     "RegionA": "Lisboa",
     "RegionB": "",
     "QuestionPt": "Em que ano foi inaugurada a ponte 25 de abril em lisboa?",
@@ -815,8 +889,9 @@
   },
   {
     "Id": 74,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Alto Douro",
     "QuestionPt": "O museu dos Coches pertence a que cidade?",
     "QuestionEn": "The museum Coach belongs to that city?",
     "CorrectAnswerPt": "Lisboa",
@@ -826,8 +901,9 @@
   },
   {
     "Id": 75,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Ribatejo",
     "QuestionPt": "Onde se localiza o Terreiro do Paço?",
     "QuestionEn": "Where is the Palace Square?",
     "CorrectAnswerPt": "Lisboa",
@@ -837,8 +913,9 @@
   },
   {
     "Id": 76,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Alentejo",
     "QuestionPt": "Onde fica o Castelo de S.Jorge?",
     "QuestionEn": "Where is the Castle of São Jorge?",
     "CorrectAnswerPt": "Lisboa",
@@ -848,6 +925,7 @@
   },
   {
     "Id": 77,
+    "RegionID": 4,
     "RegionA": "Lisboa",
     "RegionB": "",
     "QuestionPt": "Em que ano foi fundada a Santa Engrácia ,em Lisboa?",
@@ -859,6 +937,7 @@
   },
   {
     "Id": 78,
+    "RegionID": 4,
     "RegionA": "Lisboa",
     "RegionB": "",
     "QuestionPt": "Quando foi inaugurado o Padrão dos Descobrimentos,em Lisboa?",
@@ -870,8 +949,9 @@
   },
   {
     "Id": 79,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Beira Litoral",
     "QuestionPt": "Onde se encontra a escultura de Fernando Pessoa?",
     "QuestionEn": "Where is the sculpture of Fernando Pessoa?",
     "CorrectAnswerPt": "Lisboa",
@@ -881,8 +961,9 @@
   },
   {
     "Id": 80,
+    "RegionID": 4,
     "RegionA": "Lisboa",
-    "RegionB": "",
+    "RegionB": "Ribatejo",
     "QuestionPt": "Onde fica a estátua do Marques de Pombal?",
     "QuestionEn": "Where is the statue of the Marques de Pombal?",
     "CorrectAnswerPt": "Lisboa",
@@ -892,6 +973,7 @@
   },
   {
     "Id": 81,
+    "RegionID": 4,
     "RegionA": "Lisboa",
     "RegionB": "Alentejo",
     "QuestionPt": "Onde se localiza as enigmáticas Galerias Romanas que abrem ao público apenas durante três dias por ano",
@@ -903,6 +985,7 @@
   },
   {
     "Id": 82,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Em que ano  D. Afonso Henriques conquistou o castelo de Obidos?",
@@ -914,6 +997,7 @@
   },
   {
     "Id": 83,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual a figura mais associada com o palácio da pena?",
@@ -925,6 +1009,7 @@
   },
   {
     "Id": 84,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual destes foi declarado como património mundial pela UNESCO?",
@@ -936,6 +1021,7 @@
   },
   {
     "Id": 85,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual o Rio possível de admirar no topo da Torre de Belém?",
@@ -947,6 +1033,7 @@
   },
   {
     "Id": 86,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "A Praça do Rossio também pode ser conhecida como?",
@@ -958,6 +1045,7 @@
   },
   {
     "Id": 87,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Em que Região se situa o Castelo de São Jorge?",
@@ -969,6 +1057,7 @@
   },
   {
     "Id": 88,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Quantos arcos possui o aqueduto de pegões altos?",
@@ -980,6 +1069,7 @@
   },
   {
     "Id": 89,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Em que País nasce o Rio Tejo?",
@@ -991,6 +1081,7 @@
   },
   {
     "Id": 90,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual o estilo arquitetônico que possui a igreja de Santa Maria?",
@@ -1002,6 +1093,7 @@
   },
   {
     "Id": 91,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Em que seculo for erguida Igreja de Santa Maria?",
@@ -1013,6 +1105,7 @@
   },
   {
     "Id": 92,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual destes desportos mais se relaciona com o Aquapolis?",
@@ -1024,6 +1117,7 @@
   },
   {
     "Id": 93,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual destes locais é mais conhecido como ser um ponto de “turismo religioso”?",
@@ -1035,6 +1129,7 @@
   },
   {
     "Id": 94,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Em que região se situa a capital de Portugal?",
@@ -1046,6 +1141,7 @@
   },
   {
     "Id": 95,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual destes Concelhos pertence á região do Ribatejo?",
@@ -1057,6 +1153,7 @@
   },
   {
     "Id": 96,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual destes Concelhos pertence á região do Estremadura?",
@@ -1068,6 +1165,7 @@
   },
   {
     "Id": 97,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Onde se situa o Festival Nacional de Gastronomia de Portugal?",
@@ -1079,9 +1177,10 @@
   },
   {
     "Id": 98,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
-    "QuestionPt": "Devido ao sucesso em servir como defesa perante os muçulmanos, qual foi o apelido dado á porta do castelo templário de Tomar?",
+    "QuestionPt": "Devido ao grande sucesso em servir como defesa perante os muçulmanos, qual foi o apelido dado á porta do castelo templário de Tomar?",
     "QuestionEn": "Due to the hugely successful defense before the Muslim invasion, which nickname was given to the Templar’s castle door?",
     "CorrectAnswerPt": "Porta do Sangue.",
     "CorrectAnswerEn": "Porta do Sangue.",
@@ -1090,6 +1189,7 @@
   },
   {
     "Id": 99,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "Qual destas localizações possui uma zona para a prática dos desportos náuticos?",
@@ -1101,6 +1201,7 @@
   },
   {
     "Id": 100,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
     "RegionB": "",
     "QuestionPt": "A igreja Matriz foi mandada contrui por?",
@@ -1112,8 +1213,9 @@
   },
   {
     "Id": 101,
+    "RegionID": 5,
     "RegionA": "Ribatejo",
-    "RegionB": "",
+    "RegionB": "Alto Douro",
     "QuestionPt": "Em que zona a ordem dos templários estabeleceram a sua sede?",
     "QuestionEn": "Which zone did the Templars choose to establish their headquarters?",
     "CorrectAnswerPt": "Tomar",
@@ -1123,6 +1225,7 @@
   },
   {
     "Id": 102,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Quantas ilhas tem os Açores?",
@@ -1134,6 +1237,7 @@
   },
   {
     "Id": 103,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual destas ilhas pertence ao Grupo Central ?",
@@ -1145,6 +1249,7 @@
   },
   {
     "Id": 104,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Onde é cozinhado o cozido nos Açores?",
@@ -1156,6 +1261,7 @@
   },
   {
     "Id": 105,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual destas ilhas não é dos Açores?",
@@ -1167,6 +1273,7 @@
   },
   {
     "Id": 106,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual a ilha com mais habitantes nos Açores?",
@@ -1178,6 +1285,7 @@
   },
   {
     "Id": 107,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual destas ilhas se situa o ponto mais alto de Portugal?",
@@ -1189,6 +1297,7 @@
   },
   {
     "Id": 108,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual a flor predominante nos Açores?",
@@ -1200,6 +1309,7 @@
   },
   {
     "Id": 109,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual o animal mais comum nos Açores?",
@@ -1211,6 +1321,7 @@
   },
   {
     "Id": 110,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Em que ilha encontra-se a Sé Catedral?",
@@ -1222,6 +1333,7 @@
   },
   {
     "Id": 111,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual é a ilha mais pequena dos Açores?",
@@ -1233,6 +1345,7 @@
   },
   {
     "Id": 112,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Em que cidade encontra-se o Parlamento Regional dos Açores?",
@@ -1244,6 +1357,7 @@
   },
   {
     "Id": 113,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Em que ilha dos Açores se realiza o festival Maré de Agosto?",
@@ -1255,6 +1369,7 @@
   },
   {
     "Id": 114,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Em que ilha se encontra a Lagoa das Sete Cidades?",
@@ -1266,6 +1381,7 @@
   },
   {
     "Id": 115,
+    "RegionID": 6,
     "RegionA": "Açores",
     "RegionB": "",
     "QuestionPt": "Qual foi o município onde nasceu Vitorino Menésio?",
@@ -1277,6 +1393,7 @@
   },
   {
     "Id": 116,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual a bebida típica da Madeira?",
@@ -1288,6 +1405,7 @@
   },
   {
     "Id": 117,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual destes jogadores nasceu na Madeira?",
@@ -1299,6 +1417,7 @@
   },
   {
     "Id": 118,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual a capital da Madeira?",
@@ -1310,6 +1429,7 @@
   },
   {
     "Id": 119,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Quantos habitantes tem a ilha da Madeira?",
@@ -1321,6 +1441,7 @@
   },
   {
     "Id": 120,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual o arquipélago com mais habitantes?",
@@ -1332,6 +1453,7 @@
   },
   {
     "Id": 121,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual o nome do museu de Cristiano Ronaldo na Madeira?",
@@ -1343,6 +1465,7 @@
   },
   {
     "Id": 122,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual o cabo mais conhecido da ilha da Madeira?",
@@ -1354,6 +1477,7 @@
   },
   {
     "Id": 123,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Como se chama o estádio do Marítimo?",
@@ -1365,6 +1489,7 @@
   },
   {
     "Id": 124,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual foi a primeira ilha do Arquipélago a ser descoberta?",
@@ -1376,6 +1501,7 @@
   },
   {
     "Id": 125,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual é a principal praia do Arquipélago da Madeira?",
@@ -1387,6 +1513,7 @@
   },
   {
     "Id": 126,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Santana foi classificada pela UNESCO como?",
@@ -1398,6 +1525,7 @@
   },
   {
     "Id": 127,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Em que ano a Floresta Laurissilva foi classificada como Património da Humanidade pela UNESCO?",
@@ -1409,6 +1537,7 @@
   },
   {
     "Id": 128,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "A que concelho pertence a Ponta de São Lourenço?",
@@ -1420,6 +1549,7 @@
   },
   {
     "Id": 129,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Quais foram os três navegadores que descobriram a Ilha da Madeira?",
@@ -1431,6 +1561,7 @@
   },
   {
     "Id": 130,
+    "RegionID": 7,
     "RegionA": "Madeira",
     "RegionB": "",
     "QuestionPt": "Qual é o ponto mais elevado da Ilha da Madeira?",
@@ -1442,6 +1573,7 @@
   },
   {
     "Id": 131,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Quais os 4 distritos da Beira Litoral?",
@@ -1453,6 +1585,7 @@
   },
   {
     "Id": 132,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Qual o monumento que pertence à cidade de Coimbra?",
@@ -1464,6 +1597,7 @@
   },
   {
     "Id": 133,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Qual destes doces é típico da região de Aveiro?",
@@ -1475,17 +1609,19 @@
   },
   {
     "Id": 134,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
-    "QuestionPt": "Em que ano Santarém recebeu o seu respetivo nome ?",
-    "QuestionEn": "Where Santarem year received its their name?",
-    "CorrectAnswerPt": "",
+    "QuestionPt": "Qual o nome anterior da cidade de Santarém?",
+    "QuestionEn": "What is the former name of the city of Santarem?",
+    "CorrectAnswerPt": "Santa Iria",
     "CorrectAnswerEn": "",
-    "WrongAnswerPt": "",
+    "WrongAnswerPt": "Santana",
     "WrongAnswerEn": ""
   },
   {
     "Id": 135,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Em que cidade faleceu o primeiro Rei de Portugal?",
@@ -1497,6 +1633,7 @@
   },
   {
     "Id": 136,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Da Beira Litoral qual a cidade com maior população?",
@@ -1508,6 +1645,7 @@
   },
   {
     "Id": 137,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Quantos concelhos abrange a Beira Litoral",
@@ -1519,6 +1657,7 @@
   },
   {
     "Id": 138,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Qual o prato típico da região de Leiria?",
@@ -1530,6 +1669,7 @@
   },
   {
     "Id": 139,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "A área da Beira Litoral é de:",
@@ -1541,6 +1681,7 @@
   },
   {
     "Id": 140,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Beira Litotal está situada em que região em Portugal?",
@@ -1552,6 +1693,7 @@
   },
   {
     "Id": 141,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Qual o rio que banha a cidade de Coimbra?",
@@ -1563,6 +1705,7 @@
   },
   {
     "Id": 142,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Onde se situa a faculdade mais antiga de Portugal",
@@ -1574,6 +1717,7 @@
   },
   {
     "Id": 143,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Onde se situa o pinhal mais famoso do país?",
@@ -1585,6 +1729,7 @@
   },
   {
     "Id": 144,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Quem mandou contruir o pinhal de Leiria?",
@@ -1596,6 +1741,7 @@
   },
   {
     "Id": 145,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Quantos habitantes tem a cidade de Satarém?",
@@ -1607,6 +1753,7 @@
   },
   {
     "Id": 146,
+    "RegionID": 8,
     "RegionA": "Beira Litoral",
     "RegionB": "",
     "QuestionPt": "Qual o prato típico da região de Almeirim?",
@@ -1618,6 +1765,7 @@
   },
   {
     "Id": 147,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual o número de habitantes da cidade de Braga ?",
@@ -1629,6 +1777,7 @@
   },
   {
     "Id": 148,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual o número de habitantes da cidade de Trás-os-Montes?",
@@ -1640,6 +1789,7 @@
   },
   {
     "Id": 149,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual destas capitais de distrito se situa em Trás-os-Montes?",
@@ -1651,6 +1801,7 @@
   },
   {
     "Id": 150,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual destas iguarias é típica da região do Alto Douro?",
@@ -1662,6 +1813,7 @@
   },
   {
     "Id": 151,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Onde foi assinado o tratado de Zamora?",
@@ -1673,6 +1825,7 @@
   },
   {
     "Id": 152,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Em que consistiu o tratado de Zamora?",
@@ -1684,6 +1837,7 @@
   },
   {
     "Id": 153,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual a distância de Bragança a Lisboa",
@@ -1695,6 +1849,7 @@
   },
   {
     "Id": 154,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual o numero de freguesias da cidade de Braga?",
@@ -1706,6 +1861,7 @@
   },
   {
     "Id": 155,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual destas iguarias é típica da região do Braga?",
@@ -1717,6 +1873,7 @@
   },
   {
     "Id": 156,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "A quantos metros de altura se situa o Miradouro São Leonardo de Galafura?",
@@ -1728,6 +1885,7 @@
   },
   {
     "Id": 157,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Em que distrito se localiza a cidade de Peso da Régua?",
@@ -1739,6 +1897,7 @@
   },
   {
     "Id": 158,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "Qual o nome da estação do Douro?",
@@ -1750,6 +1909,7 @@
   },
   {
     "Id": 159,
+    "RegionID": 9,
     "RegionA": "Trás os Montes Alto Douro",
     "RegionB": "",
     "QuestionPt": "O que se pode observar no Parque Arqueológico do Vale do Côa?",

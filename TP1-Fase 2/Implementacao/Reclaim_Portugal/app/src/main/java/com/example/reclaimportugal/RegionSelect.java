@@ -20,7 +20,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class RegionSelect extends AppCompatActivity {
-    private ArrayList<String> title;
     private ArrayList<Integer> regionImages;
     private int counter = 0;
     private ImageView currentImage;

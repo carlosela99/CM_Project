@@ -119,15 +119,10 @@ public class RegionDetails extends AppCompatActivity {
 
     private void getSlideImages(){
         slideModels = new ArrayList<>();
-        if(id == 0){
+        if(id == 5){
         slideModels.add(new SlideModel(R.drawable.er_torre_de_belem,"Torre de Belem"));
         slideModels.add(new SlideModel(R.drawable.er_palacio_pena,"Palácio da Pena"));
         slideModels.add(new SlideModel(R.drawable.er_castelo_sao_jorge,"Castelo São Jorge"));
-        slideModels.add(new SlideModel(R.drawable.er_aquapolis,"Aquapolis"));
-        slideModels.add(new SlideModel(R.drawable.er_aqueduto,"Aqueduto"));
-        slideModels.add(new SlideModel(R.drawable.er_castelo_de_tomar,"Castelo de Tomár"));
-        slideModels.add(new SlideModel(R.drawable.er_praca_pedro,"Praça de D. Pedro"));
-        slideModels.add(new SlideModel(R.drawable.er_obidos,"Castelo de Óbidos"));
         }else if(id == 1){
             slideModels.add(new SlideModel(R.drawable.er_castelo_de_tomar,"Castelo de Tomár"));
             slideModels.add(new SlideModel(R.drawable.er_praca_pedro,"Praça de D. Pedro"));
