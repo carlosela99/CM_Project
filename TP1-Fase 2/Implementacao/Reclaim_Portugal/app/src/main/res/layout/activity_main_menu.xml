@@ -92,19 +92,33 @@
 
                     <ImageButton
                         android:id="@+id/settings_icon"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="20dp"
                         android:adjustViewBounds="true"
-                        android:background="@android:color/transparent"
+                        android:background="@drawable/settingslogo"
                         android:contentDescription="@string/settings"
                         android:onClick="openSettings"
                         android:padding="10dp"
-                        android:scaleType="fitCenter"
-                        app:srcCompat="@drawable/settings" />
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:id="@+id/logout_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toStartOf="@+id/settings_icon"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/logout"
+                        android:contentDescription="@string/settings"
+                        android:onClick="logout"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter" />
                 </RelativeLayout>
 
             </LinearLayout>
@@ -124,7 +138,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="16">
+                    android:layout_weight="17">
 
                 </RelativeLayout>
 
@@ -146,48 +160,19 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical">
+                                android:orientation="horizontal">
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_weight="10">
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="horizontal">
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="10">
-
-                                            <ImageView
-                                                android:id="@+id/trophy_icon"
-                                                android:layout_width="40dp"
-                                                android:layout_height="40dp"
-                                                android:layout_centerInParent="true"
-                                                app:srcCompat="@drawable/trophy" />
-
-                                        </RelativeLayout>
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="10">
-
-                                            <TextView
-                                                android:id="@+id/trophies_total"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_centerInParent="true"
-                                                android:fontFamily="@font/candy_beans"
-                                                android:text="10"
-                                                android:textSize="30sp" />
-                                        </RelativeLayout>
-                                    </LinearLayout>
-
+                                    <ImageView
+                                        android:id="@+id/trophy_icon"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/trophy" />
 
                                 </RelativeLayout>
 
@@ -196,42 +181,17 @@
                                     android:layout_height="match_parent"
                                     android:layout_weight="10">
 
-                                    <LinearLayout
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:orientation="horizontal">
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="10">
-
-                                            <ImageView
-                                                android:id="@+id/friends_icon"
-                                                android:layout_width="40dp"
-                                                android:layout_height="40dp"
-                                                android:layout_centerInParent="true"
-                                                app:srcCompat="@drawable/friends" />
-                                        </RelativeLayout>
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="10">
-
-                                            <TextView
-                                                android:id="@+id/friends_total"
-                                                android:layout_width="wrap_content"
-                                                android:layout_height="wrap_content"
-                                                android:layout_centerInParent="true"
-                                                android:fontFamily="@font/candy_beans"
-                                                android:text="10"
-                                                android:textSize="30sp" />
-                                        </RelativeLayout>
-                                    </LinearLayout>
+                                    <TextView
+                                        android:id="@+id/games_total"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/candy_beans"
+                                        android:text="10"
+                                        android:textSize="40sp" />
                                 </RelativeLayout>
-
                             </LinearLayout>
+
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -292,7 +252,7 @@
                                                 android:layout_centerInParent="true"
                                                 android:fontFamily="@font/candy_beans"
                                                 android:text="10"
-                                                android:textSize="30sp" />
+                                                android:textSize="32sp" />
                                         </RelativeLayout>
 
                                     </LinearLayout>
@@ -333,7 +293,7 @@
                                                 android:layout_centerInParent="true"
                                                 android:fontFamily="@font/candy_beans"
                                                 android:text="10"
-                                                android:textSize="30sp" />
+                                                android:textSize="32sp" />
                                         </RelativeLayout>
                                     </LinearLayout>
                                 </RelativeLayout>
@@ -348,7 +308,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="11">
+                    android:layout_weight="12">
 
                 </RelativeLayout>
             </LinearLayout>

@@ -23,6 +23,8 @@ public class Settings extends AppCompatActivity {
 
     private ImageButton btnPT;
     private ImageButton btnEN;
+    private ImageButton btnMusic;
+    private ImageButton btnSound;
 
     private static final String PT = "pt";
     private static final String EN = "en";
@@ -37,6 +39,8 @@ public class Settings extends AppCompatActivity {
 
         btnPT = findViewById(R.id.PortugalIcon);
         btnEN = findViewById(R.id.EnglishIcon);
+        btnMusic = findViewById(R.id.musicIcon);
+        btnSound = findViewById(R.id.soundIcon);
 
         Button btnChangePassword = findViewById(R.id.btnChangePassword);
         btnChangePassword.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +58,35 @@ public class Settings extends AppCompatActivity {
             }
         });
 
+        changeMusicIcon(BackgroundMusic.IsPlaying);
+        changeSoundIcon(SoundManager.IsSoundOn(getApplicationContext()));
         loadLanguage();
+    }
+
+    public void MusicMute(View v){
+        changeMusicIcon(BackgroundMusic.PlayPause(getApplicationContext()));
+    }
+
+    private void changeMusicIcon(boolean on){
+        if (on){
+            btnMusic.setBackgroundResource(R.drawable.music_on);
+        }
+        else{
+            btnMusic.setBackgroundResource(R.drawable.music_off);
+        }
+    }
+
+    public void SoundMute(View v){
+        changeSoundIcon(SoundManager.SoundOnOff(getApplicationContext()));
+    }
+
+    private void changeSoundIcon(boolean on){
+        if (on){
+            btnSound.setBackgroundResource(R.drawable.sound_on);
+        }
+        else{
+            btnSound.setBackgroundResource(R.drawable.sound_off);
+        }
     }
 
     public void openSettingsChangePassword() {

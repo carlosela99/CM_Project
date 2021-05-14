@@ -5,9 +5,9 @@ import android.content.SharedPreferences;
 
 public class Local {
 
-    private static boolean loadBoolean(String tag, String namespace, Context app_context) {
+    private static boolean loadBoolean(String tag, String namespace, boolean default_value, Context app_context) {
         SharedPreferences sharedPreferences = app_context.getSharedPreferences(namespace, Context.MODE_PRIVATE);
-        return sharedPreferences.getBoolean(tag, false);
+        return sharedPreferences.getBoolean(tag, default_value);
     }
 
     private static void saveBoolean(String tag, String namespace, boolean value, Context app_context){
@@ -45,7 +45,7 @@ public class Local {
     }
 
     public static boolean getMusic(Context context){
-        return loadBoolean("music", "settings", context);
+        return loadBoolean("music", "settings", true, context);
     }
 
     public static void setMusic(boolean on, Context context){
@@ -53,7 +53,7 @@ public class Local {
     }
 
     public static boolean getSound(Context context){
-        return loadBoolean("sound", "settings", context);
+        return loadBoolean("sound", "settings", true, context);
     }
 
     public static void setSound(boolean on, Context context){
@@ -74,5 +74,29 @@ public class Local {
 
     public static int getRegionScore(String region, Context context){
         return loadInt(region, "game", context);
+    }
+
+    public static int getGamesCount(Context context){
+        return loadInt("games_count", "game", context);
+    }
+
+    public static void incrementGamesCount(Context context){
+        saveInt("games_count", "game", getGamesCount(context) + 1, context);
+    }
+
+    public static int getCorrectAnswersCount(Context context){
+        return loadInt("correct_answers_count", "game", context);
+    }
+
+    public static void incrementCorrectAnswersCount(int value, Context context){
+        saveInt("correct_answers_count", "game", getCorrectAnswersCount(context) + value, context);
+    }
+
+    public static int getWrongAnswersCount(Context context){
+        return loadInt("wrong_answers_count", "game", context);
+    }
+
+    public static void incrementWrongAnswersCount(int value, Context context){
+        saveInt("wrong_answers_count", "game", getWrongAnswersCount(context) + value, context);
     }
 }
