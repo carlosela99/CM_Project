@@ -119,7 +119,7 @@ public class RegionDetails extends AppCompatActivity {
 
     private void getSlideImages(){
         slideModels = new ArrayList<>();
-        if(id == 0){
+        if(id == 5){
         slideModels.add(new SlideModel(R.drawable.er_torre_de_belem,"Torre de Belem"));
         slideModels.add(new SlideModel(R.drawable.er_palacio_pena,"Palácio da Pena"));
         slideModels.add(new SlideModel(R.drawable.er_castelo_sao_jorge,"Castelo São Jorge"));
