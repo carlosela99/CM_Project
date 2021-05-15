@@ -119,13 +119,13 @@ LocationListener{
         nomes[13] = "Santana";
         nomes[14] = "Parque Arq. do Vale do Côa";
         nomes[15] = "Capela do Bonfim";
-        nomes[16] = "Serra da Estrela";
+        nomes[16] = "Museu do Pão";
         nomes[17] = "Lagoa das Sete Cidades";
         nomes[18] = "Montanha do Pico";
-        nomes[19] = "Ilha do Corvo";
-        nomes[20] = "Coimbra";
+        nomes[19] = "Convento da Nossa Senhora da Esperança";
+        nomes[20] = "Pateira dos Fermenetelos";
         nomes[21] = "Mosteiro de Lorvão";
-        nomes[22] = "Leiria";
+        nomes[22] = "Torre de Almedina";
 
         capitalCities[0][0] = 41.7637524931393;//
         capitalCities[0][1] = (-8.589993813859234);
@@ -273,20 +273,20 @@ LocationListener{
                 goToLocation(41.080178292199214, -7.111765468987108);
             case "Capela do Bonfim":
                 goToLocation(40.53387742079487, -7.2637344711377185);
-            case "Serra da Estrela":
-                goToLocation(40.32200990141544, -7.612983890515077);
+            case "Museu do Pão":
+                goToLocation(40.417870130178706, -7.694508722234035);
             case "Lagoa das Sete Cidades":
                 goToLocation(37.85500349093831, -25.78639168242758);
             case "Montanha do Pico":
                 goToLocation(38.47005435579639, -28.400446300396716);
-            case "Ilha do Corvo":
-                goToLocation(39.699674078570396, -31.10123107284132);
-            case "Coimbra":
-                goToLocation(40.20514406696391, -8.409066498793608);
+            case "Convento da Nossa Senhora da Esperança":
+                goToLocation(37.738040095217166, -25.67369567998605);
+            case "Pateira dos Fermenetelos":
+                goToLocation(40.57562644316587, -8.516297485280292);
             case "Mosteiro de Lorvão":
                 goToLocation(40.25957240314976, -8.317455046017383);
-            case "Leiria":
-                goToLocation(39.75088879564916, -8.80750413768384);
+            case "Torre de Almedina":
+                goToLocation(40.208877844034944, -8.428692222434636);
             default:
                 goToLocation(38.57285310168407, -7.907405607131212);
         }
