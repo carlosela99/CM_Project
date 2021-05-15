@@ -101,8 +101,8 @@ LocationListener{
     public void addGameLocations(){
         String nomes[];
         double capitalCities[][];
-        capitalCities = new double[10][2];
-        nomes = new String[4];
+        capitalCities = new double[24][2];
+        nomes = new String[24];
         nomes[0] = "Ponte de Lima";
         nomes[1] = "Livraria Lello";
         nomes[2] = "Ponte D.Luis";
@@ -110,7 +110,7 @@ LocationListener{
         nomes[4] = "Capela dos Ossos";
         nomes[5] = "Barragem do Alqueva";
         nomes[6] = "Praia da Rocha";
-        nomes[7] = "Castelo de Sines";
+        nomes[7] = "Igreja de São Lourenço";
         nomes[8] = "Praça do Rossio";
         nomes[9] = "Terreiro do Paço";
         nomes[10] = "Castelo de S. Jorge";
@@ -148,8 +148,8 @@ LocationListener{
         capitalCities[6][0] = 37.11673007884954;
         capitalCities[6][1] = -8.535344320119568;
 
-        capitalCities[7][0] = 37.95596788460545;
-        capitalCities[7][1] = -8.866184886528442;
+        capitalCities[7][0] = 37.082312938082225;
+        capitalCities[7][1] =  -8.0088932;
 
         capitalCities[8][0] = 38.714081094946344;
         capitalCities[8][1] = -9.139072459527188;
@@ -232,8 +232,8 @@ LocationListener{
                 return true;
             }
         });
-        String sessionId = getIntent().getStringExtra("LOCATION");
-        selectLocation(sessionId);
+        //String sessionId = getIntent().getStringExtra("LOCATION");
+        selectLocation("teste");
         //if(sessionId=="Belem")
         //goToLocation(38.57285310168407, -7.907405607131212);
     }
@@ -255,8 +255,8 @@ LocationListener{
                 goToLocation(38.197554785191514, -7.496410459537539);
             case "Praia da Rocha":
                 goToLocation(37.11673007884954, -8.535344320119568);
-            case "Castelo de Sines":
-                goToLocation(37.95596788460545, -8.866184886528442);
+            case "Igreja de São Lourenço":
+                goToLocation(37.082312938082225,  -8.0088932);
             case "Praça do Rossio":
                 goToLocation(38.714081094946344, -9.139072459527188);
             case "Terreiro do Paço":

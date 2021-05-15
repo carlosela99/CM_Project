@@ -7,10 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.denzcoskun.imageslider.ImageSlider;
+//import com.denzcoskun.imageslider.interfaces.ItemChangeListener;
+import com.denzcoskun.imageslider.interfaces.ItemClickListener;
 import com.denzcoskun.imageslider.models.SlideModel;
 
 import org.json.JSONArray;
@@ -55,6 +58,16 @@ public class RegionDetails extends AppCompatActivity {
         getSlideImages();
         imageSlider.setImageList(slideModels, true);
 
+        imageSlider.setItemClickListener(new ItemClickListener() {
+            //@Override
+            public void onItemSelected(int i) {
+                //Toast.makeText(getApplicationContext(), "Good CLICK" + i, Toast.LENGTH_LONG).show();
+                goToMap();
+            }
+        });
+
+
+
         back = findViewById(R.id.back_region_selection);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +103,11 @@ public class RegionDetails extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    private void goToMap(){
+        Intent intent = new Intent(com.example.reclaimportugal.RegionDetails.this, MapsActivity.class);
+        startActivity(intent);
+    }
+
 
     private void openActivityPlay() {
         Intent intent = new Intent(RegionDetails.this, GameOngoing.class);
