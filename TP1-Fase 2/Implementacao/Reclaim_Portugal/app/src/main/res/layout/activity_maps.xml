@@ -12,6 +12,18 @@
         android:layout_height="match_parent"
         tools:context=".MapsActivity" />
 
+    <ImageButton
+        android:id="@+id/back_region_selection3"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:background="@drawable/back"
+        android:contentDescription="Go Back Button"
+        android:onClick="goToMenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,11 +42,13 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_return"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="goToMenu"
-        android:text="Button" />
+        android:layout_gravity="bottom|right"
+        android:rotation="0"
+        android:rotationX="0"
+        app:srcCompat="@drawable/compass" />
 
 </FrameLayout>

@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -102,22 +103,101 @@ LocationListener{
         double capitalCities[][];
         capitalCities = new double[10][2];
         nomes = new String[4];
-        nomes[0] = "Local1";
-        nomes[1] = "Local2";
-        nomes[2] = "Local3";
-        nomes[3] = "Local4";
+        nomes[0] = "Ponte de Lima";
+        nomes[1] = "Livraria Lello";
+        nomes[2] = "Ponte D.Luis";
+        nomes[3] = "Templo de Diana";
+        nomes[4] = "Capela dos Ossos";
+        nomes[5] = "Barragem do Alqueva";
+        nomes[6] = "Praia da Rocha";
+        nomes[7] = "Castelo de Sines";
+        nomes[8] = "Praça do Rossio";
+        nomes[9] = "Terreiro do Paço";
+        nomes[10] = "Castelo de S. Jorge";
+        nomes[11] = "Floresta Laurissilva";
+        nomes[12] = "Museu CR7";
+        nomes[13] = "Santana";
+        nomes[14] = "Parque Arq. do Vale do Côa";
+        nomes[15] = "Capela do Bonfim";
+        nomes[16] = "Serra da Estrela";
+        nomes[17] = "Lagoa das Sete Cidades";
+        nomes[18] = "Montanha do Pico";
+        nomes[19] = "Ilha do Corvo";
+        nomes[20] = "Coimbra";
+        nomes[21] = "Mosteiro de Lorvão";
+        nomes[22] = "Leiria";
 
-        capitalCities[0][0] =(38.691742787231256);//
-        capitalCities[0][1] = (-9.21597730227629);
+        capitalCities[0][0] = 41.7637524931393;//
+        capitalCities[0][1] = (-8.589993813859234);
 
-        capitalCities[1][0] = 37.01464620816543;
-        capitalCities[1][1] =-7.931128661529068;
-        capitalCities[2][0] =38.00124;
-        capitalCities[2][1] =-7.91678;
-        capitalCities[3][0] =38.57285310168407;
-        capitalCities[3][1] =-7.907405607131212;
+        capitalCities[1][0] = 41.14703474446451;
+        capitalCities[1][1] = -8.61477460180499;
 
-        for(int i = 0;i<4;i++) {
+        capitalCities[2][0] = 41.14014471758315;
+        capitalCities[2][1] = -8.60943777296951;
+
+        capitalCities[3][0] = 38.5728042734598;
+        capitalCities[3][1] = -7.907433876722188;
+
+        capitalCities[4][0] = 38.568579560813774;
+        capitalCities[4][1] = -7.908645828844928;
+
+        capitalCities[5][0] = 38.197554785191514;
+        capitalCities[5][1] = -7.496410459537539;
+
+        capitalCities[6][0] = 37.11673007884954;
+        capitalCities[6][1] = -8.535344320119568;
+
+        capitalCities[7][0] = 37.95596788460545;
+        capitalCities[7][1] = -8.866184886528442;
+
+        capitalCities[8][0] = 38.714081094946344;
+        capitalCities[8][1] = -9.139072459527188;
+
+        capitalCities[9][0] = 38.708428697918784;
+        capitalCities[9][1] = -9.136842540690846;
+
+        capitalCities[10][0] = 38.7141100948647;
+        capitalCities[10][1] = -9.133476201855908;
+
+        capitalCities[11][0] = 32.75913486940427;
+        capitalCities[11][1] = -16.995696963337092;
+
+        capitalCities[12][0] = 32.644307766899324;
+        capitalCities[12][1] =  -16.91381144284069;
+
+        capitalCities[13][0] = 32.80554976700321;
+        capitalCities[13][1] = -16.882202318439322;
+
+        capitalCities[14][0] = 41.080178292199214;
+        capitalCities[14][1] = -7.111765468987108;
+
+        capitalCities[15][0] = 40.53387742079487;
+        capitalCities[15][1] = -7.2637344711377185;
+
+        capitalCities[16][0] = 40.32200990141544;
+        capitalCities[16][1] = -7.612983890515077;
+
+        capitalCities[17][0] = 37.85500349093831;
+        capitalCities[17][1] = -25.78639168242758;
+
+        capitalCities[18][0] = 38.47005435579639;
+        capitalCities[18][1] = -28.400446300396716;
+
+        capitalCities[19][0] = 39.699674078570396;
+        capitalCities[19][1] = -31.10123107284132;
+
+        capitalCities[20][0] = 40.20514406696391;
+        capitalCities[20][1] = -8.409066498793608;
+
+        capitalCities[21][0] = 40.25957240314976;
+        capitalCities[21][1] = -8.317455046017383;
+
+        capitalCities[22][0] = 39.75088879564916;
+        capitalCities[22][1] = -8.80750413768384;
+
+
+        for(int i = 0;i<capitalCities.length;i++) {
             LatLng latLng = new LatLng(capitalCities[i][0], capitalCities[i][1]);
             MarkerOptions markerOptions = new MarkerOptions();
             markerOptions.position(latLng);
@@ -153,11 +233,65 @@ LocationListener{
             }
         });
         String sessionId = getIntent().getStringExtra("LOCATION");
-
+        selectLocation(sessionId);
         //if(sessionId=="Belem")
-        goToLocation(38.57285310168407, -7.907405607131212);
-
+        //goToLocation(38.57285310168407, -7.907405607131212);
     }
+
+    public void selectLocation(String nome){
+        switch (nome)
+        {
+            case "Ponte de Lima":
+                goToLocation(41.7637524931393, -8.589993813859234);
+            case "Livraria Lello":
+                goToLocation(41.14703474446451, -8.61477460180499);
+            case "Ponte D.Luis":
+                goToLocation(41.14014471758315, -8.60943777296951);
+            case "Templo de Diana":
+                goToLocation(38.5728042734598, -7.907433876722188);
+            case "Capela dos Ossos":
+                goToLocation(38.568579560813774, -7.908645828844928);
+            case "Barragem do Alqueva":
+                goToLocation(38.197554785191514, -7.496410459537539);
+            case "Praia da Rocha":
+                goToLocation(37.11673007884954, -8.535344320119568);
+            case "Castelo de Sines":
+                goToLocation(37.95596788460545, -8.866184886528442);
+            case "Praça do Rossio":
+                goToLocation(38.714081094946344, -9.139072459527188);
+            case "Terreiro do Paço":
+                goToLocation(38.708428697918784, -9.136842540690846);
+            case "Castelo de S. Jorge":
+                goToLocation(38.7141100948647, -9.133476201855908);
+            case "Floresta Laurissilva":
+                goToLocation(32.75913486940427, -16.995696963337092);
+            case "Museu CR7":
+                goToLocation(32.644307766899324, -16.91381144284069);
+            case "Santana":
+                goToLocation(32.80554976700321, -16.882202318439322);
+            case "Parque Arq. do Vale do Côa":
+                goToLocation(41.080178292199214, -7.111765468987108);
+            case "Capela do Bonfim":
+                goToLocation(40.53387742079487, -7.2637344711377185);
+            case "Serra da Estrela":
+                goToLocation(40.32200990141544, -7.612983890515077);
+            case "Lagoa das Sete Cidades":
+                goToLocation(37.85500349093831, -25.78639168242758);
+            case "Montanha do Pico":
+                goToLocation(38.47005435579639, -28.400446300396716);
+            case "Ilha do Corvo":
+                goToLocation(39.699674078570396, -31.10123107284132);
+            case "Coimbra":
+                goToLocation(40.20514406696391, -8.409066498793608);
+            case "Mosteiro de Lorvão":
+                goToLocation(40.25957240314976, -8.317455046017383);
+            case "Leiria":
+                goToLocation(39.75088879564916, -8.80750413768384);
+            default:
+                goToLocation(38.57285310168407, -7.907405607131212);
+        }
+    }
+
 
 
 
