@@ -57,10 +57,10 @@ public class RegionSelect extends AppCompatActivity {
         regionImages.add(R.drawable.dou_1);
         regionImages.add(R.drawable.alen_1);
         regionImages.add(R.drawable.alg_1);
-        regionImages.add(R.drawable.bi_serra_da_estrela);
+        regionImages.add(R.drawable.bi_museu_do_pao);
         regionImages.add(R.drawable.lis_1);
         regionImages.add(R.drawable.er_obidos);
-        regionImages.add(R.drawable.a_corvo);
+        regionImages.add(R.drawable.a_lagoa);
         regionImages.add(R.drawable.ma_1);
         regionImages.add(R.drawable.bl_mosteiro_de_lorvao);
         regionImages.add(R.drawable.tras_castelo_braganca);
