@@ -127,12 +127,12 @@ public class RegionDetails extends AppCompatActivity {
         else if(id == 1){
             slideModels.add(new SlideModel(R.drawable.alen_1,"Templo de Diana"));
             slideModels.add(new SlideModel(R.drawable.alen_2,"Capela dos ossos"));
-            slideModels.add(new SlideModel(R.drawable.alen_3,"Castelo de Sines"));
+            slideModels.add(new SlideModel(R.drawable.alen_3,"Barragem do Alqueva"));
         }
         else if(id == 2){
             slideModels.add(new SlideModel(R.drawable.alg_1,"Praia da Rocha"));
             slideModels.add(new SlideModel(R.drawable.alg_2,"Sé de Faro"));
-            slideModels.add(new SlideModel(R.drawable.alg_3,"Barragem do Alqueva"));
+            slideModels.add(new SlideModel(R.drawable.alg_igreja_sao_lourenco_almancil,"Igreja de São Lourenço"));
         }
         else if(id == 3){
             slideModels.add(new SlideModel(R.drawable.bi_capelabonfim, "Capela Bonfim"));
