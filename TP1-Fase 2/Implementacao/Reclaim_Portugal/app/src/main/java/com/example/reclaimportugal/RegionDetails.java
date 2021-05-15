@@ -136,7 +136,7 @@ public class RegionDetails extends AppCompatActivity {
         }
         else if(id == 3){
             slideModels.add(new SlideModel(R.drawable.bi_capelabonfim, "Capela Bonfim"));
-            slideModels.add(new SlideModel(R.drawable.bi_serra_da_estrela, "Serra da Estrela"));
+            slideModels.add(new SlideModel(R.drawable.bi_museu_do_pao, "Museu do Pão"));
             slideModels.add(new SlideModel(R.drawable.bi_vale_do_coa, "Vale do Coa"));
         }
         else if(id == 4){
@@ -149,7 +149,7 @@ public class RegionDetails extends AppCompatActivity {
             slideModels.add(new SlideModel(R.drawable.er_palacio_pena, "Palácio da Pena"));
             slideModels.add(new SlideModel(R.drawable.er_castelo_sao_jorge, "Castelo São Jorge"));
         }else if(id == 6){
-            slideModels.add(new SlideModel(R.drawable.a_corvo, "Corvo"));
+            slideModels.add(new SlideModel(R.drawable.a_igreja_de_santo_cristo, "Igreja de Santo Cristo"));
             slideModels.add(new SlideModel(R.drawable.a_lagoa, "Lagoa"));
             slideModels.add(new SlideModel(R.drawable.a_pico, "Pico"));
         }
@@ -158,8 +158,8 @@ public class RegionDetails extends AppCompatActivity {
             slideModels.add(new SlideModel(R.drawable.ma_2, "Museu CR7"));
             slideModels.add(new SlideModel(R.drawable.ma_3, "Santana"));
         }else if(id == 8){
-            slideModels.add(new SlideModel(R.drawable.bl_coimbra, "Coimbra"));
-            slideModels.add(new SlideModel(R.drawable.bl_leiria, "Leiria"));
+            slideModels.add(new SlideModel(R.drawable.bl_lagoa_fermentelos, "Lagoa de Fermentelos"));
+            slideModels.add(new SlideModel(R.drawable.bl_torrel_de_almedina, "Torre de Almedina"));
             slideModels.add(new SlideModel(R.drawable.bl_mosteiro_de_lorvao, "Mosteiro do Lorvão"));
         }else if(id == 9){
             slideModels.add(new SlideModel(R.drawable.tras_castelo_braganca, "Castelo de Bragança"));
