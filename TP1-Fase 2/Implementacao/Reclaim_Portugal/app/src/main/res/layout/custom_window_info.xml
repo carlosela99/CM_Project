@@ -12,39 +12,42 @@
     android:padding="10dp"
     >
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"/>
+
 
     <include layout="@layout/content_custom_window_info" />
 
     <ImageView
         android:id="@+id/picImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:gravity="center"
-        android:src="@android:drawable/ic_popup_disk_full"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center_horizontal"
+        android:src="@android:drawable/ic_popup_disk_full" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Title"
-        android:gravity="center"
-        android:textColor="#fff"
         android:id="@+id/title"
-        android:textSize="20sp"/>
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Snipp"
-        android:id="@+id/snipp"
+        android:layout_gravity="top|center_vertical"
+        android:fontFamily="@font/candy_beans"
+        android:gravity="center_horizontal"
+        android:text="Title"
         android:textColor="#fff"
-        android:textSize="20sp"
-        android:layout_marginTop="3dp"/>
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/snipp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/candy_beans"
+        android:text="Snipp"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
