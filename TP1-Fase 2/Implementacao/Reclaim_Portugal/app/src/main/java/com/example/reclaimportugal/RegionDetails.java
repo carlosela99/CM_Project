@@ -50,7 +50,7 @@ public class RegionDetails extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        language = Locale.getDefault().getLanguage();
+       language = Locale.getDefault().getLanguage();
 
         setContentView(R.layout.activity_region_detail);
 
@@ -59,19 +59,18 @@ public class RegionDetails extends AppCompatActivity {
         imageSlider.setImageList(slideModels, true);
 
         imageSlider.setItemClickListener(new ItemClickListener() {
-            //@Override
+            @Override
             public void onItemSelected(int i) {
-                //Toast.makeText(getApplicationContext(), "Good CLICK" + i, Toast.LENGTH_LONG).show();
-                goToMap();
+                goToMap(id,i);
             }
         });
-
-
 
         back = findViewById(R.id.back_region_selection);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(RegionDetails.this, RegionSelect.class);
+                startActivity(intent);
                 openActivityBack();
             }
         });
@@ -103,8 +102,10 @@ public class RegionDetails extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private void goToMap(){
+    private void goToMap(int idRegion,int idPlace){
         Intent intent = new Intent(com.example.reclaimportugal.RegionDetails.this, MapsActivity.class);
+        intent.putExtra("regionIDGame", String.valueOf(idRegion));
+        intent.putExtra("placeIDGame", String.valueOf(idPlace));
         startActivity(intent);
     }
 

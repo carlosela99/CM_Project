@@ -13,11 +13,11 @@
         tools:context=".MapsActivity" />
 
     <ImageButton
-        android:id="@+id/back_region_selection3"
+        android:id="@+id/back_region"
         android:layout_width="50dp"
         android:layout_height="60dp"
         android:background="@drawable/back"
-        android:contentDescription="Go Back Button"
+        android:contentDescription="Go Back "
         android:onClick="goToMenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,14 +41,5 @@
             android:orientation="horizontal"/>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:rotation="0"
-        android:rotationX="0"
-        app:srcCompat="@drawable/compass" />
 
 </FrameLayout>
