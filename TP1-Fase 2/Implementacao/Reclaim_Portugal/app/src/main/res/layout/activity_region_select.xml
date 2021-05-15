@@ -41,6 +41,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498" />
 
+    <ImageButton
+        android:id="@+id/previousRegion"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/back"
+        android:contentDescription="Go Back Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/regionMenuBody"
         android:layout_width="match_parent"

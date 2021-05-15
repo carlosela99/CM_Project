@@ -24,6 +24,8 @@ public class RegionSelect extends AppCompatActivity {
     private int counter = 0;
     private ImageView currentImage;
     private ImageButton nextRegion;
+    private ImageButton previousRegion;
+    private ImageButton back;
     private TextView currentTitle;
     private TextView currentPercentage;
     private Button playButton;
@@ -52,16 +54,16 @@ public class RegionSelect extends AppCompatActivity {
         layout = findViewById(R.id.constraintLayoutMain);
 
         regionImages = new ArrayList<>();
-        regionImages.add(R.drawable.friends);
+        regionImages.add(R.drawable.dou_1);
+        regionImages.add(R.drawable.alen_1);
+        regionImages.add(R.drawable.alg_1);
+        regionImages.add(R.drawable.bi_serra_da_estrela);
+        regionImages.add(R.drawable.lis_1);
         regionImages.add(R.drawable.er_obidos);
-        regionImages.add(R.drawable.friends);
-        regionImages.add(R.drawable.er_obidos);
-        regionImages.add(R.drawable.friends);
-        regionImages.add(R.drawable.er_obidos);
-        regionImages.add(R.drawable.friends);
-        regionImages.add(R.drawable.er_obidos);
-        regionImages.add(R.drawable.friends);
-        regionImages.add(R.drawable.er_obidos);
+        regionImages.add(R.drawable.a_corvo);
+        regionImages.add(R.drawable.ma_1);
+        regionImages.add(R.drawable.bl_mosteiro_de_lorvao);
+        regionImages.add(R.drawable.tras_castelo_braganca);
         currentImage = findViewById(R.id.region_image);
 
         try {
@@ -112,6 +114,31 @@ public class RegionSelect extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        previousRegion = findViewById(R.id.previousRegion);
+        previousRegion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter--;
+                if(counter < 0)
+                    counter = 9;
+                try {
+                    nextRegion();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        back = findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegionSelect.this, MainMenu.class);
+                finish();
+                startActivity(intent);
             }
         });
     }
