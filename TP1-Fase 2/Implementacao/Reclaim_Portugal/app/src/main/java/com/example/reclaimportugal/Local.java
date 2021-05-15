@@ -13,8 +13,9 @@ public class Local {
     private static void saveBoolean(String tag, String namespace, boolean value, Context app_context){
         SharedPreferences sharedPref = app_context.getSharedPreferences(namespace, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
+        editor.clear();
         editor.putBoolean(tag, value);
-        editor.commit();
+        editor.apply();
     }
 
     private static String loadString(String tag, String namespace, Context app_context) {
@@ -25,8 +26,9 @@ public class Local {
     private static void saveString(String tag, String namespace, String value, Context app_context){
         SharedPreferences sharedPref = app_context.getSharedPreferences(namespace, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
+        editor.clear();
         editor.putString(tag, value);
-        editor.commit();
+        editor.apply();
     }
 
     private static int loadInt(String tag, String namespace, Context app_context) {
@@ -36,12 +38,10 @@ public class Local {
 
     private static void saveInt(String tag, String namespace, int value, Context app_context){
         SharedPreferences sharedPref = app_context.getSharedPreferences(namespace, Context.MODE_PRIVATE);
-        if(sharedPref.getInt(tag, 0) < value){
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.clear();
         editor.putInt(tag, value);
         editor.apply();
-        }
     }
 
     public static boolean getMusic(Context context){

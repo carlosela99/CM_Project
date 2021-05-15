@@ -7,11 +7,11 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -25,6 +25,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Random;
@@ -52,8 +53,12 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
     private HashMap<String, Boolean> highlightQuestions;
     private int nQuestions;
 
+    private boolean isPlaying;
+    private boolean sensorInput;
+    private CountDownTimer sensorTimer;
+
     private SensorManager sensorManager;
-    double az;
+    double axis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +118,8 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
                 onButtonShowPopupWindowClick(v);
             }
         });
+        isPlaying = true;
+        sensorInput = true;
         startTimer();
     }
 
@@ -123,22 +130,29 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
 
     @Override
     public void onSensorChanged(SensorEvent event){
-        if (event.sensor.getType()==Sensor.TYPE_ACCELEROMETER){
-            if (az - event.values[2] > 2){
-                try {
-                    chooseRight();
-                } catch (JSONException e) {
-                    e.printStackTrace();
+        if (isPlaying && event.sensor.getType()==Sensor.TYPE_ACCELEROMETER){
+            if (sensorInput){
+                if (axis - event.values[1] > 3){
+                    try {
+                        chooseRight();
+                        startSensorTimer();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (axis - event.values[1] < -3){
+                    try {
+                        chooseLeft();
+                        startSensorTimer();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
-            if (az - event.values[2] < -2){
-                try {
-                    chooseLeft();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-            az=event.values[2];
+            //Log.i("sensor", String.valueOf(event.values[0]));
+            //Log.i("sensor", String.valueOf(event.values[1]));
+            //Log.i("sensor", String.valueOf(event.values[2]));
+            axis = event.values[1];
         }
     }
 
@@ -157,6 +171,20 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
             }
         }.start();
         timerRunning = true;
+    }
+
+    public void startSensorTimer() {
+        sensorInput = false;
+        sensorTimer = new CountDownTimer(1000, 100) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+            }
+
+            @Override
+            public void onFinish() {
+                sensorInput = true;
+            }
+        }.start();
     }
 
     //updates timer
@@ -216,7 +244,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            json = new String(buffer, "UTF-8");
+            json = new String(buffer, StandardCharsets.UTF_8);
             return json;
 
         } catch (IOException e) {
@@ -229,7 +257,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
     private void chooseLeft() throws JSONException {
         SoundManager.ClickSound(getApplicationContext());
         counter--;
-        if(rightOrWrong == false){
+        if(!rightOrWrong){
             correctAnswers++;
             placeQuestion(true);
         }else {
@@ -252,26 +280,29 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
         }newQuestion();
     }
 
-
     //left answer
     public void chooseLeft(View v) throws JSONException {
-        chooseLeft();
+        if (isPlaying){
+            chooseLeft();
+        }
     }
 
     //right answer
     public void chooseRight(View v) throws JSONException {
-        chooseRight();
+        if (isPlaying){
+            chooseRight();
+        }
     }
 
     //places the questions into the arraylist
     public void placeQuestion(Boolean correct) throws JSONException {
         if(correct){
-            if (language == "en")
+            if (language.equals("en"))
                 highlightQuestions.put("<font color=#1BCA13>" + obj.getString("QuestionEn") + "<br/>" + obj.getString("CorrectAnswerEn") + "</font><br/><br/>", correct);
             else
                 highlightQuestions.put("<font color=#1BCA13>" + obj.getString("QuestionPt") + "<br/>" + obj.getString("CorrectAnswerPt") + "</font><br/><br/>", correct);
         }else{
-        if (language == "en")
+        if (language.equals("en"))
             highlightQuestions.put("<font color=#D81F1F>" + obj.getString("QuestionEn") + "<br/>" + obj.getString("WrongAnswerEn") + "</font><br/><br/>", correct);
         else
             highlightQuestions.put("<font color=#D81F1F>" + obj.getString("QuestionPt") + "<br/>" + obj.getString("WrongAnswerPt") + "</font><br/><br/>", correct);
@@ -281,7 +312,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
     //calls a new question
     public void newQuestion() {
         Random rightOrLeft = new Random();
-        Boolean choice = rightOrLeft.nextBoolean();
+        boolean choice = rightOrLeft.nextBoolean();
 
         if (counter > 0) {
             if(id==99){
@@ -303,7 +334,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
             }
 
             try {
-                if (language == "en")
+                if (language.equals("en"))
                     question.setText(obj.getString("QuestionEn"));
                 else
                     question.setText(obj.getString("QuestionPt"));
@@ -313,7 +344,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
 
             if(choice){
             try {
-                if (language == "en")
+                if (language.equals("en"))
                     answerLeft.setText(obj.getString("CorrectAnswerEn"));
                 else
                     answerLeft.setText(obj.getString("CorrectAnswerPt"));
@@ -323,7 +354,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
             }
 
             try {
-                if (language == "en")
+                if (language.equals("en"))
                     answerRight.setText(obj.getString("WrongAnswerEn"));
                 else
                     answerRight.setText(obj.getString("WrongAnswerPt"));
@@ -333,7 +364,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
                 rightOrWrong = false;
             }else{
                 try {
-                    if (language == "en")
+                    if (language.equals("en"))
                         answerRight.setText(obj.getString("CorrectAnswerEn"));
                     else
                         answerRight.setText(obj.getString("CorrectAnswerPt"));
@@ -342,7 +373,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
                 }
 
                 try {
-                    if (language == "en")
+                    if (language.equals("en"))
                         answerLeft.setText(obj.getString("WrongAnswerEn"));
                     else
                         answerLeft.setText(obj.getString("WrongAnswerPt"));
@@ -357,12 +388,19 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
     }
 
     public void endGame(){
+        countDownTimer.cancel();
+
+        if (!isPlaying)
+            return;
+
+        isPlaying = false;
         Intent intent = new Intent(GameOngoing.this, MatchResult.class);
         intent.putExtra("score", correctAnswers);
         intent.putExtra("wrong", wrongAnswers);
         intent.putExtra("highlightedQuestions", highlightQuestions);
         intent.putExtra("regionID", id);
         intent.putExtra("numberQuestions", nQuestions);
+        finish();
         startActivity(intent);
     }
 }

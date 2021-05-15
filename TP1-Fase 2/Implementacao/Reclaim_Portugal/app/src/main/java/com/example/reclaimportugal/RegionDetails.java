@@ -19,6 +19,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -73,7 +74,7 @@ public class RegionDetails extends AppCompatActivity {
         description = findViewById(R.id.region_description);
         description.setMovementMethod(new ScrollingMovementMethod());
         try {
-            if(language == "en"){
+            if(language.equals("en")){
             description.setText(obj.getString("DescriptionEn"));
             }else{
             description.setText(obj.getString("DescriptionPt"));
@@ -97,8 +98,7 @@ public class RegionDetails extends AppCompatActivity {
     }
 
     private void openActivityBack() {
-        Intent intent = new Intent(this, RegionSelect.class);
-        startActivity(intent);
+        finish();
     }
 
     private String getJson(){
@@ -108,7 +108,7 @@ public class RegionDetails extends AppCompatActivity {
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            json = new String(buffer, "UTF-8");
+            json = new String(buffer, StandardCharsets.UTF_8);
             return json;
 
         }catch(IOException e){
@@ -119,13 +119,52 @@ public class RegionDetails extends AppCompatActivity {
 
     private void getSlideImages(){
         slideModels = new ArrayList<>();
-        if(id == 5){
-        slideModels.add(new SlideModel(R.drawable.er_torre_de_belem,"Torre de Belem"));
-        slideModels.add(new SlideModel(R.drawable.er_palacio_pena,"Palácio da Pena"));
-        slideModels.add(new SlideModel(R.drawable.er_castelo_sao_jorge,"Castelo São Jorge"));
-        }else if(id == 1){
-            slideModels.add(new SlideModel(R.drawable.er_castelo_de_tomar,"Castelo de Tomár"));
-            slideModels.add(new SlideModel(R.drawable.er_praca_pedro,"Praça de D. Pedro"));
+        if(id == 0){
+            slideModels.add(new SlideModel(R.drawable.dou_1,"Ponte de Lima"));
+            slideModels.add(new SlideModel(R.drawable.dou_2,"Livraria Lello"));
+            slideModels.add(new SlideModel(R.drawable.dou_3,"Ponte D.Luis"));
+        }
+        else if(id == 1){
+            slideModels.add(new SlideModel(R.drawable.alen_1,"Templo de Diana"));
+            slideModels.add(new SlideModel(R.drawable.alen_2,"Capela dos ossos"));
+            slideModels.add(new SlideModel(R.drawable.alen_3,"Castelo de Sines"));
+        }
+        else if(id == 2){
+            slideModels.add(new SlideModel(R.drawable.alg_1,"Praia da Rocha"));
+            slideModels.add(new SlideModel(R.drawable.alg_2,"Sé de Faro"));
+            slideModels.add(new SlideModel(R.drawable.alg_3,"Barragem do Alqueva"));
+        }
+        else if(id == 3){
+            slideModels.add(new SlideModel(R.drawable.bi_capelabonfim, "Capela Bonfim"));
+            slideModels.add(new SlideModel(R.drawable.bi_serra_da_estrela, "Serra da Estrela"));
+            slideModels.add(new SlideModel(R.drawable.bi_vale_do_coa, "Vale do Coa"));
+        }
+        else if(id == 4){
+            slideModels.add(new SlideModel(R.drawable.lis_1, "Praça do Rossio"));
+            slideModels.add(new SlideModel(R.drawable.lis_2, "Terreiro do Paço"));
+            slideModels.add(new SlideModel(R.drawable.lis_3, "Castelo S. Jorge"));
+        }
+        else if(id == 5) {
+            slideModels.add(new SlideModel(R.drawable.er_torre_de_belem, "Torre de Belem"));
+            slideModels.add(new SlideModel(R.drawable.er_palacio_pena, "Palácio da Pena"));
+            slideModels.add(new SlideModel(R.drawable.er_castelo_sao_jorge, "Castelo São Jorge"));
+        }else if(id == 6){
+            slideModels.add(new SlideModel(R.drawable.a_corvo, "Corvo"));
+            slideModels.add(new SlideModel(R.drawable.a_lagoa, "Lagoa"));
+            slideModels.add(new SlideModel(R.drawable.a_pico, "Pico"));
+        }
+        else if(id == 7){
+            slideModels.add(new SlideModel(R.drawable.ma_1, "Floresta Laurissilva"));
+            slideModels.add(new SlideModel(R.drawable.ma_2, "Museu CR7"));
+            slideModels.add(new SlideModel(R.drawable.ma_3, "Santana"));
+        }else if(id == 8){
+            slideModels.add(new SlideModel(R.drawable.bl_coimbra, "Coimbra"));
+            slideModels.add(new SlideModel(R.drawable.bl_leiria, "Leiria"));
+            slideModels.add(new SlideModel(R.drawable.bl_mosteiro_de_lorvao, "Mosteiro do Lorvão"));
+        }else if(id == 9){
+            slideModels.add(new SlideModel(R.drawable.tras_castelo_braganca, "Castelo de Bragança"));
+            slideModels.add(new SlideModel(R.drawable.tras_igreja_senhora_remedios, "Igreja da Senhora dos Remédios"));
+            slideModels.add(new SlideModel(R.drawable.tras_estacao_do_pinhao, "Estação do Pinhão"));
         }
 
     }
