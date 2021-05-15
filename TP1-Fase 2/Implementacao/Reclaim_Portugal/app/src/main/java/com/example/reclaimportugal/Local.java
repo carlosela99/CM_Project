@@ -77,7 +77,8 @@ public class Local {
     }
 
     public static int getGamesCount(Context context){
-        return loadInt("games_count", "game", context);
+        int value = loadInt("games_count", "game", context);
+        return value;
     }
 
     public static void incrementGamesCount(Context context){

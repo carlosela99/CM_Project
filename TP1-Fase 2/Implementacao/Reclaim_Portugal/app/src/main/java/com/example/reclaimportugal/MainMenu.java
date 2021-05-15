@@ -58,7 +58,9 @@ public class MainMenu extends AppCompatActivity {
 
     public void openRegions(View v){
         Intent intent = new Intent(this, RegionSelect.class);
+        finish();
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     public void logout(View v){

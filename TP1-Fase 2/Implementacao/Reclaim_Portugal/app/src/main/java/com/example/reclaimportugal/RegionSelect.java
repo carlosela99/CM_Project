@@ -140,6 +140,7 @@ public class RegionSelect extends AppCompatActivity {
                 Intent intent = new Intent(RegionSelect.this, MainMenu.class);
                 finish();
                 startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         });
     }
