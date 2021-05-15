@@ -10,160 +10,202 @@
     android:background="@drawable/background_main_menu">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/back"
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:background="@drawable/back"
-            android:contentDescription="Go Back Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageButton
-        android:id="@+id/nextRegion"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="28dp"
-        android:background="@drawable/back_rotated"
-        android:contentDescription="Go Back Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
-
-    <ImageButton
-        android:id="@+id/previousRegion"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="32dp"
-        android:background="@drawable/back"
-        android:contentDescription="Go Back Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/regionMenuBody"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/quickmatch"
-            android:layout_width="210dp"
-            android:layout_height="65dp"
-            android:color="@android:color/holo_red_light"
-            android:fontFamily="@font/candy_beans"
-            android:text="Quick Match"
-            android:textSize="24sp"
-            app:backgroundTint="@color/red_button"
-            app:cornerRadius="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayoutMain"
-        android:layout_width="386dp"
-        android:layout_height="0dp"
-        android:background="@drawable/regions_shape_box"
-        app:layout_constraintBottom_toTopOf="@+id/regionMenuBody"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="35dp">
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/back"
+                android:contentDescription="Go Back Button" />
+
+            <ImageButton
+                android:id="@+id/previousRegion"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back"
+                android:contentDescription="Go Back Button" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30">
+
+                    <LinearLayout
+                        android:id="@+id/constraintLayoutMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/regions_shape_box"
+                        android:orientation="vertical">
 
 
-        <ImageView
-            android:id="@+id/region_image"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/er_obidos" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="60">
 
-        <TextView
-            android:id="@+id/regionName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/candy_beans"
-            android:shadowColor="@android:color/white"
-            android:shadowRadius="4"
-            android:text="TextView"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/region_image" />
+                            <ImageView
+                                android:id="@+id/region_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="15dp"
+                                app:srcCompat="@drawable/er_obidos" />
+                        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/regionPercentage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/candy_beans"
-            android:shadowColor="@android:color/white"
-            android:shadowRadius="4"
-            android:text="TextView"
-            android:textColor="@android:color/black"
-            android:layout_marginTop="5dp"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/regionName" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="100">
 
-        <Button
-            android:id="@+id/discoverButton"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/candy_beans"
-            android:shadowColor="@color/black"
-            android:shadowRadius="4"
-            android:text="Discover"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:backgroundTint="@color/orange"
-            app:cornerRadius="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/play_from_select"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent" />
+                            <TextView
+                                android:id="@+id/regionName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/candy_beans"
+                                android:shadowColor="@android:color/white"
+                                android:shadowRadius="4"
+                                android:text="Region"
+                                android:textColor="@android:color/black"
+                                android:textSize="26sp" />
+                        </RelativeLayout>
 
-        <Button
-            android:id="@+id/play_from_select"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:fontFamily="@font/candy_beans"
-            android:shadowColor="@color/black"
-            android:shadowRadius="4"
-            android:text="Play"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:backgroundTint="@color/orange"
-            app:cornerRadius="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="108">
+
+                            <TextView
+                                android:id="@+id/regionPercentage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/candy_beans"
+                                android:shadowColor="@android:color/white"
+                                android:shadowRadius="4"
+                                android:text="0%"
+                                android:textColor="@android:color/black"
+                                android:textSize="22sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="90">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="100">
+
+                                    <Button
+                                        android:id="@+id/discoverButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/candy_beans"
+                                        android:paddingHorizontal="20dp"
+                                        android:paddingVertical="8dp"
+                                        android:shadowColor="@color/black"
+                                        android:shadowRadius="4"
+                                        android:text="Discover"
+                                        android:textColor="@color/white"
+                                        android:textSize="22sp"
+                                        app:backgroundTint="@color/orange"
+                                        app:cornerRadius="12dp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="100">
+
+                                    <Button
+                                        android:id="@+id/play_from_select"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:fontFamily="@font/candy_beans"
+                                        android:paddingHorizontal="20dp"
+                                        android:paddingVertical="8dp"
+                                        android:shadowColor="@color/black"
+                                        android:shadowRadius="4"
+                                        android:text="Play"
+                                        android:textColor="@color/white"
+                                        android:textSize="22sp"
+                                        app:backgroundTint="@color/orange"
+                                        app:cornerRadius="12dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="100">
+
+                    <Button
+                        android:id="@+id/quickmatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:color="@android:color/holo_red_light"
+                        android:fontFamily="@font/candy_beans"
+                        android:text="Quick Match"
+                        android:textSize="24sp"
+                        app:backgroundTint="@color/red_button"
+                        app:cornerRadius="14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100">
+
+            <ImageButton
+                android:id="@+id/nextRegion"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/back_rotated"
+                android:contentDescription="Go Back Button" />
+        </RelativeLayout>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

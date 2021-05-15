@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +35,7 @@ public class RegionSelect extends AppCompatActivity {
     private String json;
     private JSONObject obj;
     private JSONArray jArray;
-    private ConstraintLayout layout;
+    private LinearLayout layout;
 
 
     @Override

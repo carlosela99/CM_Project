@@ -9,61 +9,71 @@
     >
 
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/candy_beans"
-        android:shadowColor="@android:color/white"
-        android:shadowRadius="4"
-        android:text="The Clock is ticking! \nQuit Game?"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_Continue"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:fontFamily="@font/candy_beans"
-        android:shadowColor="@color/black"
-        android:shadowRadius="4"
-        android:text="Continue"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        android:onClick="continueGame"
-        app:backgroundTint="@color/red_button"
-        app:cornerRadius="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100">
 
-    <Button
-        android:id="@+id/button_Quit"
-        android:layout_width="200dp"
-        android:layout_height="80dp"
-        android:fontFamily="@font/candy_beans"
-        android:shadowColor="@color/black"
-        android:shadowRadius="4"
-        android:text="Quit"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        android:onClick="quitGame"
-        app:backgroundTint="@color/red_button"
-        app:cornerRadius="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/candy_beans"
+                android:shadowColor="@android:color/white"
+                android:shadowRadius="4"
+                android:layout_centerInParent="true"
+                android:text="The Clock is ticking! \nQuit Game?"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="26sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100">
+
+            <Button
+                android:id="@+id/button_Continue"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/candy_beans"
+                android:onClick="continueGame"
+                android:shadowColor="@color/black"
+                android:layout_centerInParent="true"
+                android:shadowRadius="4"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:backgroundTint="@color/red_button"
+                app:cornerRadius="45dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="100">
+
+            <Button
+                android:id="@+id/button_Quit"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/candy_beans"
+                android:onClick="quitGame"
+                android:shadowColor="@color/black"
+                android:shadowRadius="4"
+                android:layout_centerInParent="true"
+                android:text="Quit"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:backgroundTint="@color/red_button"
+                app:cornerRadius="45dp" />
+        </RelativeLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

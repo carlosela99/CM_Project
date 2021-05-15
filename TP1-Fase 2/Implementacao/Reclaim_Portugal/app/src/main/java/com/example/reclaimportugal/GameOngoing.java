@@ -59,6 +59,9 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
 
     private SensorManager sensorManager;
     double axis;
+
+    private final static float ACCELETOMETER_TRIGGER_VALUE = 2.5f;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,18 +135,16 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
     public void onSensorChanged(SensorEvent event){
         if (isPlaying && event.sensor.getType()==Sensor.TYPE_ACCELEROMETER){
             if (sensorInput){
-                if (axis - event.values[1] > 3){
+                if (axis - event.values[1] > ACCELETOMETER_TRIGGER_VALUE){
                     try {
                         chooseRight();
-                        startSensorTimer();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-                if (axis - event.values[1] < -3){
+                if (axis - event.values[1] < -ACCELETOMETER_TRIGGER_VALUE){
                     try {
                         chooseLeft();
-                        startSensorTimer();
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -255,6 +256,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
 
     //left answer
     private void chooseLeft() throws JSONException {
+        startSensorTimer();
         SoundManager.ClickSound(getApplicationContext());
         counter--;
         if(!rightOrWrong){
@@ -269,6 +271,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
 
     //right answer
     private void chooseRight() throws JSONException {
+        startSensorTimer();
         SoundManager.ClickSound(getApplicationContext());
         counter--;
         if(rightOrWrong) {
@@ -298,14 +301,14 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
     public void placeQuestion(Boolean correct) throws JSONException {
         if(correct){
             if (language.equals("en"))
-                highlightQuestions.put("<font color=#1BCA13>" + obj.getString("QuestionEn") + "<br/>" + obj.getString("CorrectAnswerEn") + "</font><br/><br/>", correct);
+                highlightQuestions.put("<font color=#1BCA13>" + obj.getString("QuestionEn") + "<br/> -" + obj.getString("CorrectAnswerEn") + "</font><br/><br/>", correct);
             else
-                highlightQuestions.put("<font color=#1BCA13>" + obj.getString("QuestionPt") + "<br/>" + obj.getString("CorrectAnswerPt") + "</font><br/><br/>", correct);
+                highlightQuestions.put("<font color=#1BCA13>" + obj.getString("QuestionPt") + "<br/> -" + obj.getString("CorrectAnswerPt") + "</font><br/><br/>", correct);
         }else{
         if (language.equals("en"))
-            highlightQuestions.put("<font color=#D81F1F>" + obj.getString("QuestionEn") + "<br/>" + obj.getString("WrongAnswerEn") + "</font><br/><br/>", correct);
+            highlightQuestions.put("<font color=#D81F1F>" + obj.getString("QuestionEn") + "<br/> -" + obj.getString("WrongAnswerEn") + "</font><br/><br/>", correct);
         else
-            highlightQuestions.put("<font color=#D81F1F>" + obj.getString("QuestionPt") + "<br/>" + obj.getString("WrongAnswerPt") + "</font><br/><br/>", correct);
+            highlightQuestions.put("<font color=#D81F1F>" + obj.getString("QuestionPt") + "<br/> -" + obj.getString("WrongAnswerPt") + "</font><br/><br/>", correct);
         }
     }
 

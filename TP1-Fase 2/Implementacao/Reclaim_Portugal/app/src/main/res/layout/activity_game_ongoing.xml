@@ -7,115 +7,155 @@
     android:layout_height="match_parent"
     android:background="@drawable/gamebackground">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/gameQuestion"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/regions_shape_box"
-                    android:fontFamily="@font/candy_beans"
-                    android:shadowColor="@android:color/white"
-                    android:shadowRadius="4"
-                    android:text="TextView"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="25sp"
-                    android:layout_marginStart="97dp"
-                    app:layout_constraintBottom_toTopOf="@+id/countdown"
-                    app:layout_constraintEnd_toStartOf="@+id/pauseGame"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageButton
-                    android:id="@+id/pauseGame"
-                    android:layout_width="65dp"
-                    android:layout_height="66dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
-                    android:background="@drawable/pause"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/countdown"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/candy_beans"
-                    android:shadowColor="@android:color/white"
-                    android:shadowRadius="4"
-                    android:text="1:00"
-                    android:textColor="@android:color/black"
-                    android:textSize="35sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:onClick="chooseLeft">
+                    android:layout_weight="100">
 
-                        <TextView
-                            android:id="@+id/answerLeft"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/candy_beans"
-                            android:shadowColor="@android:color/white"
-                            android:shadowRadius="4"
-                            android:text="TextView"
-                            android:textAlignment="center"
-                            android:textColor="@android:color/black"
-                            android:textSize="44sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="100">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="25">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="50">
+
+                                                        <TextView
+                                                            android:id="@+id/gameQuestion"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentBottom="true"
+                                                            android:background="@drawable/regions_shape_box"
+                                                            android:fontFamily="@font/candy_beans"
+                                                            android:shadowColor="@android:color/white"
+                                                            android:padding="10dp"
+                                                            android:shadowRadius="4"
+                                                            android:text="Question"
+                                                            android:textAlignment="center"
+                                                            android:textColor="@android:color/black"
+                                                            android:textSize="23sp" />
+                                                </RelativeLayout>
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight="100">
+
+                                                        <TextView
+                                                            android:id="@+id/countdown"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_centerInParent="true"
+                                                            android:fontFamily="@font/candy_beans"
+                                                            android:shadowColor="@android:color/white"
+                                                            android:shadowRadius="4"
+                                                            android:text="1:00"
+                                                            android:textColor="@android:color/black"
+                                                            android:textSize="35sp" />
+                                                </RelativeLayout>
+                                        </LinearLayout>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="100">
+
+                                        <ImageButton
+                                            android:id="@+id/pauseGame"
+                                            android:layout_width="50dp"
+                                            android:layout_height="50dp"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/pause" />
+                                </RelativeLayout>
+                        </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:onClick="chooseRight">
+                    android:layout_weight="60">
 
-                        <TextView
-                            android:id="@+id/answerRight"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/candy_beans"
-                            android:shadowColor="@android:color/white"
-                            android:shadowRadius="4"
-                            android:text="TextView"
-                            android:textAlignment="center"
-                            android:textColor="@android:color/black"
-                            android:textSize="44sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:onClick="chooseLeft">
+
+                                        <TextView
+                                            android:id="@+id/answerLeft"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/candy_beans"
+                                            android:shadowColor="@android:color/white"
+                                            android:shadowRadius="4"
+                                            android:layout_margin="20dp"
+                                            android:text="Answer"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="40sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:onClick="chooseRight">
+
+                                        <TextView
+                                            android:id="@+id/answerRight"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/candy_beans"
+                                            android:shadowColor="@android:color/white"
+                                            android:shadowRadius="4"
+                                            android:layout_margin="20dp"
+                                            android:text="Answer"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="40sp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                </RelativeLayout>
         </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
