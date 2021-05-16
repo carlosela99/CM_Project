@@ -539,14 +539,11 @@ LocationListener{
     }
 
     public void goToMenu(View v){
-        Intent intent = new Intent(com.example.reclaimportugal.MapsActivity.this, RegionDetails.class);
-        intent.putExtra("regionID", Integer.parseInt(regionId));
-        startActivity(intent);
+        finish();
     }
 
     @Override
     public View getInfoWindow(Marker marker) {
-
         return null;
     }
 

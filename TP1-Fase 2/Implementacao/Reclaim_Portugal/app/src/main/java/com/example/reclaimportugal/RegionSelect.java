@@ -79,7 +79,9 @@ public class RegionSelect extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(RegionSelect.this, GameOngoing.class);
                 intent.putExtra("regionIDGame", counter);
+                finish();
                 startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         });
 
@@ -89,7 +91,9 @@ public class RegionSelect extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(RegionSelect.this, GameOngoing.class);
                 intent.putExtra("regionIDGame", 99);
+                finish();
                 startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         });
 
@@ -99,7 +103,9 @@ public class RegionSelect extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(RegionSelect.this, RegionDetails.class);
                 intent.putExtra("regionID", counter);
+                finish();
                 startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         });
 

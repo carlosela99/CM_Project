@@ -113,11 +113,16 @@ public class RegionDetails extends AppCompatActivity {
     private void openActivityPlay() {
         Intent intent = new Intent(RegionDetails.this, GameOngoing.class);
         intent.putExtra("regionIDGame", id);
+        finish();
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     private void openActivityBack() {
+        Intent intent = new Intent(RegionDetails.this, RegionSelect.class);
         finish();
+        startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 
     private String getJson(){

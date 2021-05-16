@@ -60,7 +60,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
     private SensorManager sensorManager;
     double axis;
 
-    private final static float ACCELETOMETER_TRIGGER_VALUE = 2.5f;
+    private final static float ACCELETOMETER_TRIGGER_VALUE = 1.5f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -176,7 +176,7 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
 
     public void startSensorTimer() {
         sensorInput = false;
-        sensorTimer = new CountDownTimer(1000, 100) {
+        sensorTimer = new CountDownTimer(800, 100) {
             @Override
             public void onTick(long millisUntilFinished) {
             }
@@ -405,5 +405,6 @@ public class GameOngoing extends AppCompatActivity implements SensorEventListene
         intent.putExtra("numberQuestions", nQuestions);
         finish();
         startActivity(intent);
+        overridePendingTransition(0, 0);
     }
 }

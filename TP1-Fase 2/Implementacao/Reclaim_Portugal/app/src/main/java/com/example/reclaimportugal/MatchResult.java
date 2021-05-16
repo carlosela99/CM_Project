@@ -85,6 +85,7 @@ public class MatchResult extends AppCompatActivity {
                 intent.putExtra("regionIDGame", id);
                 finish();
                 startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         });
 
@@ -92,7 +93,10 @@ public class MatchResult extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MatchResult.this, RegionSelect.class);
                 finish();
+                startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         });
 
