@@ -7,121 +7,129 @@
     android:background="@drawable/estremadura_ribatejo_background">
 
     <LinearLayout
-        android:id="@+id/region_top_layout"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="100dp"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/back_region_selection"
-                android:layout_width="50dp"
-                android:layout_height="60dp"
-                android:background="@drawable/back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="Go Back Button" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            android:id="@+id/region_title"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/candy_beans"
-            android:shadowColor="@color/black"
-            android:shadowRadius="4"
-            android:textColor="@color/white"
-            android:textSize="35sp"
-            android:gravity=""
-            android:text="Title" />
+            android:layout_weight="100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="100">>
+                    <ImageButton
+                        android:id="@+id/back_region_selection"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/back"
+                        android:contentDescription="Go Back Button" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="15">
+
+                    <TextView
+                        android:id="@+id/region_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/candy_beans"
+                        android:gravity=""
+                        android:shadowColor="@color/black"
+                        android:shadowRadius="4"
+                        android:text="Title"
+                        android:textColor="@color/white"
+                        android:textSize="35sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="70">
+
+            <TextView
+                android:id="@+id/region_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/regions_shape_box"
+                android:fontFamily="@font/candy_beans"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginHorizontal="25dp"
+                android:scrollbars="vertical"
+                android:shadowColor="@android:color/white"
+                android:shadowRadius="4"
+                android:text="Text gets inserted here!"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/region_slider"
+                        android:layout_width="250dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        app:auto_cycle="true"
+                        app:corner_radius="5"
+                        app:delay="0"
+                        app:period="1000">
+
+                    </com.denzcoskun.imageslider.ImageSlider>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="100">
+
+                    <Button
+                        android:id="@+id/button_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:color="@android:color/holo_red_light"
+                        android:fontFamily="@font/candy_beans"
+                        android:layout_centerInParent="true"
+                        android:paddingHorizontal="30dp"
+                        android:paddingVertical="10dp"
+                        android:text="Play"
+                        android:textSize="28sp"
+                        app:backgroundTint="@color/red_button"
+                        app:cornerRadius="12dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
     </LinearLayout>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/region_middle_layout"
-        android:layout_width="732dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="146dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/region_top_layout">
-
-        <TextView
-            android:id="@+id/region_description"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@drawable/regions_shape_box"
-            android:fontFamily="@font/candy_beans"
-            android:padding="8dp"
-            android:scrollbars="vertical"
-            android:shadowColor="@android:color/white"
-            android:shadowRadius="4"
-            android:text="Text gets inserted here!"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <Button
-            android:id="@+id/button_play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:color="@android:color/holo_red_light"
-            android:fontFamily="@font/candy_beans"
-            android:paddingHorizontal="30dp"
-            android:paddingVertical="10dp"
-            android:text="Play"
-            android:textSize="28sp"
-            app:backgroundTint="@color/red_button"
-            app:cornerRadius="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.922"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/region_slider"
-            android:layout_width="250dp"
-            android:layout_height="130dp"
-            android:layout_marginBottom="16dp"
-            app:auto_cycle="true"
-            app:corner_radius="5"
-            app:delay="0"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.185"
-            app:layout_constraintStart_toStartOf="parent"
-            app:period="1000">
-
-        </com.denzcoskun.imageslider.ImageSlider>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
