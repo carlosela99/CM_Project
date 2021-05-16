@@ -66,13 +66,17 @@
                     android:layout_weight="10">
                     <Button
                         android:id="@+id/mainmenu"
-                        android:layout_width="200dp"
-                        android:layout_height="60dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="@string/title_activity_main_menu"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="20dp"
+                        android:fontFamily="@font/candy_beans"
                         app:backgroundTint="#E10C0C"
                         app:cornerRadius="20dp"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginTop="65dp"
+                        android:textSize="22sp"
+                        android:layout_marginStart="100dp"
+                        android:layout_centerVertical="true"
                         />
 
                 </RelativeLayout>

@@ -17,8 +17,6 @@ import android.util.DisplayMetrics;
 
 public class Settings extends AppCompatActivity {
 
-    private String email;
-    private String username;
     private String currentLang;
 
     private ImageButton btnPT;
@@ -33,9 +31,6 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-        email = getIntent().getStringExtra("EMAIL");
-        username = getIntent().getStringExtra("USERNAME");
 
         btnPT = findViewById(R.id.PortugalIcon);
         btnEN = findViewById(R.id.EnglishIcon);
@@ -91,14 +86,11 @@ public class Settings extends AppCompatActivity {
 
     public void openSettingsChangePassword() {
         Intent intent = new Intent(this, SettingsChangePassword.class);
-        intent.putExtra("EMAIL", email);
         startActivity(intent);
     }
 
     public void openMainMenu() {
         Intent intent = new Intent(this, MainMenu.class);
-        intent.putExtra("EMAIL", email);
-        intent.putExtra("USERNAME", username);
         finish();
         startActivity(intent);
         overridePendingTransition(0, 0);
@@ -156,8 +148,6 @@ public class Settings extends AppCompatActivity {
 
     private void restartActivity(){
         Intent restart = new Intent(this, this.getClass());
-        restart.putExtra("EMAIL", email);
-        restart.putExtra("USERNAME", username);
         finish();
         startActivity(restart);
         overridePendingTransition(0, 0);

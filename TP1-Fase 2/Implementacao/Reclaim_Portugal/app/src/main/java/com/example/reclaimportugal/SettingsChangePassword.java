@@ -15,7 +15,6 @@ public class SettingsChangePassword extends AppCompatActivity {
 
     private TextView failChange;
 
-    private String email;
     private boolean isBusy;
 
     @Override
@@ -25,7 +24,6 @@ public class SettingsChangePassword extends AppCompatActivity {
 
         isBusy = false;
         failChange = (TextView)findViewById(R.id.text_fail);
-        email = getIntent().getStringExtra("EMAIL");
 
         ImageButton imageButton = (ImageButton) findViewById(R.id.settingsChangePasswordBack);
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +59,7 @@ public class SettingsChangePassword extends AppCompatActivity {
         else{
             failChange.setVisibility(View.INVISIBLE);
             isBusy = true;
-            Server.changePasswordSettings(email, oldPassword, newPassword, this);
+            Server.changePasswordSettings(User.CurrentUser.Email, oldPassword, newPassword, this);
         }
     }
 

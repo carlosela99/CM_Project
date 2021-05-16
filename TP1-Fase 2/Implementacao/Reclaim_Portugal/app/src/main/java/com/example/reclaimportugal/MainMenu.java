@@ -11,16 +11,10 @@ import android.widget.TextView;
 
 public class MainMenu extends AppCompatActivity {
 
-    private String email;
-    private String username;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
-        username = getIntent().getStringExtra("USERNAME");
-        email = getIntent().getStringExtra("EMAIL");
 
         TextView tvUsername = findViewById(R.id.username);
         tvUsername.setText(User.CurrentUser.Username);
@@ -43,8 +37,6 @@ public class MainMenu extends AppCompatActivity {
 
     public void openSettings(View view) {
         Intent intent = new Intent(this, Settings.class);
-        intent.putExtra("EMAIL", email);
-        intent.putExtra("USERNAME", username);
         finish();
         startActivity(intent);
         overridePendingTransition(0, 0);
@@ -52,7 +44,6 @@ public class MainMenu extends AppCompatActivity {
 
     public void openSubmitQuestion(View view) {
         Intent intent = new Intent(this, SubmitQuestion.class);
-        intent.putExtra("EMAIL", email);
         startActivity(intent);
     }
 

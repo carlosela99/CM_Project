@@ -16,7 +16,6 @@ public class SubmitQuestion extends AppCompatActivity {
 
     private TextView failSubmit;
 
-    private String email;
     private boolean isBusy;
 
     @Override
@@ -25,7 +24,6 @@ public class SubmitQuestion extends AppCompatActivity {
         setContentView(R.layout.activity_submit_question);
 
         failSubmit = (TextView)findViewById(R.id.text_fail);
-        email = getIntent().getStringExtra("EMAIL");
     }
 
     public void backToMenu(View v) {
@@ -50,7 +48,7 @@ public class SubmitQuestion extends AppCompatActivity {
         else{
             failSubmit.setVisibility(View.INVISIBLE);
             isBusy = true;
-            Server.submitQuestion(email, question, correctAnswer, wrongAnswer, this);
+            Server.submitQuestion(User.CurrentUser.Email, question, correctAnswer, wrongAnswer, this);
         }
     }
 
