@@ -48,6 +48,9 @@ public class Login extends AppCompatActivity {
     }
 
     public void loginUser(View v){
+        if (isBusy){
+            return;
+        }
 
         EditText userText = (EditText)findViewById(R.id.text_user);
         EditText passwordText = (EditText)findViewById(R.id.text_password);

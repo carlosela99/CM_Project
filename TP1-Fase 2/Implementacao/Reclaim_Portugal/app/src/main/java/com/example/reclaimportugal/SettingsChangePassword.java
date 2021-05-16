@@ -39,6 +39,10 @@ public class SettingsChangePassword extends AppCompatActivity {
     }
 
     public void changePassword(View v){
+        if (isBusy){
+            return;
+        }
+
         EditText oldPasswordText = (EditText)findViewById(R.id.OldPassword);
         EditText newPasswordText = (EditText)findViewById(R.id.NewPassword);
         EditText newPasswordConfirmText = (EditText)findViewById(R.id.ConfirmNewPassword);

@@ -38,7 +38,9 @@ public class ForgotPassword extends AppCompatActivity {
     }
 
     public void confirmEmail(View v){
-
+        if (isBusy){
+            return;
+        }
         EditText emailText = (EditText)findViewById(R.id.text_email);
 
         email = emailText.getText().toString();

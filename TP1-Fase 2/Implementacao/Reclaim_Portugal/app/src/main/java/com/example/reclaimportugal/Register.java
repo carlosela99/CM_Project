@@ -49,7 +49,9 @@ public class Register extends AppCompatActivity {
     }
 
     public void registerUser(View v){
-
+        if (isBusy){
+            return;
+        }
         EditText usernameText = (EditText)findViewById(R.id.text_username);
         EditText emailText = (EditText)findViewById(R.id.text_email);
         EditText passwordText = (EditText)findViewById(R.id.text_password);

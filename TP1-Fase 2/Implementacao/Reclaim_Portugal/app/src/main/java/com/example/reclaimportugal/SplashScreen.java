@@ -36,6 +36,7 @@ public class SplashScreen extends AppCompatActivity {
                     Intent intent = new Intent(SplashScreen.this, Welcome.class);
                     finish();
                     startActivity(intent);
+                    overridePendingTransition(0, 0);
                 }
             }
         }).start();

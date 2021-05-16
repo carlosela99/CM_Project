@@ -31,6 +31,9 @@ public class SubmitQuestion extends AppCompatActivity {
     }
 
     public void submitQuestion(View v){
+        if (isBusy){
+            return;
+        }
         EditText questionText = (EditText)findViewById(R.id.questionText);
         EditText correctAnswerText = (EditText)findViewById(R.id.correctAnswer);
         EditText wrongAnswerText = (EditText)findViewById(R.id.wrongAnswer);

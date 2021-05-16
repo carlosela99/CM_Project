@@ -32,6 +32,10 @@ public class ForgotPasswordChange extends AppCompatActivity {
     }
 
     public void changePassword(View v){
+        if (isBusy){
+            return;
+        }
+
         EditText codeText = (EditText)findViewById(R.id.code_text);
         EditText passwordText = (EditText)findViewById(R.id.password_text);
         EditText passwordConfirmText = (EditText)findViewById(R.id.password_confirm_text);

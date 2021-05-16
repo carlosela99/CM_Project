@@ -39,7 +39,9 @@ public class RegisterConfirmCode extends AppCompatActivity {
     }
 
     public void confirmCode(View v){
-
+        if (isBusy){
+            return;
+        }
         EditText codeText = (EditText)findViewById(R.id.text_code);
 
         String code = codeText.getText().toString();
