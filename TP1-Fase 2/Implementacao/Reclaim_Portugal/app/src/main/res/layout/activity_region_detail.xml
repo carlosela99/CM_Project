@@ -89,12 +89,14 @@
 
         <Button
             android:id="@+id/button_play"
-            android:layout_width="202dp"
-            android:layout_height="86dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:color="@android:color/holo_red_light"
             android:fontFamily="@font/candy_beans"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="10dp"
             android:text="Play"
             android:textSize="28sp"
             app:backgroundTint="@color/red_button"
