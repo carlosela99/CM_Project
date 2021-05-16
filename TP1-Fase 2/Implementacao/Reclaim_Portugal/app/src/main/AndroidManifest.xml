@@ -13,14 +13,26 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReclaimPortugal">
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="landscape">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
         <service android:name=".BackgroundMusic" />
+
         <activity
             android:name=".RegisterConfirmCode"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Settings"
             android:screenOrientation="landscape" />
@@ -33,7 +45,7 @@
         <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".SubmitQuestion"
             android:screenOrientation="landscape" />
@@ -82,16 +94,11 @@
         <activity
             android:name=".Welcome"
             android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAvSk7C07yst2yiZPHiMzSIpMNUCYAIqoE" />
-        
     </application>
 
 </manifest>
