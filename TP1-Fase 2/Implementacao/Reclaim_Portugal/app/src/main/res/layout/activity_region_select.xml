@@ -34,7 +34,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/back"
+                android:background="@drawable/back1"
                 android:contentDescription="Go Back Button" />
         </RelativeLayout>
 
@@ -202,7 +202,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/back_rotated"
+                android:background="@drawable/next"
                 android:contentDescription="Go Back Button" />
         </RelativeLayout>
     </LinearLayout>
