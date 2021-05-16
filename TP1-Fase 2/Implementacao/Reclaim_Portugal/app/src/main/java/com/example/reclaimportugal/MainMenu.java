@@ -23,10 +23,10 @@ public class MainMenu extends AppCompatActivity {
         email = getIntent().getStringExtra("EMAIL");
 
         TextView tvUsername = findViewById(R.id.username);
-        tvUsername.setText(username);
+        tvUsername.setText(User.CurrentUser.Username);
 
         TextView tvEmail = findViewById(R.id.email);
-        tvEmail.setText(email);
+        tvEmail.setText(User.CurrentUser.Email);
 
         loadStats();
     }

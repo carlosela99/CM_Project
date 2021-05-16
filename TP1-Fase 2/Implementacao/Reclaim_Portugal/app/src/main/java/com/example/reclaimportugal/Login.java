@@ -73,6 +73,7 @@ public class Login extends AppCompatActivity {
         try{
             String username = response.getString("username");
             String email = response.getString("email");
+            User.CurrentUser = new User(username, email);
 
             showMainMenu(username, email);
         }
