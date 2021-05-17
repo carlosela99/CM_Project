@@ -1,9 +1,0 @@
-POST
-/register
-/login
-/forgot-password
-/change-password
-/submit-question
-
-GET
-/questions
