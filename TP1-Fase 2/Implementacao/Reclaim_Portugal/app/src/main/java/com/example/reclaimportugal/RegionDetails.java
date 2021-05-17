@@ -50,7 +50,7 @@ public class RegionDetails extends AppCompatActivity {
             e.printStackTrace();
         }
 
-       language = Locale.getDefault().getLanguage();
+        language = Local.getLanguage(getApplicationContext());
 
         setContentView(R.layout.activity_region_detail);
 

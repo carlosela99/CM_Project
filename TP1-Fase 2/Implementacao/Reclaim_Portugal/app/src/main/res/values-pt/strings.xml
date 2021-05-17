@@ -49,4 +49,6 @@
     <string name="ourTeam">A nossa equipa:</string>
     <string name="type_yourQuestion">Escreve a tua questão </string>
     <string name="settingsname">Configurações </string>
+    <string name="discover">Descobrir</string>
+    <string name="quick_match">Partida Rápida</string>
 </resources>

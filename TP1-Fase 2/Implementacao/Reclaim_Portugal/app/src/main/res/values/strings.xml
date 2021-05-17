@@ -54,4 +54,6 @@
     <string name="title_activity_main_menu" translatable="false">Main Menu</string>
     <string name="leftNames" translatable="false">Carlos Antunes <br /> Daniel Morais <br /> Eduardo Ferreira</string>
     <string name="rightNames" translatable="false">Jorge Mimoso <br /> Marco Teodoro <br /> Ricardo Ribeiro</string>
+    <string name="discover">Discover</string>
+    <string name="quick_match">Quick Match</string>
 </resources>

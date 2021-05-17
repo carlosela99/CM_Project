@@ -50,4 +50,6 @@
     <string name="settingsname">Settings</string>
     <string name="mandatory_question">You need to insert the question!</string>
     <string name="mandatory_answer">You need to insert the answers!</string>
+    <string name="discover">Discover</string>
+    <string name="quick_match">Quick Match</string>
 </resources>
